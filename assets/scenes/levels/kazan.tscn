@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://lui80x5p02fx"]
+[gd_scene load_steps=6 format=3 uid="uid://lui80x5p02fx"]
 
 [ext_resource type="PackedScene" uid="uid://cfi67atue4lrh" path="res://assets/scenes/actors/hero.tscn" id="1_tli3t"]
-[ext_resource type="PackedScene" uid="uid://ha7eqpu3yx3f" path="res://assets/scenes/actors/blocks/areas/small/left.tscn" id="2_h8yh6"]
 [ext_resource type="PackedScene" uid="uid://d3vlgt415niqw" path="res://assets/scenes/actors/controllers/terrain.tscn" id="3_4gayw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifakd"]
@@ -26,13 +25,13 @@ environment = SubResource("Environment_18mnk")
 transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 0, 0, 0)
 
 [node name="hero" parent="." node_paths=PackedStringArray("paths") instance=ExtResource("1_tli3t")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, -16.0139)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, -16.5906)
 paths = NodePath("../track/paths")
 
 [node name="track" type="Node3D" parent="."]
 
 [node name="paths" type="Node3D" parent="track"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -4.43293)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -16.253)
 
 [node name="left" type="Marker3D" parent="track/paths"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
@@ -41,9 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
 
 [node name="right" type="Marker3D" parent="track/paths"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
-
-[node name="area" parent="track" instance=ExtResource("2_h8yh6")]
-visible = false
 
 [node name="terrain" parent="track" instance=ExtResource("3_4gayw")]
 num_terrain_blocks = 10

@@ -8,7 +8,7 @@ class_name TerrainController
 ## is added to the far end of the conveyor
 
 ## Holds the catalog of loaded terrain block scenes
-var TerrainBlocks: Array = []
+@export var TerrainBlocks: Array = []
 ## The set of terrain blocks which are currently rendered to viewport
 var terrain_belt: Array[Node3D] = []
 @export var terrain_velocity: float = 10.0
@@ -35,17 +35,10 @@ func _init_blocks(number_of_blocks: int) -> void:
 	for block_index in number_of_blocks:
 		var block = TerrainBlocks.pick_random().instantiate()
 		
-		#mesh.size.y/2
-		
-		print(block_index)
-		print("Terrains: " + str(terrain_belt.size()))
-		
 		if block_index == 0:
 			block.position.z = _get_mesh_center(block)
-			print("true")
 		else:
 			_append_to_far_edge(terrain_belt[block_index - 1], block)
-			print("false")
 		add_child(block)
 		terrain_belt.append(block)
 
@@ -72,7 +65,7 @@ func _append_to_far_edge(target_block: Node3D, appending_block: Node3D) -> void:
 
 
 func _load_terrain_scenes(target_path: String) -> void:
-	var dir = DirAccess.open(target_path)
-	for scene_path in dir.get_files():
+	#var dir = DirAccess.open(target_path) - dir.get_files()
+	for scene_path in ["left", "middle", "right"]:
 		print("Loading terrain block scene: " + target_path + "/" + scene_path)
-		TerrainBlocks.append(load(target_path + "/" + scene_path))
+		TerrainBlocks.append(load(target_path + "/" + scene_path + ".tscn"))

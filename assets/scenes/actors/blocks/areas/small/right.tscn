@@ -1,23 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b43e3why0q58t"]
+[gd_scene load_steps=3 format=3 uid="uid://txonu2kchkib"]
 
-[ext_resource type="Shape3D" uid="uid://0y8xn7nbeogu" path="res://assets/resources/runtime/templates/materials/shapes/floor.tres" id="1_pquly"]
-[ext_resource type="PlaneMesh" uid="uid://dbglo6lglgnue" path="res://assets/resources/runtime/templates/materials/meshes/floor.tres" id="2_jit2m"]
+[ext_resource type="PackedScene" uid="uid://xjywy0leb3av" path="res://assets/scenes/actors/blocks/areas/floor.tscn" id="1_en3ax"]
 [ext_resource type="PackedScene" uid="uid://rkiptippb1wf" path="res://assets/scenes/actors/blocks/small.tscn" id="3_e2dun"]
 
-[node name="area" type="Node3D"]
+[node name="right" type="Node3D"]
 
-[node name="floor" type="StaticBody3D" parent="."]
+[node name="floor" parent="." instance=ExtResource("1_en3ax")]
 
-[node name="collision" type="CollisionShape3D" parent="floor"]
-shape = ExtResource("1_pquly")
-
-[node name="mesh" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
-top_level = true
-mesh = ExtResource("2_jit2m")
-skeleton = NodePath("../..")
-
-[node name="blocks" type="Node3D" parent="."]
-
-[node name="right" parent="blocks" instance=ExtResource("3_e2dun")]
+[node name="small" parent="." instance=ExtResource("3_e2dun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -9.5)
