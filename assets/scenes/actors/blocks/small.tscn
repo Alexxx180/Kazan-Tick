@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://rkiptippb1wf"]
+
+[ext_resource type="Shape3D" uid="uid://bfmfn04hojavf" path="res://assets/resources/runtime/templates/materials/shapes/small.tres" id="1_5xbo5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gd5ld"]
+
+[node name="small" type="StaticBody3D"]
+
+[node name="collision" type="CollisionShape3D" parent="."]
+shape = ExtResource("1_5xbo5")
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_gd5ld")

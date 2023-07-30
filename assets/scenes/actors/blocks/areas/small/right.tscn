@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://txonu2kchkib"]
+
+[ext_resource type="PackedScene" uid="uid://xjywy0leb3av" path="res://assets/scenes/actors/blocks/areas/floor.tscn" id="1_en3ax"]
+[ext_resource type="PackedScene" uid="uid://rkiptippb1wf" path="res://assets/scenes/actors/blocks/small.tscn" id="3_e2dun"]
+
+[node name="right" type="Node3D"]
+
+[node name="floor" parent="." instance=ExtResource("1_en3ax")]
+
+[node name="small" parent="." instance=ExtResource("3_e2dun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -9.5)
