@@ -53,8 +53,8 @@ func _init_blocks(number_of_blocks: int) -> void:
 func _progress_terrain(delta: float) -> void:
 	for block in terrain_belt:
 		block.position.z += terrain_velocity * delta
-
-	if terrain_belt[0].position.z >= _get_mesh_center(terrain_belt[0]):
+#_get_mesh_center(terrain_belt[0]) * 2
+	if terrain_belt[0].position.z >= -5:
 		var last_terrain = terrain_belt[-1]
 		var first_terrain = terrain_belt.pop_front()
 
@@ -66,7 +66,9 @@ func _progress_terrain(delta: float) -> void:
 
 
 func _append_to_far_edge(target_block: Node3D, appending_block: Node3D) -> void:
-	appending_block.position.z = target_block.position.z - _get_mesh_center(target_block) - _get_mesh_center(appending_block)
+	var target = _get_mesh_center(target_block)
+	var append = _get_mesh_center(appending_block)
+	appending_block.position.z = target_block.position.z - target - append
 
 
 func _load_terrain_scenes(target_path: String) -> void:
