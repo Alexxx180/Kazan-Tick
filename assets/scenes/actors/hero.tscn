@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfi67atue4lrh"]
+
+[ext_resource type="Script" path="res://assets/scripts/player/moves.gd" id="1_n6ecw"]
+[ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/materials/shapes/humanoid.tres" id="1_ty4wy"]
+[ext_resource type="CapsuleMesh" uid="uid://bo405jfge7od8" path="res://assets/resources/runtime/templates/materials/meshes/humanoid.tres" id="2_e3ejg"]
+
+[node name="hero" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+script = ExtResource("1_n6ecw")
+
+[node name="collision" type="CollisionShape3D" parent="."]
+shape = ExtResource("1_ty4wy")
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_e3ejg")
+
+[node name="vision" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.962498, 0.271289, 0, -0.271289, 0.962498, 0, 1.503, 1.68361)
+fov = 110.0
