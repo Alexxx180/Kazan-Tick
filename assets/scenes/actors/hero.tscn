@@ -15,5 +15,5 @@ shape = ExtResource("1_ty4wy")
 mesh = ExtResource("2_e3ejg")
 
 [node name="vision" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.962498, 0.271289, 0, -0.271289, 0.962498, 0, 1.503, 1.68361)
+transform = Transform3D(-1, 2.36566e-08, -8.41612e-08, 0, 0.962692, 0.2706, 8.74228e-08, 0.2706, -0.962692, 0, 1.503, -1.62716)
 fov = 110.0

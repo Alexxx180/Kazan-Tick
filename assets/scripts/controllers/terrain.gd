@@ -10,7 +10,7 @@ class_name TerrainController
 ## Holds the catalog of loaded terrain block scenes
 var TerrainBlocks: Array = []
 ## The set of terrain blocks which are currently rendered to viewport
-var terrain_belt: Array[MeshInstance3D] = []
+var terrain_belt: Array[Node3D] = []
 @export var terrain_velocity: float = 10.0
 ## The number of blocks to keep rendered to the viewport
 @export var num_terrain_blocks = 4
@@ -42,8 +42,10 @@ func _init_blocks(number_of_blocks: int) -> void:
 		
 		if block_index == 0:
 			block.position.z = _get_mesh_center(block)
+			print("true")
 		else:
 			_append_to_far_edge(terrain_belt[block_index - 1], block)
+			print("false")
 		add_child(block)
 		terrain_belt.append(block)
 
@@ -63,12 +65,12 @@ func _progress_terrain(delta: float) -> void:
 		first_terrain.queue_free()
 
 
-func _append_to_far_edge(target_block: MeshInstance3D, appending_block: MeshInstance3D) -> void:
+func _append_to_far_edge(target_block: Node3D, appending_block: Node3D) -> void:
 	appending_block.position.z = target_block.position.z - _get_mesh_center(target_block) - _get_mesh_center(appending_block)
 
 
 func _load_terrain_scenes(target_path: String) -> void:
 	var dir = DirAccess.open(target_path)
 	for scene_path in dir.get_files():
-		print("Loading terrian block scene: " + target_path + "/" + scene_path)
+		print("Loading terrain block scene: " + target_path + "/" + scene_path)
 		TerrainBlocks.append(load(target_path + "/" + scene_path))

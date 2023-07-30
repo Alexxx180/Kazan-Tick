@@ -35,15 +35,16 @@ paths = NodePath("../track/paths")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -10)
 
 [node name="left" type="Marker3D" parent="track/paths"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
 
 [node name="middle" type="Marker3D" parent="track/paths"]
 
 [node name="right" type="Marker3D" parent="track/paths"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
 
 [node name="area" parent="track" instance=ExtResource("2_h8yh6")]
 visible = false
 
 [node name="terrain" parent="track" instance=ExtResource("3_4gayw")]
+terrain_velocity = 3.0
 terrain_blocks_path = "res://assets/scenes/actors/blocks/areas/left/middle/right"
