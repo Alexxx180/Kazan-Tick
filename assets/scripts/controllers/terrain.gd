@@ -7,6 +7,7 @@ class_name TerrainController
 ## When a given block passes behind this node it is removed and a new block
 ## is added to the far end of the conveyor
 
+@export var paused = true
 ## Holds the catalog of loaded terrain block scenes
 @export var TerrainBlocks: Array = []
 ## The set of terrain blocks which are currently rendered to viewport
@@ -22,9 +23,12 @@ func _ready() -> void:
 	_load_terrain_scenes(terrain_blocks_path)
 	_init_blocks(num_terrain_blocks)
 
+func _switch_pause():
+	paused = !paused
 
 func _physics_process(delta: float) -> void:
-	_progress_terrain(delta)
+	if (not paused):
+		_progress_terrain(delta)
 
 func _get_mesh_center(block: Node3D):
 	var instance = block.get_node("floor/mesh")

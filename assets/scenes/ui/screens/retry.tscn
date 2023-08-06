@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxxnrcvqee4rg"]
+
+[ext_resource type="PackedScene" uid="uid://ca63la17sjoj2" path="res://assets/scenes/ui/elements/start.tscn" id="1_hx0ft"]
+
+[node name="retry" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="press" parent="." instance=ExtResource("1_hx0ft")]
+layout_mode = 1
