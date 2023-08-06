@@ -7,6 +7,9 @@ class_name TerrainController
 ## When a given block passes behind this node it is removed and a new block
 ## is added to the far end of the conveyor
 
+@export var hero: CharacterBody3D
+@onready var start = hero.start.get_node("option")
+
 @export var paused = true
 ## Holds the catalog of loaded terrain block scenes
 @export var TerrainBlocks: Array = []
@@ -18,12 +21,16 @@ var terrain_belt: Array[Node3D] = []
 ## Path to directory holding the terrain block scenes
 @export_dir var terrain_blocks_path = "res://assets/scenes/actors/blocks/areas"
 
-
 func _ready() -> void:
 	_load_terrain_scenes(terrain_blocks_path)
 	_init_blocks(num_terrain_blocks)
+	
+	print(self == null)
+	#start.connect("continue_pressed", self, "_switch_pause")
+	
+	start.continue_pressed.connect(_switch_pause)
 
-func _switch_pause():
+func _switch_pause() -> void:
 	paused = !paused
 
 func _physics_process(delta: float) -> void:
