@@ -48,6 +48,18 @@ right={
 ]
 }
 
+[layer_names]
+
+3d_render/layer_1="World"
+3d_render/layer_2="Player"
+3d_render/layer_3="Obstacle"
+3d_physics/layer_1="World"
+3d_navigation/layer_1="World"
+3d_physics/layer_2="Player"
+3d_navigation/layer_2="Player"
+3d_physics/layer_3="Obstacle"
+3d_navigation/layer_3="Obstacle"
+
 [rendering]
 
 renderer/rendering_method="mobile"

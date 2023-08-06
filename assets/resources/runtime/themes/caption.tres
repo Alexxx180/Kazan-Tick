@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dx8ulouwush12"]
+
+[ext_resource type="FontFile" uid="uid://c54ec7olcgmsd" path="res://assets/resources/runtime/fonts/arial/ttf/arial.ttf" id="1_f6uog"]
+
+[sub_resource type="FontFile" id="FontFile_y0n0v"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[resource]
+default_font = ExtResource("1_f6uog")
+default_font_size = 96
+/fonts/caption = SubResource("FontFile_y0n0v")

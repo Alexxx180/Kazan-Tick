@@ -4,4 +4,3 @@
 
 [node name="terrain" type="Node3D"]
 script = ExtResource("1_j6tu8")
-terrian_blocks_path = "res://assets/scenes/actors/blocks/areas/left/middle/right/"
