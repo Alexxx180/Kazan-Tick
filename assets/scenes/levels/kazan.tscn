@@ -24,8 +24,9 @@ environment = SubResource("Environment_18mnk")
 [node name="light" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 0, 0, 0)
 
-[node name="hero" parent="." node_paths=PackedStringArray("paths") instance=ExtResource("1_tli3t")]
+[node name="hero" parent="." node_paths=PackedStringArray("terrain", "paths") instance=ExtResource("1_tli3t")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, -16.5906)
+terrain = NodePath("../track/terrain")
 paths = NodePath("../track/paths")
 
 [node name="track" type="Node3D" parent="."]

@@ -25,13 +25,11 @@ func _ready() -> void:
 	_load_terrain_scenes(terrain_blocks_path)
 	_init_blocks(num_terrain_blocks)
 	
-	print(self == null)
-	#start.connect("continue_pressed", self, "_switch_pause")
-	
-	start.continue_pressed.connect(_switch_pause)
+	start.continue_pressed.connect(switch_pause)
 
-func _switch_pause() -> void:
+func switch_pause() -> void:
 	paused = !paused
+	hero.switch_pause()
 
 func _physics_process(delta: float) -> void:
 	if (not paused):

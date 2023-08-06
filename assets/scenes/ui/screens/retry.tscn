@@ -10,6 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="press" parent="." instance=ExtResource("1_hx0ft")]
-visible = false
+[node name="option" parent="." instance=ExtResource("1_hx0ft")]
 layout_mode = 1
+level = "res://assets/scenes/levels/kazan.tscn"
