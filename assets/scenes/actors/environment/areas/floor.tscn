@@ -9,7 +9,6 @@
 shape = ExtResource("1_xsi4c")
 
 [node name="mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
 top_level = true
 mesh = ExtResource("2_hfgm7")
 skeleton = NodePath("../..")

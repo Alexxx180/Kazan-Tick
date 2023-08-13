@@ -11,18 +11,23 @@ class_name TerrainController
 @onready var start = hero.start.get_node("option")
 
 @export var paused = true
+
 ## Holds the catalog of loaded terrain block scenes
 @export var TerrainBlocks: Array = []
+var obstacles: Array = []
+var current: Array[Node3D] = []
 ## The set of terrain blocks which are currently rendered to viewport
-var terrain_belt: Array[Node3D] = []
+
 @export var terrain_velocity: float = 10.0
+
 ## The number of blocks to keep rendered to the viewport
 @export var num_terrain_blocks = 4
+
 ## Path to directory holding the terrain block scenes
-@export_dir var terrain_blocks_path = "res://assets/scenes/actors/blocks/areas"
+@export_dir var files = "res://assets/scenes/actors/environment/blocks"
 
 func _ready() -> void:
-	_load_terrain_scenes(terrain_blocks_path)
+	_load_terrain_scenes(files)
 	_init_blocks(num_terrain_blocks)
 	
 	start.continue_pressed.connect(switch_pause)
@@ -47,23 +52,24 @@ func _init_blocks(number_of_blocks: int) -> void:
 		if block_index == 0:
 			block.position.z = _get_mesh_center(block)
 		else:
-			_append_to_far_edge(terrain_belt[block_index - 1], block)
+			_append_to_far_edge(current[block_index - 1], block)
 		add_child(block)
-		terrain_belt.append(block)
+		current.append(block)
 
 
 func _progress_terrain(delta: float) -> void:
-	for block in terrain_belt:
+	for block in current:
 		block.position.z += terrain_velocity * delta
-#_get_mesh_center(terrain_belt[0]) * 2
-	if terrain_belt[0].position.z >= -5:
-		var last_terrain = terrain_belt[-1]
-		var first_terrain = terrain_belt.pop_front()
+		
+	#_get_mesh_center(current[0]) * 2
+	if current[0].position.z >= -5:
+		var last_terrain = current[-1]
+		var first_terrain = current.pop_front()
 
 		var block = TerrainBlocks.pick_random().instantiate()
 		_append_to_far_edge(last_terrain, block)
 		add_child(block)
-		terrain_belt.append(block)
+		current.append(block)
 		first_terrain.queue_free()
 
 
@@ -73,8 +79,12 @@ func _append_to_far_edge(target_block: Node3D, appending_block: Node3D) -> void:
 	appending_block.position.z = target_block.position.z - target - append
 
 
-func _load_terrain_scenes(target_path: String) -> void:
-	#var dir = DirAccess.open(target_path) - dir.get_files()
-	for scene_path in ["left", "middle", "right"]:
-		print("Loading terrain block scene: " + target_path + "/" + scene_path)
-		TerrainBlocks.append(load(target_path + "/" + scene_path + ".tscn"))
+func _load_terrain_scenes(target: String) -> void:
+	
+	var blocks = DirAccess.open(target)
+	for scene in blocks.get_files():
+		var path = target + "/" + scene + ".tscn"
+		var obstacle = load(path)
+		obstacles.append(obstacle)
+		print("Loaded obstacle: " + path)
+		#TerrainBlocks.append(obstacle)
