@@ -12,19 +12,25 @@ class_name TerrainController
 
 @export var paused = true
 
+
+
+
+@export var interval: int = 100
+
 ## Holds the catalog of loaded terrain block scenes
-@export var TerrainBlocks: Array = []
+@export var terrain: Array = []
 var obstacles: Array = []
 var current: Array[Node3D] = []
 ## The set of terrain blocks which are currently rendered to viewport
 
-@export var terrain_velocity: float = 10.0
+## Path to directory holding the terrain block scenes
+@export_dir var files = "res://assets/scenes/actors/environment/areas"
 
 ## The number of blocks to keep rendered to the viewport
 @export var num_terrain_blocks = 4
 
-## Path to directory holding the terrain block scenes
-@export_dir var files = "res://assets/scenes/actors/environment/blocks"
+@export var terrain_velocity: float = 10.0
+
 
 func _ready() -> void:
 	_load_terrain_scenes(files)
@@ -47,7 +53,7 @@ func _get_mesh_center(block: Node3D):
 
 func _init_blocks(number_of_blocks: int) -> void:
 	for block_index in number_of_blocks:
-		var block = TerrainBlocks.pick_random().instantiate()
+		var block = terrain.pick_random().instantiate()
 		
 		if block_index == 0:
 			block.position.z = _get_mesh_center(block)
@@ -65,8 +71,8 @@ func _progress_terrain(delta: float) -> void:
 	if current[0].position.z >= -5:
 		var last_terrain = current[-1]
 		var first_terrain = current.pop_front()
-
-		var block = TerrainBlocks.pick_random().instantiate()
+		var block = terrain.pick_random().instantiate()
+		
 		_append_to_far_edge(last_terrain, block)
 		add_child(block)
 		current.append(block)
@@ -87,4 +93,4 @@ func _load_terrain_scenes(target: String) -> void:
 		var obstacle = load(path)
 		obstacles.append(obstacle)
 		print("Loaded obstacle: " + path)
-		#TerrainBlocks.append(obstacle)
+		#terrain.append(obstacle)

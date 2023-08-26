@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bom3j8xyclqes"]
+
+[ext_resource type="Script" path="res://assets/scripts/controllers/terrain/generator.gd" id="1_1sqmt"]
+[ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/io/files/loader.tscn" id="2_0g4ux"]
+
+[node name="generator" type="Node3D"]
+script = ExtResource("1_1sqmt")
+
+[node name="loader" parent="." instance=ExtResource("2_0g4ux")]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://r3imudttcmtb"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/io/files/loader.gd" id="1_ltpgs"]
+
+[node name="loader" type="Node3D"]
+script = ExtResource("1_ltpgs")

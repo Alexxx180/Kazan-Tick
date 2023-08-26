@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://1361f5mfq6e0"]
+
+[ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/io/files/loader.tscn" id="1_v770n"]
+
+[node name="generator" type="Node3D"]
+
+[node name="obstacles" parent="." instance=ExtResource("1_v770n")]
+files = "res://assets/scenes/actors/environment/blocks"
