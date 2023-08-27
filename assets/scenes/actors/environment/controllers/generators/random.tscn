@@ -1,8 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://1361f5mfq6e0"]
+[gd_scene load_steps=9 format=3 uid="uid://1361f5mfq6e0"]
 
+[ext_resource type="Script" path="res://assets/scripts/controllers/terrain/generators/random.gd" id="1_juqd5"]
 [ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/io/files/loader.tscn" id="1_v770n"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="3_1cqic"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="4_t57g6"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/sequence.gd" id="5_c3kex"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/action.gd" id="5_j5knf"]
+[ext_resource type="Script" path="res://assets/scripts/controllers/terrain/randomizers/score.gd" id="7_etlmj"]
+[ext_resource type="Script" path="res://assets/scripts/controllers/terrain/randomizers/obstacle.gd" id="7_g0mn0"]
 
 [node name="generator" type="Node3D"]
+script = ExtResource("1_juqd5")
+placeholder_file = "res://assets/scenes/actors/environment/controllers/lap.tscn"
 
 [node name="obstacles" parent="." instance=ExtResource("1_v770n")]
 files = "res://assets/scenes/actors/environment/blocks"
+
+[node name="score" parent="." instance=ExtResource("1_v770n")]
+files = "res://assets/scenes/actors/environment/score"
+
+[node name="blackboard" type="Node" parent="."]
+script = ExtResource("3_1cqic")
+
+[node name="behavior" type="Node" parent="."]
+script = ExtResource("4_t57g6")
+
+[node name="3" type="Node" parent="behavior"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/3"]
+script = ExtResource("5_j5knf")
+
+[node name="obstacle" type="Node" parent="behavior/3"]
+script = ExtResource("7_g0mn0")
+
+[node name="score" type="Node" parent="behavior/3"]
+script = ExtResource("7_etlmj")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://yighbuii681n"]
+
+[ext_resource type="Script" path="res://assets/scripts/controllers/terrain/placeholder.gd" id="1_krino"]
+
+[node name="lap" type="Node3D"]
+script = ExtResource("1_krino")
+
+[node name="score" type="Node3D" parent="."]
+
+[node name="obstacles" type="Node3D" parent="."]
+
+[node name="unsorted" type="Node3D" parent="."]
+
+[node name="left" type="Marker3D" parent="unsorted"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, 0)
+
+[node name="center" type="Marker3D" parent="unsorted"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="right" type="Marker3D" parent="unsorted"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 0)

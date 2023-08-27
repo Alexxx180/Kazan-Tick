@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct4mwonju3r8e"]
+
+[ext_resource type="Shape3D" uid="uid://bfmfn04hojavf" path="res://assets/resources/runtime/templates/materials/shapes/small.tres" id="1_erh1s"]
+
+[node name="1" type="Area3D"]
+
+[node name="collision" type="CollisionShape3D" parent="."]
+shape = ExtResource("1_erh1s")
