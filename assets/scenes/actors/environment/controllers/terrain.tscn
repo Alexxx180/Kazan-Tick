@@ -10,11 +10,13 @@ script = ExtResource("1_j6tu8")
 
 [node name="terrain" type="Node3D" parent="."]
 script = ExtResource("2_35o1o")
+interval = 0
 
 [node name="generator" parent="terrain" instance=ExtResource("3_f5dgv")]
 
 [node name="objects" type="Node3D" parent="."]
 script = ExtResource("2_35o1o")
+interval = 5
 
 [node name="generator" parent="objects" instance=ExtResource("4_s5047")]
 

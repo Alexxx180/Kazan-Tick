@@ -33,7 +33,7 @@ script = ExtResource("6_dt7wp")
 
 [node name="obstacle" type="Node" parent="behavior/3"]
 script = ExtResource("7_g0mn0")
-obstacles_count = 1
+obstacles_count = 2
 
 [node name="score" type="Node" parent="behavior/3"]
 script = ExtResource("7_etlmj")

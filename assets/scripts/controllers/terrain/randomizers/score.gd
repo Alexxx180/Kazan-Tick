@@ -11,7 +11,7 @@ func tick(tact: Tick) -> int:
 		var bonus = score.instantiate()
 		bonus.position = markers[0].position
 		result.add_score(bonus)
-		result.free_marker(markers[0])
+		markers.remove_at(0)
 	
 	return super.tick(tact)
 
