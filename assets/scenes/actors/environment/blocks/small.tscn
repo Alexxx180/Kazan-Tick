@@ -5,7 +5,7 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_gd5ld"]
 
-[node name="small" type="Area3D"]
+[node name="obstacle" type="Area3D"]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_x4jxa")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://yighbuii681n"]
+
+[ext_resource type="Script" path="res://assets/scripts/controllers/terrain/placeholder.gd" id="1_krino"]
+[ext_resource type="PackedScene" uid="uid://crmo778eiquc2" path="res://assets/scenes/actors/environment/controllers/tracking/paths.tscn" id="2_3jk24"]
+
+[node name="lap" type="Node3D"]
+script = ExtResource("1_krino")
+
+[node name="score" type="Node3D" parent="."]
+
+[node name="obstacles" type="Node3D" parent="."]
+
+[node name="unsorted" parent="." instance=ExtResource("2_3jk24")]
