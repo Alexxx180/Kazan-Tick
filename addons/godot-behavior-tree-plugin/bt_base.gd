@@ -8,7 +8,7 @@ func _execute(tick: Tick) -> int:
 	
 	_enter(tick)
 	
-	if not tick.blackboard.get('isOpen', tick.tree, self):
+	if not tick.blackboard.get_value('isOpen', tick.tree, self):
 		_open(tick)
 	
 	var status := _tick(tick)
@@ -31,7 +31,7 @@ func _enter(tick: Tick) -> void:
 func _open(tick: Tick) -> void:
 	
 	tick.open_node(self)
-	tick.blackboard.set('isOpen', true, tick.tree, self)
+	tick.blackboard.set_value('isOpen', true, tick.tree, self)
 	open(tick)
 
 
@@ -44,7 +44,7 @@ func _tick(tick: Tick) -> int:
 func _close(tick: Tick) -> void:
 	
 	tick.close_node(self)
-	tick.blackboard.set('isOpen', false, tick.tree, self)
+	tick.blackboard.set_value('isOpen', false, tick.tree, self)
 	close(tick)
 
 

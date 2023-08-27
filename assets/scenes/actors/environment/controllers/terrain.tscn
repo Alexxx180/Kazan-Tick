@@ -1,19 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3vlgt415niqw"]
+[gd_scene load_steps=5 format=3 uid="uid://d3vlgt415niqw"]
 
 [ext_resource type="Script" path="res://assets/scripts/controllers/terrain.gd" id="1_j6tu8"]
 [ext_resource type="Script" path="res://assets/scripts/controllers/terrain/floor.gd" id="2_35o1o"]
-[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="2_eumgr"]
 [ext_resource type="PackedScene" uid="uid://bom3j8xyclqes" path="res://assets/scenes/actors/environment/controllers/generators/constant.tscn" id="3_f5dgv"]
-[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="3_kg38o"]
 [ext_resource type="PackedScene" uid="uid://1361f5mfq6e0" path="res://assets/scenes/actors/environment/controllers/generators/random.tscn" id="4_s5047"]
 
-[node name="terrain" type="Node3D"]
+[node name="blocks" type="Node3D"]
 script = ExtResource("1_j6tu8")
 
-[node name="floor" type="Node3D" parent="."]
+[node name="terrain" type="Node3D" parent="."]
 script = ExtResource("2_35o1o")
 
-[node name="generator" parent="floor" instance=ExtResource("3_f5dgv")]
+[node name="generator" parent="terrain" instance=ExtResource("3_f5dgv")]
 
 [node name="objects" type="Node3D" parent="."]
 script = ExtResource("2_35o1o")
@@ -21,9 +19,3 @@ script = ExtResource("2_35o1o")
 [node name="generator" parent="objects" instance=ExtResource("4_s5047")]
 
 [node name="background" type="Node3D" parent="."]
-
-[node name="blackboard" type="Node" parent="."]
-script = ExtResource("2_eumgr")
-
-[node name="behavior" type="Node" parent="."]
-script = ExtResource("3_kg38o")

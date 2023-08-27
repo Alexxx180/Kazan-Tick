@@ -9,13 +9,13 @@ func _enter_tree() -> void:
 	_tree_memory = {}
 
 
-func set(key, value, behavior_tree = null, node_scope = null) -> void:
+func set_value(key, value, behavior_tree = null, node_scope = null) -> void:
 	
 	var memory := _get_memory(behavior_tree, node_scope)
 	memory[key] = value
 
 
-func get(key, behavior_tree = null, node_scope = null):
+func get_value(key, behavior_tree = null, node_scope = null):
 	
 	var memory := _get_memory(behavior_tree, node_scope)
 	

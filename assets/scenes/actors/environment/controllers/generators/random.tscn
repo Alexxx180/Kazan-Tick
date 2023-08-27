@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="3_1cqic"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="4_t57g6"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/sequence.gd" id="5_c3kex"]
-[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/action.gd" id="5_j5knf"]
+[ext_resource type="Script" path="res://assets/scripts/controllers/terrain/randomizers/act.gd" id="6_dt7wp"]
 [ext_resource type="Script" path="res://assets/scripts/controllers/terrain/randomizers/score.gd" id="7_etlmj"]
 [ext_resource type="Script" path="res://assets/scripts/controllers/terrain/randomizers/obstacle.gd" id="7_g0mn0"]
 
@@ -29,10 +29,11 @@ script = ExtResource("4_t57g6")
 script = ExtResource("5_c3kex")
 
 [node name="act" type="Node" parent="behavior/3"]
-script = ExtResource("5_j5knf")
+script = ExtResource("6_dt7wp")
 
 [node name="obstacle" type="Node" parent="behavior/3"]
 script = ExtResource("7_g0mn0")
+obstacles_count = 1
 
 [node name="score" type="Node" parent="behavior/3"]
 script = ExtResource("7_etlmj")

@@ -5,9 +5,9 @@ extends Node3D
 ## Holds the catalog of loaded terrain block scenes
 var blocks: Array = []
 
-func add_element(name: String, block):
+func add_element(type: String, block):
 	blocks.append(block)
-	print("Received block type: " + name)
+	print("Received block type: " + type)
 
 func generate():
 	return blocks.pick_random().instantiate()

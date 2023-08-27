@@ -7,3 +7,4 @@
 script = ExtResource("1_1sqmt")
 
 [node name="loader" parent="." instance=ExtResource("2_0g4ux")]
+files = "res://assets/scenes/actors/environment/areas"

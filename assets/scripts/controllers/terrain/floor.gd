@@ -11,7 +11,7 @@ extends Node3D
 var space: Array[Node3D] = []
 @onready var generator = $generator
 
-var interval: int = 0: set = set_interval, get = get_interval
+@export var interval: int = 1: set = set_interval, get = get_interval
 
 func set_interval(x: int):
 	interval = x
@@ -20,7 +20,7 @@ func get_interval() -> int:
 	return interval
 
 func _get_mesh_center(block: Node3D):
-	var instance = block.get_node("floor/mesh")
+	var instance = block.get_node("mesh")
 	return instance.mesh.size.y / 2
 	
 func _append_to_far_edge(targeted: Node3D, appendix: Node3D) -> void:

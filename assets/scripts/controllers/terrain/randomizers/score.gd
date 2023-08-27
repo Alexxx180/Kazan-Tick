@@ -1,17 +1,17 @@
 extends "res://addons/godot-behavior-tree-plugin/action.gd"
 
-func tick(tick: Tick) -> int:
-	var blocks = tick.blackboard.get("blocks")
+func tick(tact: Tick) -> int:
+	var blocks = tact.blackboard.get_value("blocks")
 	
 	var score = blocks["score"][0]
-	var result = tick.blackboard.get("result")
-	var markers = result.unsorted.get_children()
+	var result = tact.blackboard.get_value("result")
+	var markers = result.get_markers()
 	
 	while markers.size() > 0:
-		var bonus = score.instatiate()
-		bonus.position = markers[0].pozition
-		result.score.add_child(bonus)
-		result.unsorted.remove_child(markers[0])
+		var bonus = score.instantiate()
+		bonus.position = markers[0].position
+		result.add_score(bonus)
+		result.free_marker(markers[0])
 	
-	return OK
+	return super.tick(tact)
 

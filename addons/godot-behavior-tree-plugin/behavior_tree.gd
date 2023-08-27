@@ -25,17 +25,17 @@ func tick(actor, blackboard, debug = false) -> int:
 		result = child._execute(tick)
 	
 	# Close nodes from last tick, if needed
-	var last_open_nodes: Array = tick.blackboard.get('openNodes', self)
+	var last_open_nodes: Array = tick.blackboard.get_value('openNodes', self)
 	var current_open_nodes := tick.open_nodes
 
 	# If node isn't currently open, but was open during last tick, close it
 	for node in last_open_nodes:
 		if (not current_open_nodes.has(node) 
-			and tick.blackboard.get('isOpen', tick.tree, node)):
+			and tick.blackboard.get_value('isOpen', tick.tree, node)):
 				node._close(tick)
 
 	# Populate the blackboard
-	blackboard.set('openNodes', current_open_nodes, self)
+	blackboard.set_value('openNodes', current_open_nodes, self)
 	return result
 
 
