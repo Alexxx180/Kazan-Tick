@@ -12,8 +12,7 @@ const weight = 2
 var movement = 1
 var paused = true
 
-@onready var start = $vision/start
-@onready var retry = $vision/retry
+@onready var pause = $vision/pause
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -27,7 +26,7 @@ func switch_pause():
 func collide():
 	Global.highscore()
 	terrain.switch_pause()
-	retry.show()
+	pause.show()
 
 func change_direction(turn):
 	movement = clamp(movement + turn, 0, 2)

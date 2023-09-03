@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj2fvuv0efwwa"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/settings.gd" id="1_bo6a7"]
+
+[node name="settings" type="VBoxContainer"]
+script = ExtResource("1_bo6a7")
+
+[node name="options" type="Button" parent="."]
+visible = false
+layout_mode = 2
+text = "Options"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="quit" to="." method="_on_quit"]
