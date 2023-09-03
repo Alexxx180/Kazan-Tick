@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal score_received(amount)
+
 const SPEED = 30.0
 const JUMP_VELOCITY = 10.0
 const weight = 2
@@ -23,6 +25,7 @@ func switch_pause():
 	paused = !paused
 	
 func collide():
+	Global.highscore()
 	terrain.switch_pause()
 	retry.show()
 
@@ -33,32 +36,19 @@ func change_direction(turn):
 func _physics_process(delta):
 	if (paused):
 		return
-	# Add the gravity.
-	if not is_on_floor():
+
+	if is_on_floor():
+		# Handle Jump.
+		if (Input.is_action_just_pressed("up") or Input.is_action_just_pressed("jump")):
+			velocity.y = JUMP_VELOCITY
+	else:
+		# Add the gravity.
 		velocity.y -= gravity * weight * delta
-
-	# Handle Jump.
-	if (Input.is_action_just_pressed("up") or Input.is_action_just_pressed("jump")) and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 		
-
 	# Get the input direction and handle the movement/deceleration.
-	
 	if (Input.is_action_just_pressed("left")):
 		change_direction(-1)
 		
 	if (Input.is_action_just_pressed("right")):
 		change_direction(1)
 		
-	"""
-	var input_dir = Input.get_vector("left", "right", "up", "down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	move_and_slide()
-	"""

@@ -14,7 +14,13 @@ func _load_scenes(target: String) -> void:
 	
 	for scene in blocks.get_files():
 		
-		var path = target + "/" + scene
+		var file
+		if (scene.contains(".tscn.")):
+			file = scene.get_basename()
+		else:
+			file = scene
+			
+		var path = target + "/" + file
 		var block = load(path)
 		
 		parent.add_element(name, block)

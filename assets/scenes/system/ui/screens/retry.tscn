@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxxnrcvqee4rg"]
 
-[ext_resource type="PackedScene" uid="uid://ca63la17sjoj2" path="res://assets/scenes/ui/elements/retry.tscn" id="1_hx0ft"]
+[ext_resource type="PackedScene" uid="uid://ca63la17sjoj2" path="res://assets/scenes/system/ui/elements/retry.tscn" id="1_hx0ft"]
 
 [node name="retry" type="Control"]
 layout_mode = 3
@@ -12,4 +12,4 @@ grow_vertical = 2
 
 [node name="option" parent="." instance=ExtResource("1_hx0ft")]
 layout_mode = 1
-level = "res://assets/scenes/levels/kazan.tscn"
+level = "res://assets/scenes/system/levels/kazan.tscn"

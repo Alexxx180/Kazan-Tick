@@ -1,19 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://rkiptippb1wf"]
 
 [ext_resource type="Shape3D" uid="uid://bfmfn04hojavf" path="res://assets/resources/runtime/templates/materials/shapes/small.tres" id="1_5xbo5"]
-[ext_resource type="Script" path="res://assets/scripts/player/collision.gd" id="1_x4jxa"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_gd5ld"]
+[ext_resource type="Script" path="res://assets/scripts/actors/environment/collision.gd" id="1_j5ik1"]
+[ext_resource type="BoxMesh" uid="uid://ct6sfj6dbx0dv" path="res://assets/resources/runtime/templates/materials/meshes/blocks/small.tres" id="3_mv2th"]
 
 [node name="obstacle" type="Area3D"]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_x4jxa")
+script = ExtResource("1_j5ik1")
 
 [node name="collision" type="CollisionShape3D" parent="."]
 shape = ExtResource("1_5xbo5")
 
 [node name="mesh" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_gd5ld")
+mesh = ExtResource("3_mv2th")
 
 [connection signal="body_entered" from="." to="." method="_on_player_collide"]
