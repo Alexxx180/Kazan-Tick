@@ -16,4 +16,4 @@ shape = ExtResource("1_erh1s")
 visible = false
 mesh = ExtResource("3_r1cg7")
 
-[connection signal="body_exited" from="." to="." method="_on_receive"]
+[connection signal="body_entered" from="." to="." method="_on_receive"]
