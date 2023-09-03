@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct4mwonju3r8e"]
+[gd_scene load_steps=4 format=3 uid="uid://ct4mwonju3r8e"]
 
 [ext_resource type="Shape3D" uid="uid://bfmfn04hojavf" path="res://assets/resources/runtime/templates/materials/shapes/small.tres" id="1_erh1s"]
+[ext_resource type="Script" path="res://assets/scripts/actors/environment/score.gd" id="1_l84cb"]
+[ext_resource type="BoxMesh" uid="uid://ct6sfj6dbx0dv" path="res://assets/resources/runtime/templates/materials/meshes/blocks/small.tres" id="3_r1cg7"]
 
 [node name="1" type="Area3D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_l84cb")
 
 [node name="collision" type="CollisionShape3D" parent="."]
 shape = ExtResource("1_erh1s")
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("3_r1cg7")
+
+[connection signal="body_exited" from="." to="." method="_on_receive"]

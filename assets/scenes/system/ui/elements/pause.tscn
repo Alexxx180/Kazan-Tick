@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://o1u8wgm6mccj"]
 
-[ext_resource type="Script" path="res://assets/scripts/ui/pause.gd" id="1_gokbi"]
+[ext_resource type="Script" path="res://assets/scripts/system/ui/screen/pause.gd" id="1_gokbi"]
 [ext_resource type="Theme" uid="uid://dx8ulouwush12" path="res://assets/resources/runtime/themes/caption.tres" id="2_l82fd"]
 
 [node name="start" type="Button"]
