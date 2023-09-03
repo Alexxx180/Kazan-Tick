@@ -5,5 +5,6 @@
 [resource]
 default_font_size = 48
 /fonts/regular = ExtResource("1_rukcm")
+BoxContainer/constants/separation = 36
 Label/colors/font_outline_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
 Label/constants/outline_size = 10

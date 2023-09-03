@@ -1,7 +1,5 @@
-extends Button
-
-signal continue_pressed
+extends "res://assets/scripts/system/ui/screen/play.gd"
 
 func _continue():
-	emit_signal("continue_pressed")
-	get_parent().hide()
+	go()
+	self.text = "Continue"

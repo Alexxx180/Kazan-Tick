@@ -2,7 +2,7 @@ extends Button
 
 signal reset_score()
 
-@export var level = ""
+@export var level = "res://assets/scenes/system/levels/kazan.tscn"
 
 func _ready():
 	pass

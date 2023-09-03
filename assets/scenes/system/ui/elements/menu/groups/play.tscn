@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp5c5r2td8lfq"]
+
+[ext_resource type="PackedScene" uid="uid://o1u8wgm6mccj" path="res://assets/scenes/system/ui/elements/menu/options/pause.tscn" id="1_57n3u"]
+[ext_resource type="PackedScene" uid="uid://ca63la17sjoj2" path="res://assets/scenes/system/ui/elements/menu/options/retry.tscn" id="2_86ymm"]
+
+[node name="play" type="VBoxContainer"]
+
+[node name="start" parent="." instance=ExtResource("1_57n3u")]
+layout_mode = 2
+
+[node name="retry" parent="." instance=ExtResource("2_86ymm")]
+visible = false
+layout_mode = 2
+text = "Retry"

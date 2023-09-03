@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjj7hqc17hnok"]
+[gd_scene load_steps=5 format=3 uid="uid://bjj7hqc17hnok"]
 
-[ext_resource type="PackedScene" uid="uid://o1u8wgm6mccj" path="res://assets/scenes/system/ui/elements/pause.tscn" id="1_s3dlq"]
+[ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="1_gwtin"]
+[ext_resource type="PackedScene" uid="uid://blbbkucolvrga" path="res://assets/scenes/system/ui/elements/decoration/background.tscn" id="2_b1evp"]
+[ext_resource type="PackedScene" uid="uid://cp5c5r2td8lfq" path="res://assets/scenes/system/ui/elements/menu/groups/play.tscn" id="3_oijks"]
+[ext_resource type="PackedScene" uid="uid://cj2fvuv0efwwa" path="res://assets/scenes/system/ui/elements/menu/groups/settings.tscn" id="4_ld3m7"]
 
 [node name="start" type="Control"]
 layout_mode = 3
@@ -9,6 +12,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_gwtin")
 
-[node name="option" parent="." instance=ExtResource("1_s3dlq")]
+[node name="back" parent="." instance=ExtResource("2_b1evp")]
 layout_mode = 1
+
+[node name="menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -148.5
+offset_right = 149.0
+offset_bottom = 148.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="play" parent="menu" instance=ExtResource("3_oijks")]
+layout_mode = 2
+
+[node name="settings" parent="menu" instance=ExtResource("4_ld3m7")]
+layout_mode = 2

@@ -5,7 +5,7 @@ extends Node3D
 
 @export var paused = true
 @export var hero: CharacterBody3D
-@onready var start = hero.start.get_node("option")
+@onready var start = hero.pause.get_node("menu/play/start")
 
 ## Render speed and keeping count
 @export var far = 8

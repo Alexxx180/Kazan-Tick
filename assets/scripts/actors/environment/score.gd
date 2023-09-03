@@ -6,7 +6,7 @@ func _on_receive(hero: CharacterBody3D):
 	set_deferred("monitoring", false)
 	print("Score +%s" % score)
 	hero.emit_signal("score_received", score)
-	
+	1
 	var parent = get_parent()
 	for child in parent.get_children():
 		child.set_deferred("monitoring", false)
