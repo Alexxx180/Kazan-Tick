@@ -1,25 +1,38 @@
 extends Node
 
+var serializer
 const storage = "user://kazantick.dat"
 
-func _ready():
+var score: int
+
+func _ready() -> void:
+	reset()
 	load_settings()
 
-func save_settings():
-	var file = FileAccess.open(storage, FileAccess.WRITE)
-	file.store_var(settings)
-	file = null
+func get_score_string() -> String:
+	return str(score)
+
+func append_score(bonus: int) -> void:
+	score += bonus
+
+func reset() -> void:
+	score = 0
 	
-func load_settings():
+func highscore() -> void:
+	if (score > get_value("score")):
+		set_value("score", score)
+		save_settings()
+
+func save_settings() -> void:
+	Serializer.save_data(storage, settings)
+	
+func load_settings() -> void:
 	if not FileAccess.file_exists(storage):
 		save_settings()
-	
-	var file = FileAccess.open(storage, FileAccess.READ)
-	settings = file.get_var()
-	file = null
+	settings = Serializer.load_data(storage)
 
 
-func set_value(key: String, value: int):
+func set_value(key: String, value: int) -> void:
 	settings[key] = value
 	
 func get_value(key: String) -> int:

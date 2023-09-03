@@ -25,6 +25,7 @@ func switch_pause():
 	paused = !paused
 	
 func collide():
+	Global.highscore()
 	terrain.switch_pause()
 	retry.show()
 
