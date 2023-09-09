@@ -10,13 +10,15 @@ script = ExtResource("1_mpg7r")
 
 [node name="terrain" type="Node3D" parent="."]
 script = ExtResource("2_dhtf4")
+offset = 10
 interval = 0
 
 [node name="generator" parent="terrain" instance=ExtResource("3_f5dgv")]
 
 [node name="objects" type="Node3D" parent="."]
 script = ExtResource("2_dhtf4")
-interval = 5
+offset = 10
+interval = 9
 
 [node name="generator" parent="objects" instance=ExtResource("4_s5047")]
 placeholder_file = "res://assets/scenes/actors/controllers/terrain/track/objects.tscn"

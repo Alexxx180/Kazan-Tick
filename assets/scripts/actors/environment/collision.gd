@@ -6,8 +6,10 @@ func _on_player_collide(body):
 	queue_free()
 
 func change_look():
-	var mesh = $mesh
+	var mesh = get_node_or_null("mesh")
+	if (mesh == null):
+		return
+		
 	var count = mesh.get_child_count()
-	if (count > 0):
-		var current = randi() % count
-		mesh.get_child(current).show()
+	var current = randi() % count
+	mesh.get_child(current).show()
