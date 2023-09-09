@@ -11,6 +11,7 @@ const weight = 2
 @onready var markers = paths.get_children()
 var movement = 1
 var paused = true
+var over = false
 
 @onready var pause = $vision/pause
 
@@ -22,17 +23,34 @@ func _ready():
 	
 func switch_pause():
 	paused = !paused
+	print("Current pause state: %s" % paused)
+	if (paused):
+		pause.show()
+	else:
+		pause.hide()
+		
 	
 func collide():
+	over = true
 	Global.highscore()
 	terrain.switch_pause()
+	switch_pause()
 	pause.show()
+	pause.get_node("game/play/start").hide()
+	pause.get_node("game/play/retry").show()
 
 func change_direction(turn):
 	movement = clamp(movement + turn, 0, 2)
 	position.x = markers[movement].position.x
 
 func _physics_process(delta):
+	if (over):
+		return
+	
+	if (Input.is_action_just_pressed("cancel")):
+		terrain.switch_pause()
+		switch_pause()
+	
 	if (paused):
 		return
 

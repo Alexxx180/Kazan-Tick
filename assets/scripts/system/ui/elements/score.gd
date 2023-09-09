@@ -9,7 +9,7 @@ func _ready():
 	current = $current
 	set_score()
 	var parent = get_parent()
-	parent.get_node("pause/menu/play/retry").reset_score.connect(set_score)
+	parent.get_node("pause/game/play/retry").reset_score.connect(set_score)
 	
 func append_score(bonus: int):
 	Global.append_score(bonus)
