@@ -6,6 +6,8 @@ extends Node3D
 ## The set of terrain blocks which are currently rendered to viewport
 var space: Array[Node3D] = []
 
+@export var offset: int = 0
+
 @onready var generator = $generator
 @export var interval: int = 1: set = set_interval, get = get_interval
 @export var mesh_path = "mesh"
@@ -31,7 +33,7 @@ func fill_space(count: int) -> void:
 		space.append(block)
 		
 func check_out_of_bounds() -> void:
-	if space[0].position.z > space[0].get_center():
+	if space[0].position.z > space[0].get_center() + offset:
 		var last = space[-1]
 		var first = space.pop_front()
 		first.queue_free()

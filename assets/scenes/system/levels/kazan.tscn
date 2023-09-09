@@ -33,6 +33,7 @@ paths = NodePath("../track/paths")
 [node name="track" type="Node3D" parent="."]
 
 [node name="terrain" parent="track" node_paths=PackedStringArray("hero") instance=ExtResource("3_4gayw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.045995)
 hero = NodePath("../../hero")
 
 [node name="paths" parent="track" instance=ExtResource("3_6hpcg")]
