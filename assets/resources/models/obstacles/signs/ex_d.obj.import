@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bymuikdmb2q2u"
+path="res://.godot/imported/ex_d.obj-40305cfba4f5f3c6917983836c34e9a1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ex_d.obj-40305cfba4f5f3c6917983836c34e9a1.mesh"]
+
+source_file="res://assets/resources/models/obstacles/signs/ex_d.obj"
+dest_files=["res://.godot/imported/ex_d.obj-40305cfba4f5f3c6917983836c34e9a1.mesh", "res://.godot/imported/ex_d.obj-40305cfba4f5f3c6917983836c34e9a1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

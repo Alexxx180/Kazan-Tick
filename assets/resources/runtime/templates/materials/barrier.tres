@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c4puoe64mu2sq"]
+
+[ext_resource type="Texture2D" uid="uid://x62hd20xmi81" path="res://assets/resources/images/textures/sign.png" id="1_lauot"]
+
+[resource]
+albedo_texture = ExtResource("1_lauot")
+metallic = 0.05
+metallic_specular = 0.15
+roughness = 0.5
