@@ -7,7 +7,7 @@ signal reset_score()
 func _retry():
 	var reload = get_tree().change_scene_to_file(level)
 	if reload != OK:
-		print("Error during reloading '%s'" % level)
+		printerr("Error during reloading '%s'" % level)
 	Global.reset()
 	emit_signal("reset_score")
 	go()

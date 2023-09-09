@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccuksexa5rjay"]
+
+[ext_resource type="Shape3D" uid="uid://dnyhataytikbp" path="res://assets/resources/runtime/templates/geometry/shapes/blocks/jump.tres" id="1_5a4ny"]
+[ext_resource type="Script" path="res://assets/scripts/actors/environment/collision.gd" id="1_o1kwj"]
+[ext_resource type="PackedScene" uid="uid://dioqr7oi7egge" path="res://assets/resources/models/obstacles/jump/Barrier.glb" id="3_2xqky"]
+
+[node name="jump" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_o1kwj")
+
+[node name="collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.299873, 0)
+shape = ExtResource("1_5a4ny")
+
+[node name="barrier" parent="." instance=ExtResource("3_2xqky")]
+transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, -0.39, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_player_collide"]

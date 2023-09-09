@@ -2,8 +2,7 @@ extends CharacterBody3D
 
 signal score_received(amount)
 
-#const SPEED = 30.0
-const JUMP_VELOCITY = 7.0
+const JUMP_VELOCITY = 6.0
 const weight = 2
 
 @export var terrain: Node3D
@@ -23,7 +22,7 @@ func _ready():
 	
 func switch_pause():
 	paused = !paused
-	print("Current pause state: %s" % paused)
+	# print("Current pause state: %s" % paused)
 	if (paused):
 		pause.show()
 	else:
@@ -48,7 +47,6 @@ func _physics_process(delta):
 		return
 	
 	if (Input.is_action_just_pressed("cancel")):
-		#print("Player velocity: %s" % is_on_floor())
 		terrain.switch_pause()
 		switch_pause()
 	

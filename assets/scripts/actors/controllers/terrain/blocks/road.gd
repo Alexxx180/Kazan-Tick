@@ -15,4 +15,4 @@ func append_to_edge(target: Node3D, interval: int) -> void:
 	var center = target.get_center()
 	var append = get_center()
 	position.z = z - center - append - interval
-	print("Next terrain: %s" % position.z)
+	# print("Next terrain: %s" % position.z)

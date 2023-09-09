@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://rkiptippb1wf"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/environment/collision.gd" id="1_3ikwp"]
+[ext_resource type="Shape3D" uid="uid://bfmfn04hojavf" path="res://assets/resources/runtime/templates/geometry/shapes/blocks/avoid.tres" id="2_0bh7p"]
+[ext_resource type="ArrayMesh" uid="uid://xihxcql3ncfn" path="res://assets/resources/models/obstacles/signs/yoor_yool.obj" id="3_4l2ns"]
+[ext_resource type="Material" uid="uid://c4puoe64mu2sq" path="res://assets/resources/runtime/templates/materials/barrier.tres" id="4_hjt12"]
+[ext_resource type="ArrayMesh" uid="uid://bymuikdmb2q2u" path="res://assets/resources/models/obstacles/signs/ex_d.obj" id="5_xg75m"]
+[ext_resource type="ArrayMesh" uid="uid://q22sd2acqwak" path="res://assets/resources/models/obstacles/signs/auf.obj" id="6_snih7"]
+[ext_resource type="ArrayMesh" uid="uid://b04j513umuliy" path="res://assets/resources/models/obstacles/signs/reactor.obj" id="7_b5baq"]
+
+[node name="obstacle" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_3ikwp")
+
+[node name="collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0184464, 0.477888, 0.00310387)
+shape = ExtResource("2_0bh7p")
+
+[node name="mesh" type="Node3D" parent="."]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, -0.458064, 0)
+
+[node name="YoorYool" type="MeshInstance3D" parent="mesh"]
+visible = false
+layers = 4
+mesh = ExtResource("3_4l2ns")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_hjt12")
+surface_material_override/1 = ExtResource("4_hjt12")
+surface_material_override/2 = ExtResource("4_hjt12")
+surface_material_override/3 = ExtResource("4_hjt12")
+surface_material_override/4 = ExtResource("4_hjt12")
+
+[node name="ExD" type="MeshInstance3D" parent="mesh"]
+visible = false
+layers = 4
+mesh = ExtResource("5_xg75m")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_hjt12")
+surface_material_override/1 = ExtResource("4_hjt12")
+surface_material_override/2 = ExtResource("4_hjt12")
+surface_material_override/3 = ExtResource("4_hjt12")
+surface_material_override/4 = ExtResource("4_hjt12")
+
+[node name="Auf" type="MeshInstance3D" parent="mesh"]
+visible = false
+layers = 4
+mesh = ExtResource("6_snih7")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_hjt12")
+surface_material_override/1 = ExtResource("4_hjt12")
+surface_material_override/2 = ExtResource("4_hjt12")
+surface_material_override/3 = ExtResource("4_hjt12")
+surface_material_override/4 = ExtResource("4_hjt12")
+
+[node name="Reactor" type="MeshInstance3D" parent="mesh"]
+visible = false
+layers = 4
+mesh = ExtResource("7_b5baq")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_hjt12")
+surface_material_override/1 = ExtResource("4_hjt12")
+surface_material_override/2 = ExtResource("4_hjt12")
+surface_material_override/3 = ExtResource("4_hjt12")
+surface_material_override/4 = ExtResource("4_hjt12")
+
+[connection signal="body_entered" from="." to="." method="_on_player_collide"]

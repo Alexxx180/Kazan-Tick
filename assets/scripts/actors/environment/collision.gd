@@ -7,7 +7,9 @@ func _on_player_collide(body):
 
 func change_look():
 	var mesh = $mesh
+	if (mesh == null):
+		return
+		
 	var count = mesh.get_child_count()
-	if (count > 0):
-		var current = randi() % count
-		mesh.get_child(current).show()
+	var current = randi() % count
+	mesh.get_child(current).show()
