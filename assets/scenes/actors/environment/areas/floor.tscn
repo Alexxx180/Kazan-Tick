@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://xjywy0leb3av"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/blocks/road.gd" id="1_pc8m0"]
-[ext_resource type="Shape3D" uid="uid://0y8xn7nbeogu" path="res://assets/resources/runtime/templates/materials/shapes/floor.tres" id="1_xsi4c"]
-[ext_resource type="PlaneMesh" uid="uid://dbglo6lglgnue" path="res://assets/resources/runtime/templates/materials/meshes/floor.tres" id="2_hfgm7"]
+[ext_resource type="PlaneMesh" uid="uid://dbglo6lglgnue" path="res://assets/resources/runtime/templates/geometry/meshes/floor.tres" id="2_8r52i"]
+[ext_resource type="Shape3D" uid="uid://0y8xn7nbeogu" path="res://assets/resources/runtime/templates/geometry/shapes/floor.tres" id="3_e16b2"]
 
 [node name="floor" type="AnimatableBody3D"]
 collision_mask = 2
 script = ExtResource("1_pc8m0")
 
 [node name="view" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_hfgm7")
+mesh = ExtResource("2_8r52i")
 skeleton = NodePath("../..")
 
 [node name="collision" type="CollisionShape3D" parent="."]
-shape = ExtResource("1_xsi4c")
+shape = ExtResource("3_e16b2")

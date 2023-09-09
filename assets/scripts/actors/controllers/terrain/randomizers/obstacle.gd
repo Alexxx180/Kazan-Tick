@@ -23,6 +23,8 @@ func tick(tact: Tick) -> int:
 		var type = randi() % obstacles.size()
 		var obstacle = obstacles[type].instantiate()
 		
+		obstacle.change_look()
+		
 		# Set object on available position
 		var current = randi() % space.size()
 		var available = space[current]

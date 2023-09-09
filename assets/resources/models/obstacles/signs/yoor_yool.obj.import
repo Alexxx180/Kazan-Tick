@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xihxcql3ncfn"
+path="res://.godot/imported/yoor_yool.obj-fd30fb3aa155a446c27c35bc291e3b04.mesh"
+
+[deps]
+
+files=["res://.godot/imported/yoor_yool.obj-fd30fb3aa155a446c27c35bc291e3b04.mesh"]
+
+source_file="res://assets/resources/models/obstacles/signs/yoor_yool.obj"
+dest_files=["res://.godot/imported/yoor_yool.obj-fd30fb3aa155a446c27c35bc291e3b04.mesh", "res://.godot/imported/yoor_yool.obj-fd30fb3aa155a446c27c35bc291e3b04.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
