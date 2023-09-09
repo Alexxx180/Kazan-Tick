@@ -6,7 +6,7 @@ func _on_player_collide(body):
 	queue_free()
 
 func change_look():
-	var mesh = $mesh
+	var mesh = get_node_or_null("mesh")
 	if (mesh == null):
 		return
 		

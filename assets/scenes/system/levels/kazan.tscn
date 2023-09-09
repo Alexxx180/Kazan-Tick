@@ -5,8 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://crmo778eiquc2" path="res://assets/scenes/actors/controllers/terrain/track/paths.tscn" id="3_6hpcg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifakd"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_top_color = Color(0.54902, 0.419608, 0.486275, 1)
+sky_horizon_color = Color(0.215686, 0.0862745, 0.141176, 1)
+ground_bottom_color = Color(0.188235, 0.0588235, 0.121569, 1)
+ground_horizon_color = Color(0.341176, 0.180392, 0.262745, 1)
+sun_curve = 0.184672
 
 [sub_resource type="Sky" id="Sky_b11uc"]
 sky_material = SubResource("ProceduralSkyMaterial_ifakd")
@@ -35,6 +38,7 @@ paths = NodePath("../track/paths")
 [node name="terrain" parent="track" node_paths=PackedStringArray("hero") instance=ExtResource("3_4gayw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.045995)
 hero = NodePath("../../hero")
+far = 30
 
 [node name="paths" parent="track" instance=ExtResource("3_6hpcg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)

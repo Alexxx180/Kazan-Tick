@@ -10,16 +10,19 @@ extends Node3D
 
 ## Render speed and keeping count
 @export var far = 8
+@export var obstacles_far = 0
 @export var velocity: float = 15.0
 
 @onready var terrain = $terrain
 @onready var objects = $objects
 
 func _ready() -> void:
+	if (obstacles_far == 0):
+		obstacles_far = far
 	start.continue_pressed.connect(switch_pause)
 	retry.continue_pressed.connect(switch_pause)
 	terrain.fill_space(far)
-	objects.fill_space(far)
+	objects.fill_space(obstacles_far)
 
 func switch_pause() -> void:
 	paused = !paused
