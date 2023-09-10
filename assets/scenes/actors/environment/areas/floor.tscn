@@ -16,16 +16,15 @@ collision_mask = 2
 script = ExtResource("1_pc8m0")
 
 [node name="view" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.033)
 mesh = ExtResource("2_8r52i")
 skeleton = NodePath("../..")
 
 [node name="Road3" type="MeshInstance3D" parent="view"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8, -0.7, -8.267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 14.8, -0.7, -9.1)
 mesh = ExtResource("4_f2utd")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_bgpms")
 
 [node name="collision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0182001, 0, -0.0271626)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018, 0, 0.005)
 shape = ExtResource("3_e16b2")

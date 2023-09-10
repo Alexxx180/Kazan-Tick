@@ -9,19 +9,19 @@ extends Node3D
 @onready var retry = hero.pause.get_node("game/play/retry")
 
 ## Render speed and keeping count
-@export var far = 8
-@export var obstacles_far = 0
+@export var decorations_far: Vector3 = Vector3(0, 8, 300)
+@export var obstacles_far = 8
 @export var velocity: float = 15.0
 
-@onready var terrain = $terrain
+@onready var road = $terrain/road
+@onready var lanterns = $terrain/lanterns
 @onready var objects = $objects
 
 func _ready() -> void:
-	if (obstacles_far == 0):
-		obstacles_far = far
 	start.continue_pressed.connect(switch_pause)
 	retry.continue_pressed.connect(switch_pause)
-	terrain.fill_space(far)
+	road.fill_space(decorations_far.z)
+	lanterns.fill_space(decorations_far.y)
 	objects.fill_space(obstacles_far)
 
 func switch_pause() -> void:
@@ -32,5 +32,6 @@ func _physics_process(delta: float) -> void:
 		_progress_terrain(delta)
 
 func _progress_terrain(delta: float) -> void:
-	terrain.progress_terrain(velocity, delta)
+	road.progress_terrain(velocity, delta)
 	objects.progress_terrain(velocity, delta)
+	lanterns.progress_terrain(velocity, delta)

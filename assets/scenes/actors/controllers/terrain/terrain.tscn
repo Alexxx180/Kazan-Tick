@@ -1,26 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3vlgt415niqw"]
+[gd_scene load_steps=6 format=3 uid="uid://d3vlgt415niqw"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/terrain.gd" id="1_mpg7r"]
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor.gd" id="2_dhtf4"]
-[ext_resource type="PackedScene" uid="uid://bom3j8xyclqes" path="res://assets/scenes/actors/controllers/terrain/generators/constant.tscn" id="3_f5dgv"]
-[ext_resource type="PackedScene" uid="uid://1361f5mfq6e0" path="res://assets/scenes/actors/controllers/terrain/generators/random.tscn" id="4_s5047"]
+[ext_resource type="PackedScene" uid="uid://bom3j8xyclqes" path="res://assets/scenes/actors/controllers/terrain/generators/road.tscn" id="3_f5dgv"]
+[ext_resource type="PackedScene" uid="uid://dkfm8qt2q3crp" path="res://assets/scenes/actors/controllers/terrain/generators/lanterns.tscn" id="4_faym5"]
+[ext_resource type="PackedScene" uid="uid://1361f5mfq6e0" path="res://assets/scenes/actors/controllers/terrain/generators/objects.tscn" id="4_s5047"]
 
 [node name="blocks" type="Node3D"]
 script = ExtResource("1_mpg7r")
 
 [node name="terrain" type="Node3D" parent="."]
-script = ExtResource("2_dhtf4")
-offset = 10
-interval = 0
 
-[node name="generator" parent="terrain" instance=ExtResource("3_f5dgv")]
+[node name="road" type="Node3D" parent="terrain"]
+script = ExtResource("2_dhtf4")
+offset = Vector3(0, 0, 10)
+
+[node name="generator" parent="terrain/road" instance=ExtResource("3_f5dgv")]
+
+[node name="lanterns" type="Node3D" parent="terrain"]
+script = ExtResource("2_dhtf4")
+offset = Vector3(-0.35, 38.6, 5.6)
+
+[node name="generator" parent="terrain/lanterns" instance=ExtResource("4_faym5")]
 
 [node name="objects" type="Node3D" parent="."]
 script = ExtResource("2_dhtf4")
-offset = 10
-interval = 9
+offset = Vector3(-25, 9, 5)
 
 [node name="generator" parent="objects" instance=ExtResource("4_s5047")]
 placeholder_file = "res://assets/scenes/actors/controllers/terrain/track/objects.tscn"
-
-[node name="background" type="Node3D" parent="."]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/hero.gd" id="1_pu5ko"]
 [ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/geometry/shapes/humanoid.tres" id="2_7u3tt"]
 [ext_resource type="CapsuleMesh" uid="uid://bo405jfge7od8" path="res://assets/resources/runtime/templates/geometry/meshes/humanoid.tres" id="3_v0vnv"]
-[ext_resource type="PackedScene" uid="uid://bjj7hqc17hnok" path="res://assets/scenes/system/ui/screens/start.tscn" id="5_nhi07"]
+[ext_resource type="PackedScene" uid="uid://bjj7hqc17hnok" path="res://assets/scenes/system/ui/screens/menu.tscn" id="5_nhi07"]
 [ext_resource type="PackedScene" uid="uid://b1ie14j2uh6eh" path="res://assets/scenes/system/ui/elements/menu/indicators/score.tscn" id="6_5io0x"]
 
 [node name="hero" type="CharacterBody3D"]
@@ -25,7 +25,7 @@ layers = 2
 mesh = ExtResource("3_v0vnv")
 
 [node name="vision" type="Camera3D" parent="."]
-transform = Transform3D(-1, 4.37114e-08, -7.57103e-08, 0, 0.866025, 0.5, 8.74228e-08, 0.5, -0.866025, 0, 2.10124, -1.18798)
+transform = Transform3D(-1, -2.99003e-08, 8.21505e-08, 0, 0.939693, 0.34202, -8.74228e-08, 0.34202, -0.939693, 0.138, 1.796, -2.381)
 fov = 110.0
 
 [node name="pause" parent="vision" instance=ExtResource("5_nhi07")]
