@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ol2fjoveclxp"
+path="res://.godot/imported/lanterns.obj-efaad9a816da7c468cc4f7b120e5b7f2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lanterns.obj-efaad9a816da7c468cc4f7b120e5b7f2.mesh"]
+
+source_file="res://assets/resources/models/road/main/lanterns.obj"
+dest_files=["res://.godot/imported/lanterns.obj-efaad9a816da7c468cc4f7b120e5b7f2.mesh", "res://.godot/imported/lanterns.obj-efaad9a816da7c468cc4f7b120e5b7f2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

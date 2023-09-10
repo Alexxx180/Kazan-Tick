@@ -6,41 +6,36 @@ extends Node3D
 ## The set of terrain blocks which are currently rendered to viewport
 var space: Array[Node3D] = []
 
-@export var offset: int = 0
+# Offset: terrain start, blocks interval, conveyor
+@export var offset: Vector3 = Vector3(0, 1, 0)
 
 @onready var generator = $generator
-@export var interval: int = 1: set = set_interval, get = get_interval
 @export var mesh_path = "mesh"
-
-func set_interval(x: int):
-	interval = x
-	
-func get_interval() -> int:
-	return interval
-
 
 func fill_space(count: int) -> void:
 	for index in count:
 		var block = generator.generate()
 		
 		if index == 0:
-			block.position.z = block.get_center()
+			var edge = block.get_center() + offset.x + offset.z
+			block.position.z = edge
 		else:
 			var current = space[index - 1]
-			block.append_to_edge(current, interval)
+			block.append_to_edge(current, offset.y)
 		
 		add_child(block)
 		space.append(block)
 		
 func check_out_of_bounds() -> void:
-	if space[0].position.z > space[0].get_center() + offset:
+	var edge = space[0].get_center() + offset.z
+	if space[0].position.z > edge:
 		var last = space[-1]
 		var first = space.pop_front()
 		first.queue_free()
 		
 		var block = generator.generate()
 		
-		block.append_to_edge(last, interval)
+		block.append_to_edge(last, offset.y)
 		add_child(block)
 		space.append(block)
 

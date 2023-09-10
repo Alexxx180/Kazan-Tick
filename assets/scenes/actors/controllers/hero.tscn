@@ -25,7 +25,7 @@ layers = 2
 mesh = ExtResource("3_v0vnv")
 
 [node name="vision" type="Camera3D" parent="."]
-transform = Transform3D(-1, 4.37114e-08, -7.57103e-08, 0, 0.866025, 0.5, 8.74228e-08, 0.5, -0.866025, 0, 2.10124, -1.18798)
+transform = Transform3D(-1, -2.99003e-08, 8.21505e-08, 0, 0.939693, 0.34202, -8.74228e-08, 0.34202, -0.939693, 0.138, 1.796, -2.381)
 fov = 110.0
 
 [node name="pause" parent="vision" instance=ExtResource("5_nhi07")]
