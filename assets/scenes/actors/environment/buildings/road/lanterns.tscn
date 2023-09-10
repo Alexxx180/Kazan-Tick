@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bs06wrndqec2w"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/blocks/road.gd" id="1_70uea"]
-[ext_resource type="Material" uid="uid://5jeqdxswv3pc" path="res://assets/resources/runtime/templates/materials/road/ground.tres" id="1_jq1l3"]
+[ext_resource type="Material" uid="uid://5jeqdxswv3pc" path="res://assets/resources/runtime/templates/materials/terrain/road/ground.tres" id="1_jq1l3"]
 [ext_resource type="ArrayMesh" uid="uid://ol2fjoveclxp" path="res://assets/resources/models/road/main/lanterns.obj" id="1_wlvhm"]
-[ext_resource type="Texture2D" uid="uid://cnbl8fl6miwhx" path="res://assets/resources/images/textures/road.png" id="3_2vu0n"]
+[ext_resource type="Texture2D" uid="uid://cnbl8fl6miwhx" path="res://assets/resources/images/textures/terrain/road.png" id="3_2vu0n"]
 [ext_resource type="PackedScene" uid="uid://ocuaxv7cujwl" path="res://assets/scenes/system/light/lantern.tscn" id="5_47hiw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ko73h"]

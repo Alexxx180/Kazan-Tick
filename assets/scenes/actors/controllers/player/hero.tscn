@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfi67atue4lrh"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/hero.gd" id="1_suvyr"]
+[ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/geometry/shapes/humanoid.tres" id="2_y2trp"]
+[ext_resource type="CapsuleMesh" uid="uid://bo405jfge7od8" path="res://assets/resources/runtime/templates/geometry/meshes/humanoid.tres" id="3_2663i"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/model/tree.gd" id="3_a6dk4"]
+[ext_resource type="PackedScene" uid="uid://bjj7hqc17hnok" path="res://assets/scenes/system/ui/screens/menu.tscn" id="4_3efhf"]
+[ext_resource type="PackedScene" uid="uid://b1ie14j2uh6eh" path="res://assets/scenes/system/ui/elements/menu/indicators/score.tscn" id="5_5fr56"]
+[ext_resource type="PackedScene" uid="uid://bhxtfo1g3ogn4" path="res://assets/scenes/actors/controllers/player/model/active/jump.tscn" id="6_xgng2"]
+
+[node name="hero" type="CharacterBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, 0)
+collision_layer = 2
+collision_mask = 5
+axis_lock_linear_z = true
+axis_lock_angular_z = true
+slide_on_ceiling = false
+platform_on_leave = 2
+platform_floor_layers = 4278190081
+script = ExtResource("1_suvyr")
+
+[node name="collision" type="CollisionShape3D" parent="."]
+shape = ExtResource("2_y2trp")
+
+[node name="character" type="Node3D" parent="."]
+script = ExtResource("3_a6dk4")
+
+[node name="mesh" type="MeshInstance3D" parent="character"]
+visible = false
+layers = 2
+mesh = ExtResource("3_2663i")
+skeleton = NodePath("../..")
+
+[node name="jump" parent="character" instance=ExtResource("6_xgng2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.02, 0)
+visible = false
+
+[node name="vision" type="Camera3D" parent="."]
+transform = Transform3D(-1, -2.99003e-08, 8.21505e-08, 0, 0.939693, 0.34202, -8.74228e-08, 0.34202, -0.939693, 0.138, 1.796, -2.381)
+fov = 110.0
+
+[node name="pause" parent="vision" instance=ExtResource("4_3efhf")]
+
+[node name="score" parent="vision" instance=ExtResource("5_5fr56")]
+
+[connection signal="score_received" from="." to="vision/score" method="append_score"]

@@ -1,0 +1,8 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=2 format=3 uid="uid://codavodjixec5"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_h17ga"]
+
+[resource]
+graph_offset = Vector2(-432.166, 17.8172)
+nodes/Transition/node = SubResource("AnimationNodeTransition_h17ga")
+nodes/Transition/position = Vector2(-20, 140)
