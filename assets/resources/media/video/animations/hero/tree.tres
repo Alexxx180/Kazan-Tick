@@ -1,8 +1,49 @@
-[gd_resource type="AnimationNodeBlendTree" load_steps=2 format=3 uid="uid://codavodjixec5"]
+[gd_resource type="AnimationNodeBlendTree" load_steps=7 format=3 uid="uid://codavodjixec5"]
 
-[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_h17ga"]
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_xfc5k"]
+input_0/name = "jump"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "run"
+input_1/auto_advance = false
+input_1/reset = true
+input_2/name = "roll"
+input_2/auto_advance = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_ni4x6"]
+input_0/name = "active"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "stop"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0dd05"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v3oeb"]
+animation = &"roll"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rjmwd"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x5uqq"]
+animation = &"lose"
 
 [resource]
-graph_offset = Vector2(-432.166, 17.8172)
-nodes/Transition/node = SubResource("AnimationNodeTransition_h17ga")
-nodes/Transition/position = Vector2(-20, 140)
+graph_offset = Vector2(-168.091, 11.8182)
+nodes/active/node = SubResource("AnimationNodeTransition_xfc5k")
+nodes/active/position = Vector2(240, 0)
+nodes/character/node = SubResource("AnimationNodeTransition_ni4x6")
+nodes/character/position = Vector2(420, 60)
+nodes/jump/node = SubResource("AnimationNodeAnimation_0dd05")
+nodes/jump/position = Vector2(60, -20)
+nodes/output/position = Vector2(580, 100)
+nodes/roll/node = SubResource("AnimationNodeAnimation_v3oeb")
+nodes/roll/position = Vector2(60, 120)
+nodes/run/node = SubResource("AnimationNodeAnimation_rjmwd")
+nodes/run/position = Vector2(-80, 60)
+nodes/stop/node = SubResource("AnimationNodeAnimation_x5uqq")
+nodes/stop/position = Vector2(240, 220)
+node_connections = [&"output", 0, &"character", &"active", 0, &"jump", &"active", 1, &"run", &"active", 2, &"roll", &"character", 0, &"active", &"character", 1, &"stop"]

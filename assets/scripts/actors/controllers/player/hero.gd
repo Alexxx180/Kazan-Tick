@@ -13,6 +13,7 @@ var paused = true
 var over = false
 
 @onready var pause = $vision/pause
+@onready var view = $view
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -25,8 +26,10 @@ func switch_pause():
 	# print("Current pause state: %s" % paused)
 	if (paused):
 		pause.show()
+		view.interrupt("stop")
 	else:
 		pause.hide()
+		view.interrupt("active")
 		
 	
 func collide():
@@ -37,6 +40,7 @@ func collide():
 	pause.show()
 	pause.get_node("game/play/start").hide()
 	pause.get_node("game/play/retry").show()
+	view.interrupt("stop")
 
 func change_direction(turn):
 	movement = clamp(movement + turn, 0, 2)
@@ -58,6 +62,7 @@ func _physics_process(delta):
 		if (Input.is_action_pressed("up") or Input.is_action_pressed("jump")):
 			velocity.y = JUMP_VELOCITY
 			move_and_slide()
+			view.act("jump")
 	else:
 		# Add the gravity.
 		velocity.y -= gravity * weight * delta
