@@ -1,10 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfi67atue4lrh"]
+[gd_scene load_steps=17 format=3 uid="uid://cfi67atue4lrh"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/hero.gd" id="1_suvyr"]
 [ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/geometry/shapes/humanoid.tres" id="2_y2trp"]
 [ext_resource type="PackedScene" uid="uid://bjj7hqc17hnok" path="res://assets/scenes/system/ui/screens/menu.tscn" id="4_3efhf"]
 [ext_resource type="PackedScene" uid="uid://b1ie14j2uh6eh" path="res://assets/scenes/system/ui/elements/menu/indicators/score.tscn" id="5_5fr56"]
+[ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="6_pg1bo"]
 [ext_resource type="PackedScene" uid="uid://bhxtfo1g3ogn4" path="res://assets/scenes/actors/controllers/player/model/active/jump.tscn" id="6_xgng2"]
+[ext_resource type="Shortcut" uid="uid://beefargnqrmfc" path="res://assets/resources/runtime/templates/macro/shortcuts/cancel.tres" id="7_wrwd7"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="8_gr5rv"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="9_hfsic"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/selector.gd" id="10_mixgd"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/paused.gd" id="11_2s1ts"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/vertical/touchscreen.gd" id="12_246to"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/reset.gd" id="12_mhdkl"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/vertical/keyboard.gd" id="13_datty"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/horizontal/touchscreen.gd" id="15_3q8ui"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/horizontal/keyboard.gd" id="16_r6c7c"]
 
 [node name="hero" type="CharacterBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, 0)
@@ -31,4 +42,56 @@ fov = 110.0
 
 [node name="score" parent="vision" instance=ExtResource("5_5fr56")]
 
+[node name="game" type="MarginContainer" parent="vision"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -105.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("6_pg1bo")
+
+[node name="pause" type="Button" parent="vision/game"]
+visible = false
+layout_mode = 2
+shortcut = ExtResource("7_wrwd7")
+text = "II"
+
+[node name="blackboard" type="Node" parent="."]
+script = ExtResource("8_gr5rv")
+
+[node name="movement" type="Node" parent="."]
+script = ExtResource("9_hfsic")
+
+[node name="behavior" type="Node" parent="movement"]
+script = ExtResource("10_mixgd")
+
+[node name="paused" type="Node" parent="movement/behavior"]
+script = ExtResource("11_2s1ts")
+
+[node name="reset" type="Node" parent="movement/behavior"]
+script = ExtResource("12_mhdkl")
+
+[node name="vertical" type="Node" parent="movement/behavior"]
+script = ExtResource("10_mixgd")
+
+[node name="touchscreen" type="Node" parent="movement/behavior/vertical"]
+script = ExtResource("12_246to")
+
+[node name="keyboard" type="Node" parent="movement/behavior/vertical"]
+script = ExtResource("13_datty")
+
+[node name="horizontal" type="Node" parent="movement/behavior"]
+script = ExtResource("10_mixgd")
+
+[node name="touchscreen" type="Node" parent="movement/behavior/horizontal"]
+script = ExtResource("15_3q8ui")
+
+[node name="keyboard" type="Node" parent="movement/behavior/horizontal"]
+script = ExtResource("16_r6c7c")
+
 [connection signal="score_received" from="." to="vision/score" method="append_score"]
+[connection signal="pressed" from="vision/game/pause" to="." method="_on_pause_pressed"]

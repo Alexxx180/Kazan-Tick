@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://67rij63muiut"
 path.s3tc="res://.godot/imported/torso.jpg-e8cf7d6f80f5df6c2cf94a34f14319ff.s3tc.ctex"
+path.etc2="res://.godot/imported/torso.jpg-e8cf7d6f80f5df6c2cf94a34f14319ff.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/resources/media/images/textures/hero/body/torso.jpg"
-dest_files=["res://.godot/imported/torso.jpg-e8cf7d6f80f5df6c2cf94a34f14319ff.s3tc.ctex"]
+dest_files=["res://.godot/imported/torso.jpg-e8cf7d6f80f5df6c2cf94a34f14319ff.s3tc.ctex", "res://.godot/imported/torso.jpg-e8cf7d6f80f5df6c2cf94a34f14319ff.etc2.ctex"]
 
 [params]
 

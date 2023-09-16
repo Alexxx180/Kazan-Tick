@@ -18,7 +18,6 @@ theme = ExtResource("1_rc0ss")
 
 [node name="back" parent="." instance=ExtResource("2_t4mrg")]
 layout_mode = 1
-color = Color(0.109804, 0.109804, 0.109804, 0.72549)
 
 [node name="game" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -109,7 +108,7 @@ layout_mode = 2
 bbcode_enabled = true
 text = "[i]Art[/i]
 [right]Stepanova Maria
-Rora Mark[/right]
+Lomako Mark[/right]
 [i]Code[/i]
 [right]Tatarintsev Aleksandr[/right]"
 fit_content = true

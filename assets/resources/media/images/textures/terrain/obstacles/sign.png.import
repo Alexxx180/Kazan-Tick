@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://x62hd20xmi81"
 path.s3tc="res://.godot/imported/sign.png-66544afc57145e6c55f5961ef1719fce.s3tc.ctex"
+path.etc2="res://.godot/imported/sign.png-66544afc57145e6c55f5961ef1719fce.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/resources/media/images/textures/terrain/obstacles/sign.png"
-dest_files=["res://.godot/imported/sign.png-66544afc57145e6c55f5961ef1719fce.s3tc.ctex"]
+dest_files=["res://.godot/imported/sign.png-66544afc57145e6c55f5961ef1719fce.s3tc.ctex", "res://.godot/imported/sign.png-66544afc57145e6c55f5961ef1719fce.etc2.ctex"]
 
 [params]
 

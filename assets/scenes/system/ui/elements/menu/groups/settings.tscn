@@ -8,12 +8,18 @@ script = ExtResource("1_bo6a7")
 
 [node name="options" type="Button" parent="."]
 layout_mode = 2
+focus_neighbor_left = NodePath("../quit")
+focus_neighbor_bottom = NodePath("../quit")
+focus_next = NodePath("../quit")
 text = "Options"
 
 [node name="switcher" parent="options" instance=ExtResource("2_64il7")]
 
 [node name="quit" type="Button" parent="."]
 layout_mode = 2
+focus_neighbor_top = NodePath("../options")
+focus_neighbor_right = NodePath("../options")
+focus_previous = NodePath("../options")
 text = "Quit"
 
 [connection signal="pressed" from="options" to="options/switcher" method="_switch"]

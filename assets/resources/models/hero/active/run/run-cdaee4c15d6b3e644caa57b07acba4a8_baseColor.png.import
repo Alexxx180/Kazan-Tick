@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbv7gwkcriuhf"
 path.s3tc="res://.godot/imported/run-cdaee4c15d6b3e644caa57b07acba4a8_baseColor.png-f8125ebdf9a08096550d97f3fb56b28f.s3tc.ctex"
+path.etc2="res://.godot/imported/run-cdaee4c15d6b3e644caa57b07acba4a8_baseColor.png-f8125ebdf9a08096550d97f3fb56b28f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://assets/resources/models/hero/active/run/run-cdaee4c15d6b3e644caa57b07acba4a8_baseColor.png"
-dest_files=["res://.godot/imported/run-cdaee4c15d6b3e644caa57b07acba4a8_baseColor.png-f8125ebdf9a08096550d97f3fb56b28f.s3tc.ctex"]
+dest_files=["res://.godot/imported/run-cdaee4c15d6b3e644caa57b07acba4a8_baseColor.png-f8125ebdf9a08096550d97f3fb56b28f.s3tc.ctex", "res://.godot/imported/run-cdaee4c15d6b3e644caa57b07acba4a8_baseColor.png-f8125ebdf9a08096550d97f3fb56b28f.etc2.ctex"]
 
 [params]
 
