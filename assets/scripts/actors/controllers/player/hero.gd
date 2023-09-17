@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 signal score_received(amount)
 
-const JUMP_VELOCITY = 7.2
+const JUMP_VELOCITY = 6
 const weight = 2
 
 @export var terrain: Node3D
@@ -25,6 +25,8 @@ func _ready():
 	blackboard.set_value('over', false)
 	blackboard.set_value('paused', true)
 	blackboard.set_value('drag', false)
+	blackboard.set_value('is_on_floor', true)
+	blackboard.set_value('event', null)
 	change_direction(0)
 	
 func switch_pause():
@@ -77,9 +79,18 @@ func _physics_process(delta):
 	if is_on_floor():
 		# Handle Jump.
 		if (blackboard.get_value('swipe') == 'up'):
-			_jump()
 			blackboard.set_value('swipe', 'swiped')
+			blackboard.set_value('is_on_floor', false)
+			_jump()
 	else:
+		
 		# Add the gravity.
 		velocity.y -= gravity * weight * delta
 		move_and_slide()
+		if is_on_floor():
+			blackboard.set_value('is_on_floor', true)
+		
+		# move_and_collide(velocity * delta)
+		#if collision_info:
+		#	velocity = velocity.bounce(collision_info.normal)
+		

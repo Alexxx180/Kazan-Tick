@@ -1,14 +1,15 @@
 extends "res://addons/godot-behavior-tree-plugin/action.gd"
 
+func move(tact: Tick, direction: int):
+	tact.actor.change_direction(direction)
+	return OK
+
+
 func tick(tact: Tick):
-	var actor = tact.actor
-	
 	if (Input.is_action_just_pressed("left")):
-		actor.change_direction(-1)
-		return OK
+		return move(tact, -1)
 	
 	if (Input.is_action_just_pressed("right")):
-		actor.change_direction(1)
-		return OK
+		return move(tact, 1)
 		
 	return FAILED

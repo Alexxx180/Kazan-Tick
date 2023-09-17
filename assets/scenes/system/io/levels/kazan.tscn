@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://lui80x5p02fx"]
+[gd_scene load_steps=9 format=3 uid="uid://lui80x5p02fx"]
 
 [ext_resource type="PackedScene" uid="uid://cfi67atue4lrh" path="res://assets/scenes/actors/controllers/player/hero.tscn" id="1_fy2wg"]
 [ext_resource type="PackedScene" uid="uid://d3vlgt415niqw" path="res://assets/scenes/actors/controllers/terrain/terrain.tscn" id="2_6w7cb"]
@@ -22,6 +22,8 @@ tonemap_mode = 2
 glow_enabled = true
 glow_strength = 2.0
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4p1w3"]
+
 [node name="world" type="Node3D"]
 
 [node name="environment" type="WorldEnvironment" parent="."]
@@ -40,13 +42,14 @@ paths = NodePath("../track/paths")
 [node name="terrain" parent="track" node_paths=PackedStringArray("hero") instance=ExtResource("2_6w7cb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.045995)
 hero = NodePath("../../hero")
-decorations_far = Vector3(0, 2, 30)
+obstacles_far = 6
 
 [node name="paths" parent="track" instance=ExtResource("3_w2i3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="platform" type="StaticBody3D" parent="track"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+physics_material_override = SubResource("PhysicsMaterial_4p1w3")
 
 [node name="collision" type="CollisionShape3D" parent="track/platform"]
 shape = ExtResource("4_0r2cq")
