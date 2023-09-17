@@ -94,27 +94,28 @@ anchor_bottom = 0.5
 offset_left = -212.0
 offset_top = -217.0
 offset_right = 212.0
-offset_bottom = 217.0
+offset_bottom = 209.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="credits"]
+[node name="panel" type="ColorRect" parent="credits"]
 layout_mode = 2
 size_flags_vertical = 3
 color = Color(0.109804, 0.109804, 0.109804, 0.72549)
 
-[node name="MarginContainer" type="MarginContainer" parent="credits/ColorRect"]
+[node name="margin" type="MarginContainer" parent="credits/panel"]
 layout_mode = 2
-offset_right = 298.0
-offset_bottom = 222.0
+offset_right = 417.0
+offset_bottom = 266.0
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="credits/ColorRect/MarginContainer"]
+[node name="authors" type="RichTextLabel" parent="credits/panel/margin"]
 layout_mode = 2
 bbcode_enabled = true
 text = "[i]Art[/i]
 [right]Stepanova Maria
-Lomako Mark[/right]
+Lomako Mark
+Bulankina Elizaveta[/right]
 [i]Code[/i]
 [right]Tatarintsev Aleksandr[/right]"
 fit_content = true
