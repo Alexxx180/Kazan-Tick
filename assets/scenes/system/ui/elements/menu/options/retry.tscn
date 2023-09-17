@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ca63la17sjoj2"]
 
-[ext_resource type="Script" path="res://assets/scripts/system/ui/screen/retry.gd" id="1_inrsl"]
+[ext_resource type="Script" path="res://assets/scripts/system/ui/screen/menu/retry.gd" id="1_inrsl"]
 
 [node name="retry" type="Button"]
 anchors_preset = 15

@@ -15,4 +15,4 @@ default_font = ExtResource("1_f6uog")
 /fonts/caption = SubResource("FontFile_y0n0v")
 BoxContainer/constants/separation = 0
 Label/constants/line_spacing = 2
-Label/font_sizes/font_size = 24
+Label/font_sizes/font_size = 48

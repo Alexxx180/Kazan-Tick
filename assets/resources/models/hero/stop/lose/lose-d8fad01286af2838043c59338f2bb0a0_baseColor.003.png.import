@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://4dj1gq1c5xgn"
 path.s3tc="res://.godot/imported/lose-d8fad01286af2838043c59338f2bb0a0_baseColor.003.png-cc42a0e28c59e8c36593b778d94633fd.s3tc.ctex"
+path.etc2="res://.godot/imported/lose-d8fad01286af2838043c59338f2bb0a0_baseColor.003.png-cc42a0e28c59e8c36593b778d94633fd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://assets/resources/models/hero/stop/lose/lose-d8fad01286af2838043c59338f2bb0a0_baseColor.003.png"
-dest_files=["res://.godot/imported/lose-d8fad01286af2838043c59338f2bb0a0_baseColor.003.png-cc42a0e28c59e8c36593b778d94633fd.s3tc.ctex"]
+dest_files=["res://.godot/imported/lose-d8fad01286af2838043c59338f2bb0a0_baseColor.003.png-cc42a0e28c59e8c36593b778d94633fd.s3tc.ctex", "res://.godot/imported/lose-d8fad01286af2838043c59338f2bb0a0_baseColor.003.png-cc42a0e28c59e8c36593b778d94633fd.etc2.ctex"]
 
 [params]
 

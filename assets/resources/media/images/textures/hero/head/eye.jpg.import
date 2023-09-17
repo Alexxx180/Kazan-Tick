@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1tspf5t7hbkw"
 path.s3tc="res://.godot/imported/eye.jpg-a3d8853500b4a139d1e022dc20bfbf31.s3tc.ctex"
+path.etc2="res://.godot/imported/eye.jpg-a3d8853500b4a139d1e022dc20bfbf31.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/resources/media/images/textures/hero/head/eye.jpg"
-dest_files=["res://.godot/imported/eye.jpg-a3d8853500b4a139d1e022dc20bfbf31.s3tc.ctex"]
+dest_files=["res://.godot/imported/eye.jpg-a3d8853500b4a139d1e022dc20bfbf31.s3tc.ctex", "res://.godot/imported/eye.jpg-a3d8853500b4a139d1e022dc20bfbf31.etc2.ctex"]
 
 [params]
 

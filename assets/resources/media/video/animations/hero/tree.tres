@@ -32,7 +32,7 @@ animation = &"run"
 animation = &"lose"
 
 [resource]
-graph_offset = Vector2(-168.091, 11.8182)
+graph_offset = Vector2(-234.717, 32.6596)
 nodes/active/node = SubResource("AnimationNodeTransition_xfc5k")
 nodes/active/position = Vector2(240, 0)
 nodes/character/node = SubResource("AnimationNodeTransition_ni4x6")

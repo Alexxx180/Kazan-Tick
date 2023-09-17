@@ -13,20 +13,21 @@ func tick(tact: Tick) -> int:
 	var markers = result.get_markers()
 	
 	# Determine obstacles max count and free space
-	var count = randi() % obstacles_count + 1
-	var anchor = abs(randi() % amount.size() - 1)
+	var count = randi_range(1, obstacles_count)
+	var anchor = randi_range(0, amount.size() - 1)
+	anchor = abs(anchor - 1) # create obstacles offset
 	var space = range(0, markers.size())
 	space.remove_at(anchor)
 	
 	while space.size() > 0 and count > 0:
 		# Determine and instantiate object
-		var type = randi() % obstacles.size()
+		var type = randi_range(0, obstacles.size() - 1)
 		var obstacle = obstacles[type].instantiate()
 		
 		obstacle.change_look()
 		
 		# Set object on available position
-		var current = randi() % space.size()
+		var current = randi_range(0, space.size() - 1)
 		var available = space[current]
 		obstacle.position = markers[available].position
 		

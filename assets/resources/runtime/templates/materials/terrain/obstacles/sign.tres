@@ -4,6 +4,4 @@
 
 [resource]
 albedo_texture = ExtResource("1_lauot")
-metallic = 0.05
 metallic_specular = 0.15
-roughness = 0.5
