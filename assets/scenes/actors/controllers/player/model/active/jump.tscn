@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bhxtfo1g3ogn4"]
+[gd_scene load_steps=23 format=3 uid="uid://bhxtfo1g3ogn4"]
 
 [ext_resource type="PackedScene" uid="uid://boojoshyrmech" path="res://assets/resources/models/hero/active/jump.fbx" id="1_6sqqk"]
 [ext_resource type="Material" uid="uid://vyjumhstphnn" path="res://assets/resources/runtime/templates/materials/hero/body/outfit/shirt.tres" id="2_egejg"]
@@ -14,6 +14,8 @@
 [ext_resource type="Animation" uid="uid://0f7wxl1t7wly" path="res://assets/resources/media/video/animations/hero/stop/lose.res" id="12_ge4fs"]
 [ext_resource type="Animation" uid="uid://c1m50rrqvp551" path="res://assets/resources/media/video/animations/hero/active/run.res" id="13_3wbci"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://codavodjixec5" path="res://assets/resources/media/video/animations/hero/tree.tres" id="14_5fwte"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6qyvd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4me0b"]
 albedo_texture = ExtResource("3_403n4")
@@ -43,6 +45,11 @@ _data = {
 
 [node name="jump" instance=ExtResource("1_6sqqk")]
 script = ExtResource("2_xrnbl")
+
+[node name="coat_example" type="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.01465, 0, 0, 0, 0.096566, -0.107115, 1.03105, -0.203483)
+visible = false
+mesh = SubResource("BoxMesh_6qyvd")
 
 [node name="Skeleton3D" parent="RootNode/Armature" index="0"]
 bones/0/position = Vector3(-0.0301915, 0.974895, 0.0111284)
@@ -123,7 +130,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_f1pp0")
 [node name="Wolf3D_Hair" parent="RootNode/Armature/Skeleton3D" index="7"]
 surface_material_override/0 = SubResource("StandardMaterial3D_kmuau")
 
-[node name="AnimationPlayer" parent="." index="1"]
+[node name="AnimationPlayer" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_n40ke")
 }

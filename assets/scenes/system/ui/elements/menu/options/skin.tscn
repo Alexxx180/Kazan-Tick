@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmbiftba05658"]
+[gd_scene load_steps=6 format=3 uid="uid://dmbiftba05658"]
 
 [ext_resource type="Theme" uid="uid://dx8ulouwush12" path="res://assets/resources/runtime/themes/caption.tres" id="1_0lwxb"]
 [ext_resource type="Theme" uid="uid://cakxia6pcud44" path="res://assets/resources/runtime/themes/sub.tres" id="2_cg45q"]
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/coat.gd" id="2_gam46"]
 [ext_resource type="Texture2D" uid="uid://mdg5gxg5deak" path="res://assets/resources/media/images/icon.svg" id="2_gjsui"]
+[ext_resource type="Shortcut" uid="uid://bqjg8wnpe5jmb" path="res://assets/resources/runtime/templates/macro/shortcuts/confirm.tres" id="2_qhul1"]
 
 [node name="highscore" type="Button"]
 custom_minimum_size = Vector2(0, 65)
 offset_right = 400.0
 offset_bottom = 110.0
 theme = ExtResource("1_0lwxb")
+shortcut = ExtResource("2_qhul1")
+script = ExtResource("2_gam46")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -49,10 +53,12 @@ theme_override_constants/separation = 0
 [node name="score" type="Label" parent="MarginContainer/text"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "500"
+text = "100"
 
 [node name="high" type="Label" parent="MarginContainer/text"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_cg45q")
 text = "Highscore"
+
+[connection signal="pressed" from="." to="." method="_toggle_coat"]

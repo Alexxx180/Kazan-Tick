@@ -63,6 +63,7 @@ layout_mode = 2
 [node name="highscore" parent="options" instance=ExtResource("5_g0pn7")]
 custom_minimum_size = Vector2(0, 118)
 layout_mode = 2
+path = "../../../../view/coat_example"
 
 [node name="credits" type="Button" parent="options"]
 layout_mode = 2
