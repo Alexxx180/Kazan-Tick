@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://lui80x5p02fx"]
+[gd_scene load_steps=8 format=3 uid="uid://lui80x5p02fx"]
 
 [ext_resource type="PackedScene" uid="uid://cfi67atue4lrh" path="res://assets/scenes/actors/controllers/player/hero.tscn" id="1_fy2wg"]
 [ext_resource type="PackedScene" uid="uid://d3vlgt415niqw" path="res://assets/scenes/actors/controllers/terrain/terrain.tscn" id="2_6w7cb"]
 [ext_resource type="PackedScene" uid="uid://crmo778eiquc2" path="res://assets/scenes/actors/controllers/terrain/track/paths.tscn" id="3_w2i3u"]
+[ext_resource type="Shape3D" uid="uid://0y8xn7nbeogu" path="res://assets/resources/runtime/templates/geometry/shapes/floor.tres" id="4_0r2cq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifakd"]
 sky_top_color = Color(0.541176, 0.368627, 0.513726, 1)
@@ -39,6 +40,13 @@ paths = NodePath("../track/paths")
 [node name="terrain" parent="track" node_paths=PackedStringArray("hero") instance=ExtResource("2_6w7cb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.045995)
 hero = NodePath("../../hero")
+decorations_far = Vector3(0, 2, 30)
 
 [node name="paths" parent="track" instance=ExtResource("3_w2i3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="platform" type="StaticBody3D" parent="track"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="collision" type="CollisionShape3D" parent="track/platform"]
+shape = ExtResource("4_0r2cq")

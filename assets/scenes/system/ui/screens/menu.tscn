@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjj7hqc17hnok"]
+[gd_scene load_steps=9 format=3 uid="uid://bjj7hqc17hnok"]
 
 [ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="1_rc0ss"]
 [ext_resource type="PackedScene" uid="uid://blbbkucolvrga" path="res://assets/scenes/system/ui/elements/decoration/background.tscn" id="2_t4mrg"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cj2fvuv0efwwa" path="res://assets/scenes/system/ui/elements/menu/groups/settings.tscn" id="4_dkyxj"]
 [ext_resource type="PackedScene" uid="uid://dmbiftba05658" path="res://assets/scenes/system/ui/elements/menu/options/skin.tscn" id="5_g0pn7"]
 [ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher.tscn" id="6_8xapt"]
+[ext_resource type="Shortcut" uid="uid://b1hcbfnqa7gxa" path="res://assets/resources/runtime/templates/macro/shortcuts/focus.tres" id="6_r1yy0"]
+[ext_resource type="Shortcut" uid="uid://beefargnqrmfc" path="res://assets/resources/runtime/templates/macro/shortcuts/cancel.tres" id="7_4cqhw"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -26,10 +28,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -149.0
-offset_top = -148.5
-offset_right = 149.0
-offset_bottom = 148.5
+offset_left = -212.0
+offset_top = -217.0
+offset_right = 212.0
+offset_bottom = 217.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -47,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -149.0
-offset_top = -94.0
-offset_right = 149.0
-offset_bottom = 94.0
+offset_left = -212.0
+offset_top = -217.0
+offset_right = 212.0
+offset_bottom = 217.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -59,10 +61,12 @@ visible = false
 layout_mode = 2
 
 [node name="highscore" parent="options" instance=ExtResource("5_g0pn7")]
+custom_minimum_size = Vector2(0, 118)
 layout_mode = 2
 
 [node name="credits" type="Button" parent="options"]
 layout_mode = 2
+shortcut = ExtResource("6_r1yy0")
 text = "Credits"
 
 [node name="switcher" parent="options/credits" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
@@ -71,6 +75,7 @@ to_show = NodePath("../../../credits")
 
 [node name="back" type="Button" parent="options"]
 layout_mode = 2
+shortcut = ExtResource("7_4cqhw")
 text = "Back"
 
 [node name="switcher" parent="options/back" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
@@ -85,10 +90,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -149.0
-offset_top = -171.0
-offset_right = 149.0
-offset_bottom = 171.0
+offset_left = -212.0
+offset_top = -217.0
+offset_right = 212.0
+offset_bottom = 217.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -115,6 +120,7 @@ fit_content = true
 
 [node name="back" type="Button" parent="credits"]
 layout_mode = 2
+shortcut = ExtResource("7_4cqhw")
 text = "Back"
 
 [node name="switcher" parent="credits/back" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]

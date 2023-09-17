@@ -6,6 +6,7 @@
 default_font_size = 48
 /fonts/regular = ExtResource("1_rukcm")
 BoxContainer/constants/separation = 36
+Button/font_sizes/font_size = 80
 Label/colors/font_outline_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
 Label/constants/outline_size = 10
 MarginContainer/constants/margin_bottom = 15

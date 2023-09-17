@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmbiftba05658"]
+[gd_scene load_steps=4 format=3 uid="uid://dmbiftba05658"]
 
 [ext_resource type="Theme" uid="uid://dx8ulouwush12" path="res://assets/resources/runtime/themes/caption.tres" id="1_0lwxb"]
+[ext_resource type="Theme" uid="uid://cakxia6pcud44" path="res://assets/resources/runtime/themes/sub.tres" id="2_cg45q"]
+[ext_resource type="Texture2D" uid="uid://mdg5gxg5deak" path="res://assets/resources/media/images/icon.svg" id="2_gjsui"]
 
 [node name="highscore" type="Button"]
 custom_minimum_size = Vector2(0, 65)
+offset_right = 400.0
+offset_bottom = 110.0
 theme = ExtResource("1_0lwxb")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -13,47 +17,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
 
-[node name="upgrade" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="image" type="TextureRect" parent="MarginContainer/upgrade"]
-custom_minimum_size = Vector2(65, 0)
+[node name="image" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
 size_flags_horizontal = 0
+texture = ExtResource("2_gjsui")
+expand_mode = 3
 
-[node name="placeholder" type="Label" parent="MarginContainer/upgrade/image"]
+[node name="placeholder" type="Label" parent="MarginContainer/image"]
+visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.5
-offset_top = -30.0
-offset_right = 25.5
-offset_bottom = 30.0
-grow_horizontal = 2
+offset_top = -57.0
+offset_right = 105.0
+offset_bottom = 57.0
 grow_vertical = 2
 text = "Coat
 Here"
 
-[node name="description" type="CenterContainer" parent="MarginContainer/upgrade"]
-custom_minimum_size = Vector2(200, 0)
+[node name="text" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-
-[node name="text" type="VBoxContainer" parent="MarginContainer/upgrade/description"]
-layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_constants/separation = 0
 
-[node name="high" type="Label" parent="MarginContainer/upgrade/description/text"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Highscore"
-
-[node name="score" type="Label" parent="MarginContainer/upgrade/description/text"]
+[node name="score" type="Label" parent="MarginContainer/text"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "500"
+
+[node name="high" type="Label" parent="MarginContainer/text"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_cg45q")
+text = "Highscore"

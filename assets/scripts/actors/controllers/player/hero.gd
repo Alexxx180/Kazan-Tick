@@ -2,10 +2,8 @@ extends CharacterBody3D
 
 signal score_received(amount)
 
-const JUMP_VELOCITY = 8.0
-const weight = 2.5
-
-var swipe_speed = Vector2(5, -10)
+const JUMP_VELOCITY = 7.2
+const weight = 2
 
 @export var terrain: Node3D
 @export var paths: Node3D

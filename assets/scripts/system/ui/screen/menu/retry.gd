@@ -1,4 +1,4 @@
-extends "res://assets/scripts/system/ui/screen/play.gd"
+extends "res://assets/scripts/system/ui/screen/menu/play.gd"
 
 signal reset_score()
 

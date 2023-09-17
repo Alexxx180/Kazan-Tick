@@ -1,18 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://xjywy0leb3av"]
+[gd_scene load_steps=6 format=3 uid="uid://xjywy0leb3av"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/blocks/road.gd" id="1_pc8m0"]
 [ext_resource type="PlaneMesh" uid="uid://dbglo6lglgnue" path="res://assets/resources/runtime/templates/geometry/meshes/floor.tres" id="2_8r52i"]
-[ext_resource type="Shape3D" uid="uid://0y8xn7nbeogu" path="res://assets/resources/runtime/templates/geometry/shapes/floor.tres" id="3_e16b2"]
 [ext_resource type="ArrayMesh" uid="uid://dp45fkcmb25e3" path="res://assets/resources/models/road/main/road_3.obj" id="4_f2utd"]
-[ext_resource type="Texture2D" uid="uid://cnbl8fl6miwhx" path="res://assets/resources/images/textures/road.png" id="5_gjsav"]
+[ext_resource type="Texture2D" uid="uid://cnbl8fl6miwhx" path="res://assets/resources/media/images/textures/terrain/road.png" id="5_gjsav"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgpms"]
 albedo_texture = ExtResource("5_gjsav")
 metallic_specular = 0.0
 roughness = 0.21
 
-[node name="floor" type="AnimatableBody3D"]
-collision_mask = 2
+[node name="floor" type="Node3D"]
 script = ExtResource("1_pc8m0")
 
 [node name="view" type="MeshInstance3D" parent="."]
@@ -24,7 +22,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 14.8, -0.7, -9.1)
 mesh = ExtResource("4_f2utd")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_bgpms")
-
-[node name="collision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018, 0, 0.005)
-shape = ExtResource("3_e16b2")

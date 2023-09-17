@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cj2fvuv0efwwa"]
+[gd_scene load_steps=5 format=3 uid="uid://cj2fvuv0efwwa"]
 
 [ext_resource type="Script" path="res://assets/scripts/system/ui/elements/settings.gd" id="1_bo6a7"]
 [ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher.tscn" id="2_64il7"]
+[ext_resource type="Shortcut" uid="uid://b1hcbfnqa7gxa" path="res://assets/resources/runtime/templates/macro/shortcuts/focus.tres" id="2_l25fu"]
+[ext_resource type="Shortcut" uid="uid://beefargnqrmfc" path="res://assets/resources/runtime/templates/macro/shortcuts/cancel.tres" id="3_l62c1"]
 
 [node name="settings" type="VBoxContainer"]
 script = ExtResource("1_bo6a7")
@@ -11,6 +13,7 @@ layout_mode = 2
 focus_neighbor_left = NodePath("../quit")
 focus_neighbor_bottom = NodePath("../quit")
 focus_next = NodePath("../quit")
+shortcut = ExtResource("2_l25fu")
 text = "Options"
 
 [node name="switcher" parent="options" instance=ExtResource("2_64il7")]
@@ -20,6 +23,7 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../options")
 focus_neighbor_right = NodePath("../options")
 focus_previous = NodePath("../options")
+shortcut = ExtResource("3_l62c1")
 text = "Quit"
 
 [connection signal="pressed" from="options" to="options/switcher" method="_switch"]

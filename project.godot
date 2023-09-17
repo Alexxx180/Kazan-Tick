@@ -17,11 +17,17 @@ config/name_localized={
 run/main_scene="res://assets/scenes/system/io/levels/kazan.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0.0392157, 0.0392157, 0.0392157, 1)
-config/icon="res://icon.svg"
+boot_splash/image="res://assets/resources/media/images/logo.png"
+config/icon="res://assets/resources/media/images/icon.svg"
 
 [autoload]
 
 Global="*res://assets/scripts/system/global.gd"
+
+[display]
+
+window/size/mode=2
+window/handheld/orientation=6
 
 [editor_plugins]
 
@@ -82,3 +88,4 @@ cancel={
 
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+occlusion_culling/use_occlusion_culling=true

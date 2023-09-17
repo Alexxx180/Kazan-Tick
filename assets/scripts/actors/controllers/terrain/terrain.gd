@@ -9,8 +9,8 @@ extends Node3D
 @onready var retry = hero.pause.get_node("game/play/retry")
 
 ## Render speed and keeping count
-@export var decorations_far: Vector3 = Vector3(0, 8, 300)
-@export var obstacles_far = 8
+@export var decorations_far: Vector3 = Vector3(0, 2, 30)
+@export var obstacles_far = 7
 @export var velocity: float = 15.0
 
 @onready var road = $terrain/road

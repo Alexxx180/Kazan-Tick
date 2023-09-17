@@ -6,5 +6,3 @@
 resource_name = "Wolf3D_Outfit_Bottom"
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_87gfi")
-metallic = 0.4
-roughness = 0.272166
