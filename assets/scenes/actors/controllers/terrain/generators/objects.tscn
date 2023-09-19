@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://1361f5mfq6e0"]
+[gd_scene load_steps=11 format=3 uid="uid://1361f5mfq6e0"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/generators/random.gd" id="1_juqd5"]
 [ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/io/files/loader.tscn" id="1_v770n"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="3_1cqic"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="4_t57g6"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/sequence.gd" id="5_c3kex"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/selector.gd" id="5_yk4p0"]
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/randomizers/act.gd" id="6_dt7wp"]
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/randomizers/score.gd" id="7_etlmj"]
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/randomizers/obstacle.gd" id="7_g0mn0"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/randomizers/behavior/reset.gd" id="10_hnssw"]
 
 [node name="generator" type="Node3D"]
 script = ExtResource("1_juqd5")
@@ -25,15 +27,171 @@ script = ExtResource("3_1cqic")
 [node name="behavior" type="Node" parent="."]
 script = ExtResource("4_t57g6")
 
-[node name="3" type="Node" parent="behavior"]
+[node name="laps" type="Node" parent="behavior"]
+script = ExtResource("5_yk4p0")
+
+[node name="0" type="Node" parent="behavior/laps"]
 script = ExtResource("5_c3kex")
 
-[node name="act" type="Node" parent="behavior/3"]
+[node name="act" type="Node" parent="behavior/laps/0"]
 script = ExtResource("6_dt7wp")
 
-[node name="obstacle" type="Node" parent="behavior/3"]
+[node name="obstacle" type="Node" parent="behavior/laps/0"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 1
+offset = 0
+
+[node name="score" type="Node" parent="behavior/laps/0"]
+script = ExtResource("7_etlmj")
+
+[node name="1" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/1"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/1"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 1
+
+[node name="score" type="Node" parent="behavior/laps/1"]
+script = ExtResource("7_etlmj")
+
+[node name="2" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/2"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/2"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 2
+offset = 2
+
+[node name="score" type="Node" parent="behavior/laps/2"]
+script = ExtResource("7_etlmj")
+
+[node name="3" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/3"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/3"]
 script = ExtResource("7_g0mn0")
 obstacles_count = 2
 
-[node name="score" type="Node" parent="behavior/3"]
+[node name="score" type="Node" parent="behavior/laps/3"]
 script = ExtResource("7_etlmj")
+
+[node name="4" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/4"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/4"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 1
+offset = 0
+
+[node name="score" type="Node" parent="behavior/laps/4"]
+script = ExtResource("7_etlmj")
+
+[node name="5" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/5"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/5"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 2
+offset = 0
+
+[node name="score" type="Node" parent="behavior/laps/5"]
+script = ExtResource("7_etlmj")
+
+[node name="6" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/6"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/6"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 2
+
+[node name="score" type="Node" parent="behavior/laps/6"]
+script = ExtResource("7_etlmj")
+
+[node name="7" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/7"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/7"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 2
+offset = 0
+
+[node name="score" type="Node" parent="behavior/laps/7"]
+script = ExtResource("7_etlmj")
+
+[node name="8" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/8"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/8"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 1
+offset = 2
+
+[node name="score" type="Node" parent="behavior/laps/8"]
+script = ExtResource("7_etlmj")
+
+[node name="9" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/9"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/9"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 2
+
+[node name="score" type="Node" parent="behavior/laps/9"]
+script = ExtResource("7_etlmj")
+
+[node name="10" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/10"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/10"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 2
+
+[node name="score" type="Node" parent="behavior/laps/10"]
+script = ExtResource("7_etlmj")
+
+[node name="11" type="Node" parent="behavior/laps"]
+script = ExtResource("5_c3kex")
+
+[node name="act" type="Node" parent="behavior/laps/11"]
+script = ExtResource("6_dt7wp")
+
+[node name="obstacle" type="Node" parent="behavior/laps/11"]
+script = ExtResource("7_g0mn0")
+obstacles_count = 1
+offset = 0
+
+[node name="score" type="Node" parent="behavior/laps/11"]
+script = ExtResource("7_etlmj")
+
+[node name="end" type="Node" parent="behavior/laps"]
+script = ExtResource("10_hnssw")

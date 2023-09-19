@@ -16,6 +16,7 @@ func get_blackboard():
 	blackboard.set_value("placeholder", load(placeholder_file))
 	blackboard.set_value("blocks", { "obstacles" : [], "score" : [] })
 	blackboard.set_value("space", [0, 1, 2])
+	blackboard.set_value("lap", -1)
 	return blackboard
 
 func add_element(type: String, block):

@@ -1,0 +1,7 @@
+[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://c878usfansgny"]
+
+[ext_resource type="Material" uid="uid://5jeqdxswv3pc" path="res://assets/resources/runtime/templates/materials/terrain/road/ground.tres" id="1_2f42w"]
+
+[resource]
+material = ExtResource("1_2f42w")
+size = Vector2(10, 27.5)

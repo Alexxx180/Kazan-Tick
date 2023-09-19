@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/scripts/actors/environment/collision.gd" id="1_3ikwp"]
 [ext_resource type="Shape3D" uid="uid://bfmfn04hojavf" path="res://assets/resources/runtime/templates/geometry/shapes/blocks/avoid.tres" id="2_0bh7p"]
 [ext_resource type="ArrayMesh" uid="uid://xihxcql3ncfn" path="res://assets/resources/models/obstacles/signs/yoor_yool.obj" id="3_4l2ns"]
-[ext_resource type="Material" uid="uid://c4puoe64mu2sq" path="res://assets/resources/runtime/templates/materials/barrier.tres" id="4_hjt12"]
+[ext_resource type="Material" uid="uid://c4puoe64mu2sq" path="res://assets/resources/runtime/templates/materials/terrain/obstacles/sign.tres" id="4_hjt12"]
 [ext_resource type="ArrayMesh" uid="uid://bymuikdmb2q2u" path="res://assets/resources/models/obstacles/signs/ex_d.obj" id="5_xg75m"]
 [ext_resource type="ArrayMesh" uid="uid://q22sd2acqwak" path="res://assets/resources/models/obstacles/signs/auf.obj" id="6_snih7"]
 [ext_resource type="ArrayMesh" uid="uid://b04j513umuliy" path="res://assets/resources/models/obstacles/signs/reactor.obj" id="7_b5baq"]
