@@ -1,6 +1,7 @@
 extends "res://addons/godot-behavior-tree-plugin/action.gd"
 
 @export var obstacles_count: int = 0
+@export var offset: int = 1
 
 func tick(tact: Tick) -> int:
 	# Receiving all blocks and free space amount
@@ -13,9 +14,9 @@ func tick(tact: Tick) -> int:
 	var markers = result.get_markers()
 	
 	# Determine obstacles max count and free space
-	var count = randi_range(1, obstacles_count)
+	var count = obstacles_count #randi_range(1, )
 	var anchor = randi_range(0, amount.size() - 1)
-	anchor = abs(anchor - 1) # create obstacles offset
+	anchor = abs(anchor - offset) # create obstacles offset
 	var space = range(0, markers.size())
 	space.remove_at(anchor)
 	

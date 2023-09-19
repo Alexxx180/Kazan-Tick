@@ -55,7 +55,7 @@ files = "res://assets/scenes/actors/environment/buildings/sides/houses"
 
 [node name="objects" type="Node3D" parent="."]
 script = ExtResource("2_dhtf4")
-offset = Vector3(-25, 18, 5)
+offset = Vector3(-25, 12, 5)
 
 [node name="generator" parent="objects" instance=ExtResource("4_s5047")]
 placeholder_file = "res://assets/scenes/actors/controllers/terrain/track/objects.tscn"
