@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3vlgt415niqw"]
+[gd_scene load_steps=8 format=3 uid="uid://d3vlgt415niqw"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/terrain.gd" id="1_mpg7r"]
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor.gd" id="2_dhtf4"]
 [ext_resource type="PackedScene" uid="uid://bom3j8xyclqes" path="res://assets/scenes/actors/controllers/terrain/generators/road.tscn" id="3_f5dgv"]
 [ext_resource type="PackedScene" uid="uid://dkfm8qt2q3crp" path="res://assets/scenes/actors/controllers/terrain/generators/lanterns.tscn" id="4_faym5"]
 [ext_resource type="PackedScene" uid="uid://1361f5mfq6e0" path="res://assets/scenes/actors/controllers/terrain/generators/objects.tscn" id="4_s5047"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/generators/constant.gd" id="5_7udai"]
+[ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/io/files/loader.tscn" id="5_pj38g"]
 
 [node name="blocks" type="Node3D"]
 script = ExtResource("1_mpg7r")
@@ -13,7 +15,7 @@ script = ExtResource("1_mpg7r")
 
 [node name="road" type="Node3D" parent="terrain"]
 script = ExtResource("2_dhtf4")
-offset = Vector3(0, 0, 10)
+offset = Vector3(0, 0, 1)
 
 [node name="generator" parent="terrain/road" instance=ExtResource("3_f5dgv")]
 
@@ -23,9 +25,37 @@ offset = Vector3(-0.35, 38.6, 5.6)
 
 [node name="generator" parent="terrain/lanterns" instance=ExtResource("4_faym5")]
 
+[node name="sides" type="Node3D" parent="terrain"]
+
+[node name="left" type="Node3D" parent="terrain/sides"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -1, 0)
+
+[node name="houses" type="Node3D" parent="terrain/sides/left"]
+script = ExtResource("2_dhtf4")
+offset = Vector3(0, 0, -50)
+
+[node name="generator" type="Node3D" parent="terrain/sides/left/houses"]
+script = ExtResource("5_7udai")
+
+[node name="loader" parent="terrain/sides/left/houses/generator" instance=ExtResource("5_pj38g")]
+files = "res://assets/scenes/actors/environment/buildings/sides/houses"
+
+[node name="right" type="Node3D" parent="terrain/sides"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -1, 0)
+
+[node name="houses" type="Node3D" parent="terrain/sides/right"]
+script = ExtResource("2_dhtf4")
+offset = Vector3(0, 0, -50)
+
+[node name="generator" type="Node3D" parent="terrain/sides/right/houses"]
+script = ExtResource("5_7udai")
+
+[node name="loader" parent="terrain/sides/right/houses/generator" instance=ExtResource("5_pj38g")]
+files = "res://assets/scenes/actors/environment/buildings/sides/houses"
+
 [node name="objects" type="Node3D" parent="."]
 script = ExtResource("2_dhtf4")
-offset = Vector3(-25, 15, 5)
+offset = Vector3(-25, 18, 5)
 
 [node name="generator" parent="objects" instance=ExtResource("4_s5047")]
 placeholder_file = "res://assets/scenes/actors/controllers/terrain/track/objects.tscn"

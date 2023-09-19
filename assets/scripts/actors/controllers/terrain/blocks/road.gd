@@ -1,4 +1,4 @@
-extends Node3D
+extends MeshInstance3D
 
 var view: get = get_view
 
