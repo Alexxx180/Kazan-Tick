@@ -1239,237 +1239,237 @@ script = ExtResource("1_wg2vn")
 mesh = ExtResource("2_wmkx5")
 
 [node name="Vert" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_ruyxb")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Vert_001" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_2nrnr")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Vert_002" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_uf5k7")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_r62uh")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_001" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_u2fkx")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_002" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_m1fic")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_003" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_010n4")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 surface_material_override/1 = ExtResource("2_kayu0")
 
 [node name="Куб_004" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_pj4dq")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_006" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_f4upo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_007" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_j43ib")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_008" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_52030")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_009" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_bbbsi")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_011" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_5ie0e")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_012" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_4brdu")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_014" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_61brq")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_015" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_8gh0s")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_016" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_3t4vr")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_017" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_jrejf")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_018" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_i03pj")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_019" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_8gdtn")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_020" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_y25if")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_021" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_f35ng")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_024" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_10ax2")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_025" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_3f1gd")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_026" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_vwt5f")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_027" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_d2ggi")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_028" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_c00i5")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_030" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_624bd")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 surface_material_override/1 = ExtResource("2_kayu0")
 
 [node name="Куб_031" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_bdn7d")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_032" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_4bmq5")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_037" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_6loa1")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_038" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_k000r")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_039" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_a5p7o")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_044" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_3ot8c")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_045" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_ncc1i")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_046" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_3ocsw")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_047" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_x28m0")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_048" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_jhv8p")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")
 
 [node name="Куб_049" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, -3.5, 0, 3.5, -1.5299e-07, 1.4292, 0, 0.0484114)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 1.4292, 0, 0.0484114)
 mesh = SubResource("ArrayMesh_lum3p")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kayu0")

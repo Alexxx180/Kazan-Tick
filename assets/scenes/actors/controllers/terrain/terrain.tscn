@@ -27,16 +27,24 @@ offset = Vector3(-0.35, 38.6, 5.6)
 [node name="sides" type="Node3D" parent="terrain"]
 
 [node name="left" type="Node3D" parent="terrain/sides"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5, -1, 0)
 
-[node name="houses" parent="terrain/sides/left" instance=ExtResource("5_uotr5")]
+[node name="left" parent="terrain/sides/left" instance=ExtResource("5_uotr5")]
+offset = Vector3(0, 0, 20)
+
+[node name="right" parent="terrain/sides/left" instance=ExtResource("5_uotr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
 offset = Vector3(0, 0, 0)
 
 [node name="right" type="Node3D" parent="terrain/sides"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, -1, 0)
 
-[node name="houses" parent="terrain/sides/right" instance=ExtResource("5_uotr5")]
+[node name="left" parent="terrain/sides/right" instance=ExtResource("5_uotr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0)
 offset = Vector3(0, 0, 0)
+
+[node name="right" parent="terrain/sides/right" instance=ExtResource("5_uotr5")]
+offset = Vector3(0, 0, 20)
 
 [node name="objects" type="Node3D" parent="."]
 script = ExtResource("2_dhtf4")
