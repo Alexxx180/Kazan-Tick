@@ -49,7 +49,6 @@ fov = 110.0
 [node name="score" parent="vision" instance=ExtResource("5_5fr56")]
 
 [node name="fullscreen" type="MarginContainer" parent="vision"]
-visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0

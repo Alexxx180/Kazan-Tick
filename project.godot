@@ -26,7 +26,7 @@ Global="*res://assets/scripts/system/global.gd"
 
 [display]
 
-window/size/mode=2
+window/size/mode=3
 window/handheld/orientation=6
 
 [editor_plugins]

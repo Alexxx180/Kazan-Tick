@@ -1,6 +1,6 @@
 extends "res://addons/godot-behavior-tree-plugin/action.gd"
 
-@onready var check: int = int(str(get_parent().name))
+var check: int
 
 func stage_check(blackboard, stage):
 	if (blackboard.get_value(stage) >= check):
