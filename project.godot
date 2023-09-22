@@ -84,6 +84,10 @@ cancel={
 3d_navigation/layer_3="Obstacle"
 3d_physics/layer_4="Score"
 
+[physics]
+
+common/physics_ticks_per_second=120
+
 [rendering]
 
 renderer/rendering_method="mobile"
