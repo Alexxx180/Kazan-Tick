@@ -126,7 +126,7 @@ text = "Back"
 
 [node name="switcher" parent="credits/back" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
 to_hide = NodePath("../..")
-to_show = NodePath("../../../options")
+to_show = NodePath("../../../game")
 
 [connection signal="pressed" from="options/credits" to="options/credits/switcher" method="_switch"]
 [connection signal="pressed" from="options/back" to="options/back/switcher" method="_switch"]

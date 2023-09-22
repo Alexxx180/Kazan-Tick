@@ -388,6 +388,7 @@ libraries = {
 tree_root = ExtResource("5_85kxk")
 anim_player = NodePath("..")
 active = true
+parameters/TimeScale/scale = 1.4
 parameters/active/current_state = "run"
 parameters/active/transition_request = ""
 parameters/active/current_index = 1

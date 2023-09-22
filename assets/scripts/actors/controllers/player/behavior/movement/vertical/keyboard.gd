@@ -6,10 +6,10 @@ func swipe(data):
 
 
 func tick(tact: Tick):
-	if (Input.is_action_pressed("up")):
+	if (Input.is_action_just_pressed("up")):
 		return swipe(tact.blackboard)
 	
-	if (Input.is_action_pressed("jump")):
+	if (Input.is_action_just_pressed("jump")):
 		return swipe(tact.blackboard)
 		
 	return FAILED

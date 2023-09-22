@@ -14,7 +14,7 @@ focus_neighbor_left = NodePath("../quit")
 focus_neighbor_bottom = NodePath("../quit")
 focus_next = NodePath("../quit")
 shortcut = ExtResource("2_l25fu")
-text = "Options"
+text = "Credits"
 
 [node name="switcher" parent="options" instance=ExtResource("2_64il7")]
 

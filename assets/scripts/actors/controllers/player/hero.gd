@@ -33,7 +33,6 @@ func switch_pause():
 	var paused = blackboard.get_value('paused')
 	paused = !paused
 	blackboard.set_value('paused', paused)
-	# print("Current pause state: %s" % paused)
 	if (paused):
 		pause.show()
 		option.hide()
@@ -89,8 +88,4 @@ func _physics_process(delta):
 		move_and_slide()
 		if is_on_floor():
 			blackboard.set_value('is_on_floor', true)
-		
-		# move_and_collide(velocity * delta)
-		#if collision_info:
-		#	velocity = velocity.bounce(collision_info.normal)
-		
+			
