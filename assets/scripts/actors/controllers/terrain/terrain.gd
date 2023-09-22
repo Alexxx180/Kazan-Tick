@@ -17,14 +17,20 @@ extends Node3D
 @onready var lanterns = $terrain/lanterns
 @onready var objects = $objects
 
-@onready var left = $terrain/sides/left/houses
-@onready var right = $terrain/sides/right/houses
+@onready var left_right = $terrain/sides/left/right
+@onready var right_left = $terrain/sides/right/left
+
+@onready var left_left = $terrain/sides/left/left
+@onready var right_right = $terrain/sides/right/right
 
 func _ready() -> void:
 	start.continue_pressed.connect(switch_pause)
 	retry.continue_pressed.connect(switch_pause)
-	left.fill_space(decorations_far.x)
-	right.fill_space(decorations_far.x)
+	left_right.fill_space(decorations_far.x)
+	right_left.fill_space(decorations_far.x)
+	
+	left_left.fill_space(decorations_far.x)	
+	right_right.fill_space(decorations_far.x)
 	road.fill_space(decorations_far.z)
 	lanterns.fill_space(decorations_far.y)
 	objects.fill_space(obstacles_far)
@@ -37,8 +43,11 @@ func _physics_process(delta: float) -> void:
 		_progress_terrain(delta)
 
 func _progress_terrain(delta: float) -> void:
-	left.progress_terrain(velocity, delta)
-	right.progress_terrain(velocity, delta)
+	left_right.progress_terrain(velocity, delta)
+	right_left.progress_terrain(velocity, delta)
+	
+	left_left.progress_terrain(velocity, delta)
+	right_right.progress_terrain(velocity, delta)
 	road.progress_terrain(velocity, delta)
 	objects.progress_terrain(velocity, delta)
 	lanterns.progress_terrain(velocity, delta)

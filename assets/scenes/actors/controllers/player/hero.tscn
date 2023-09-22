@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/hero.gd" id="1_suvyr"]
 [ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/geometry/shapes/humanoid.tres" id="2_y2trp"]
+[ext_resource type="PackedScene" uid="uid://bv3x2hl8fanqy" path="res://assets/scenes/actors/controllers/player/model3.tscn" id="3_iug8k"]
 [ext_resource type="PackedScene" uid="uid://bjj7hqc17hnok" path="res://assets/scenes/system/ui/screens/menu.tscn" id="4_3efhf"]
 [ext_resource type="PackedScene" uid="uid://b1ie14j2uh6eh" path="res://assets/scenes/system/ui/elements/menu/indicators/score.tscn" id="5_5fr56"]
 [ext_resource type="Shortcut" uid="uid://gwvblu3dti2y" path="res://assets/resources/runtime/templates/macro/shortcuts/screen.tres" id="6_51gjr"]
 [ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="6_pg1bo"]
-[ext_resource type="PackedScene" uid="uid://bhxtfo1g3ogn4" path="res://assets/scenes/actors/controllers/player/model/active/jump.tscn" id="6_xgng2"]
 [ext_resource type="Texture2D" uid="uid://ocyxbostk612" path="res://assets/resources/media/images/textures/ui/screen/normal.svg" id="6_xqym6"]
 [ext_resource type="Texture2D" uid="uid://877wx1dk7y0i" path="res://assets/resources/media/images/textures/ui/screen/hover.svg" id="7_ty4wp"]
 [ext_resource type="Shortcut" uid="uid://beefargnqrmfc" path="res://assets/resources/runtime/templates/macro/shortcuts/cancel.tres" id="7_wrwd7"]
@@ -37,8 +37,7 @@ script = ExtResource("1_suvyr")
 [node name="collision" type="CollisionShape3D" parent="."]
 shape = ExtResource("2_y2trp")
 
-[node name="view" parent="." instance=ExtResource("6_xgng2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.02, 0)
+[node name="view" parent="." instance=ExtResource("3_iug8k")]
 
 [node name="vision" type="Camera3D" parent="."]
 transform = Transform3D(-1, -2.99003e-08, 8.21505e-08, 0, 0.939693, 0.34202, -8.74228e-08, 0.34202, -0.939693, 0.138, 1.796, -2.381)
@@ -49,7 +48,6 @@ fov = 110.0
 [node name="score" parent="vision" instance=ExtResource("5_5fr56")]
 
 [node name="fullscreen" type="MarginContainer" parent="vision"]
-visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0

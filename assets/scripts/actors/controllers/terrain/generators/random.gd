@@ -22,7 +22,6 @@ func get_blackboard():
 func add_element(type: String, block):
 	var blocks = get_blackboard().get_value("blocks")
 	blocks[type].append(block)
-	print("Received block type: " + type)
 
 func _ready():
 	behavior = $behavior

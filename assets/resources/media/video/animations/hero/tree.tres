@@ -1,4 +1,6 @@
-[gd_resource type="AnimationNodeBlendTree" load_steps=7 format=3 uid="uid://codavodjixec5"]
+[gd_resource type="AnimationNodeBlendTree" load_steps=8 format=3 uid="uid://codavodjixec5"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ohtal"]
 
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_xfc5k"]
 input_0/name = "jump"
@@ -32,18 +34,20 @@ animation = &"run"
 animation = &"lose"
 
 [resource]
-graph_offset = Vector2(-234.717, 32.6596)
+graph_offset = Vector2(-295.433, -49.9488)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ohtal")
+nodes/TimeScale/position = Vector2(400, 40)
 nodes/active/node = SubResource("AnimationNodeTransition_xfc5k")
 nodes/active/position = Vector2(240, 0)
 nodes/character/node = SubResource("AnimationNodeTransition_ni4x6")
-nodes/character/position = Vector2(420, 60)
+nodes/character/position = Vector2(560, 80)
 nodes/jump/node = SubResource("AnimationNodeAnimation_0dd05")
 nodes/jump/position = Vector2(60, -20)
-nodes/output/position = Vector2(580, 100)
+nodes/output/position = Vector2(720, 120)
 nodes/roll/node = SubResource("AnimationNodeAnimation_v3oeb")
 nodes/roll/position = Vector2(60, 120)
 nodes/run/node = SubResource("AnimationNodeAnimation_rjmwd")
 nodes/run/position = Vector2(-80, 60)
 nodes/stop/node = SubResource("AnimationNodeAnimation_x5uqq")
-nodes/stop/position = Vector2(240, 220)
-node_connections = [&"output", 0, &"character", &"active", 0, &"jump", &"active", 1, &"run", &"active", 2, &"roll", &"character", 0, &"active", &"character", 1, &"stop"]
+nodes/stop/position = Vector2(400, 200)
+node_connections = [&"output", 0, &"character", &"active", 0, &"jump", &"active", 1, &"run", &"active", 2, &"roll", &"character", 0, &"TimeScale", &"character", 1, &"stop", &"TimeScale", 0, &"active"]
