@@ -1,8 +1,6 @@
 [gd_resource type="Shortcut" load_steps=2 format=3 uid="uid://gwvblu3dti2y"]
 
-[sub_resource type="InputEventKey" id="InputEventKey_1b866"]
-device = -1
-keycode = 4194342
+[ext_resource type="InputEventKey" uid="uid://bxhltkssnmu88" path="res://assets/resources/runtime/templates/macro/keys/f/f11.tres" id="1_notpl"]
 
 [resource]
-events = [SubResource("InputEventKey_1b866")]
+events = [ExtResource("1_notpl")]

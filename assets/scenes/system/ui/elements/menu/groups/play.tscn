@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cp5c5r2td8lfq"]
 
 [ext_resource type="PackedScene" uid="uid://o1u8wgm6mccj" path="res://assets/scenes/system/ui/elements/menu/options/pause.tscn" id="1_57n3u"]
+[ext_resource type="Shortcut" uid="uid://vr6w0nmbyqd7" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/continue.tres" id="2_0b2ju"]
 [ext_resource type="PackedScene" uid="uid://ca63la17sjoj2" path="res://assets/scenes/system/ui/elements/menu/options/retry.tscn" id="2_86ymm"]
-[ext_resource type="Shortcut" uid="uid://bqjg8wnpe5jmb" path="res://assets/resources/runtime/templates/macro/shortcuts/confirm.tres" id="2_clhao"]
 
 [node name="play" type="VBoxContainer"]
 
 [node name="start" parent="." instance=ExtResource("1_57n3u")]
 layout_mode = 2
-shortcut = ExtResource("2_clhao")
+shortcut = ExtResource("2_0b2ju")
 
 [node name="retry" parent="." instance=ExtResource("2_86ymm")]
 visible = false
 layout_mode = 2
-shortcut = ExtResource("2_clhao")
+shortcut = ExtResource("2_0b2ju")
 text = "Retry"

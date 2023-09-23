@@ -1,0 +1,7 @@
+[gd_resource type="Shortcut" load_steps=3 format=3 uid="uid://vr6w0nmbyqd7"]
+
+[ext_resource type="InputEventKey" uid="uid://bim3i7rwn87m1" path="res://assets/resources/runtime/templates/macro/keys/enter.tres" id="1_h1po8"]
+[ext_resource type="InputEventKey" uid="uid://chaky3stj4ef4" path="res://assets/resources/runtime/templates/macro/keys/escape/key.tres" id="2_8ysuf"]
+
+[resource]
+events = [ExtResource("1_h1po8"), ExtResource("2_8ysuf")]

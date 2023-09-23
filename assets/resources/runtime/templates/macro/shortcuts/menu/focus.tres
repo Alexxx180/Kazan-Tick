@@ -1,0 +1,6 @@
+[gd_resource type="Shortcut" load_steps=2 format=3 uid="uid://b1hcbfnqa7gxa"]
+
+[ext_resource type="InputEventKey" uid="uid://cd10k1jlyv1xi" path="res://assets/resources/runtime/templates/macro/keys/tab.tres" id="1_jcayt"]
+
+[resource]
+events = [ExtResource("1_jcayt")]

@@ -50,4 +50,4 @@ nodes/run/node = SubResource("AnimationNodeAnimation_rjmwd")
 nodes/run/position = Vector2(-80, 60)
 nodes/stop/node = SubResource("AnimationNodeAnimation_x5uqq")
 nodes/stop/position = Vector2(400, 200)
-node_connections = [&"output", 0, &"character", &"active", 0, &"jump", &"active", 1, &"run", &"active", 2, &"roll", &"character", 0, &"TimeScale", &"character", 1, &"stop", &"TimeScale", 0, &"active"]
+node_connections = [&"output", 0, &"character", &"TimeScale", 0, &"active", &"active", 0, &"jump", &"active", 1, &"run", &"active", 2, &"roll", &"character", 0, &"TimeScale", &"character", 1, &"stop"]
