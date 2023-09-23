@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/progression/blocks.gd" id="1_mpg7r"]
 [ext_resource type="PackedScene" uid="uid://iom2ex5bjgd6" path="res://assets/scenes/actors/controllers/conveyor/terrain/terrain.tscn" id="2_57ejy"]
-[ext_resource type="PackedScene" uid="uid://drqqxvhaba1wr" path="res://assets/scenes/actors/controllers/conveyor/objects.tscn" id="3_4bjyq"]
+[ext_resource type="PackedScene" uid="uid://drqqxvhaba1wr" path="res://assets/scenes/actors/controllers/conveyor/complex/objects.tscn" id="3_4bjyq"]
 
 [node name="blocks" type="Node3D"]
 script = ExtResource("1_mpg7r")

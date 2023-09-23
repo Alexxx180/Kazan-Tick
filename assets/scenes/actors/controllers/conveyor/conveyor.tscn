@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://batexkrasnhm1"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor/storage.gd" id="1_vlr21"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor.gd" id="1_ytana"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor/filler.gd" id="2_l2nym"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor/progressor.gd" id="3_1l5e3"]
+
+[node name="conveyor" type="Node3D"]
+script = ExtResource("1_ytana")
+
+[node name="storage" type="Node3D" parent="."]
+script = ExtResource("1_vlr21")
+
+[node name="filler" type="Node" parent="."]
+script = ExtResource("2_l2nym")
+
+[node name="progressor" type="Node" parent="."]
+script = ExtResource("3_1l5e3")
