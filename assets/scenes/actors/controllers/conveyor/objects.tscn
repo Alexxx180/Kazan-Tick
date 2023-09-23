@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://drqqxvhaba1wr"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor.gd" id="1_fhg10"]
+[ext_resource type="PackedScene" uid="uid://1361f5mfq6e0" path="res://assets/scenes/actors/controllers/conveyor/generators/objects.tscn" id="2_7oj2t"]
+
+[node name="objects" type="Node3D"]
+script = ExtResource("1_fhg10")
+offset = Vector3(-25, 12, 5)
+
+[node name="generator" parent="." instance=ExtResource("2_7oj2t")]
+placeholder_file = "res://assets/scenes/actors/controllers/track/objects.tscn"

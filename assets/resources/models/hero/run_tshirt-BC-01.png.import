@@ -2,18 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4ytwuh4qkiq"
-path.s3tc="res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.s3tc.ctex"
-path.etc2="res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.etc2.ctex"
+uid="uid://dd7gg70nwfb36"
+path.s3tc="res://.godot/imported/run_tshirt-BC-01.png-f929d1a46ac77ed106276d41e4a0cb58.s3tc.ctex"
+path.etc2="res://.godot/imported/run_tshirt-BC-01.png-f929d1a46ac77ed106276d41e4a0cb58.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/resources/models/road/sides/houses/2/Материал_BaseColor.png"
-dest_files=["res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.s3tc.ctex", "res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.etc2.ctex"]
+source_file="res://assets/resources/models/hero/run_tshirt-BC-01.png"
+dest_files=["res://.godot/imported/run_tshirt-BC-01.png-f929d1a46ac77ed106276d41e4a0cb58.s3tc.ctex", "res://.godot/imported/run_tshirt-BC-01.png-f929d1a46ac77ed106276d41e4a0cb58.etc2.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://lui80x5p02fx"]
 
 [ext_resource type="PackedScene" uid="uid://cfi67atue4lrh" path="res://assets/scenes/actors/controllers/player/hero.tscn" id="1_fy2wg"]
-[ext_resource type="PackedScene" uid="uid://d3vlgt415niqw" path="res://assets/scenes/actors/controllers/terrain/terrain.tscn" id="2_6w7cb"]
-[ext_resource type="PackedScene" uid="uid://crmo778eiquc2" path="res://assets/scenes/actors/controllers/terrain/track/paths.tscn" id="3_w2i3u"]
+[ext_resource type="PackedScene" uid="uid://d3vlgt415niqw" path="res://assets/scenes/actors/controllers/conveyor/blocks.tscn" id="2_6w7cb"]
+[ext_resource type="PackedScene" uid="uid://crmo778eiquc2" path="res://assets/scenes/actors/controllers/track/paths.tscn" id="3_w2i3u"]
 [ext_resource type="Shape3D" uid="uid://0y8xn7nbeogu" path="res://assets/resources/runtime/templates/geometry/shapes/floor.tres" id="4_0r2cq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifakd"]
@@ -46,8 +46,6 @@ paths = NodePath("../track/paths")
 [node name="terrain" parent="track" node_paths=PackedStringArray("hero") instance=ExtResource("2_6w7cb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.045995)
 hero = NodePath("../../hero")
-decorations_far = Vector3(4, 3, 6)
-obstacles_far = 6
 
 [node name="paths" parent="track" instance=ExtResource("3_w2i3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)

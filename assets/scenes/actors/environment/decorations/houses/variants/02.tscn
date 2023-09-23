@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgbkylddkuq2w"]
+
+[ext_resource type="PackedScene" uid="uid://gvnwgjiex3sm" path="res://addons/single/merger.tscn" id="1_bi5ke"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/blocks/road.gd" id="1_y6wrb"]
+[ext_resource type="PackedScene" uid="uid://b1111pxvpach0" path="res://assets/scenes/actors/environment/decorations/houses/floor.tscn" id="2_urt8d"]
+[ext_resource type="PackedScene" uid="uid://be7d76wleth1y" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_6.tscn" id="3_0mwg4"]
+[ext_resource type="PackedScene" uid="uid://2ah4pdwcb6ng" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_5_poster_big.tscn" id="4_kn4c4"]
+[ext_resource type="PackedScene" uid="uid://db1rrmhp0knrp" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_4.tscn" id="5_o3lua"]
+[ext_resource type="PackedScene" uid="uid://dyxfcgokjk7py" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_3.tscn" id="6_016il"]
+
+[node name="02" type="Node3D"]
+script = ExtResource("1_y6wrb")
+
+[node name="view" parent="." instance=ExtResource("2_urt8d")]
+
+[node name="merger" parent="." instance=ExtResource("1_bi5ke")]
+
+[node name="top_6" parent="merger" instance=ExtResource("3_0mwg4")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -3.80665)
+
+[node name="top_5_poster_big" parent="merger" instance=ExtResource("4_kn4c4")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.507, 0.04, 3.72474)
+
+[node name="top_4" parent="merger" instance=ExtResource("5_o3lua")]
+transform = Transform3D(3.99998, 0, -0.013823, 0, 4, 0, 0.013823, 0, 3.99998, -0.143805, 0, 0.43531)
+
+[node name="top_3" parent="merger" instance=ExtResource("6_016il")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.0759619, 0, -4.26281)

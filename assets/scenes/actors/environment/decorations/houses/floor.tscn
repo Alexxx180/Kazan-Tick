@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1111pxvpach0"]
+
+[ext_resource type="PlaneMesh" uid="uid://c878usfansgny" path="res://assets/resources/runtime/templates/geometry/meshes/house.tres" id="1_q4u5f"]
+
+[node name="view" type="MeshInstance3D"]
+mesh = ExtResource("1_q4u5f")

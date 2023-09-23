@@ -1,0 +1,24 @@
+[gd_scene load_steps=8 format=3 uid="uid://chda2ncbaqayk"]
+
+[ext_resource type="PackedScene" uid="uid://b1111pxvpach0" path="res://assets/scenes/actors/environment/decorations/houses/floor.tscn" id="1_1isye"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/blocks/road.gd" id="1_s5adk"]
+[ext_resource type="PackedScene" uid="uid://gvnwgjiex3sm" path="res://addons/single/merger.tscn" id="2_nomt7"]
+[ext_resource type="Material" uid="uid://dgydnkweui60s" path="res://assets/resources/runtime/templates/materials/terrain/road/sides/houses/1.tres" id="3_phw3m"]
+[ext_resource type="PackedScene" uid="uid://be7d76wleth1y" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_6.tscn" id="4_c25n0"]
+[ext_resource type="PackedScene" uid="uid://dqbomm50an8ov" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_5_poster.tscn" id="5_mhwqw"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hknvj"]
+
+[node name="04" type="Node3D"]
+script = ExtResource("1_s5adk")
+
+[node name="view" parent="." instance=ExtResource("1_1isye")]
+
+[node name="merger" parent="." instance=ExtResource("2_nomt7")]
+material_override = ExtResource("3_phw3m")
+mesh = SubResource("ArrayMesh_hknvj")
+toggle_children_visibility = true
+
+[node name="top_6" parent="merger" instance=ExtResource("4_c25n0")]
+
+[node name="top_5_poster" parent="merger" instance=ExtResource("5_mhwqw")]

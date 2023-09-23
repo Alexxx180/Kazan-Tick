@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp51os7dptrff"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/conveyor.gd" id="1_8kror"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/generators/constant.gd" id="2_rh663"]
+[ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/io/files/loader.tscn" id="3_ng6g0"]
+
+[node name="houses" type="Node3D"]
+script = ExtResource("1_8kror")
+offset = Vector3(0, 0, -50)
+
+[node name="generator" type="Node3D" parent="."]
+script = ExtResource("2_rh663")
+
+[node name="loader" parent="generator" instance=ExtResource("3_ng6g0")]
+files = "res://assets/scenes/actors/environment/decorations/houses/variants"

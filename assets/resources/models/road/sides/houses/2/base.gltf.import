@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ca6620hc5yfv4"
-path="res://.godot/imported/sign.glb-5fe174f76b63ce410c61aa09e2cbbdef.scn"
+uid="uid://cf28sjj8lbdqc"
+path="res://.godot/imported/base.gltf-5acb462aab6a729604ed3c8b5207d60c.scn"
 
 [deps]
 
-source_file="res://assets/resources/models/road/sides/houses/1/sign.glb"
-dest_files=["res://.godot/imported/sign.glb-5fe174f76b63ce410c61aa09e2cbbdef.scn"]
+source_file="res://assets/resources/models/road/sides/houses/2/base.gltf"
+dest_files=["res://.godot/imported/base.gltf-5acb462aab6a729604ed3c8b5207d60c.scn"]
 
 [params]
 
@@ -30,10 +30,6 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Material.001": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/resources/runtime/templates/materials/terrain/road/sides/houses/1.tres"
-},
 "Материал": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/resources/runtime/templates/materials/terrain/road/sides/houses/1.tres"

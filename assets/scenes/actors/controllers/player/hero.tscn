@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/hero.gd" id="1_suvyr"]
 [ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/geometry/shapes/humanoid.tres" id="2_y2trp"]
-[ext_resource type="PackedScene" uid="uid://bv3x2hl8fanqy" path="res://assets/scenes/actors/controllers/player/model3.tscn" id="3_iug8k"]
+[ext_resource type="PackedScene" uid="uid://bv3x2hl8fanqy" path="res://assets/scenes/actors/controllers/player/model.tscn" id="3_iug8k"]
 [ext_resource type="PackedScene" uid="uid://bjj7hqc17hnok" path="res://assets/scenes/system/ui/screens/menu.tscn" id="4_3efhf"]
 [ext_resource type="PackedScene" uid="uid://b1ie14j2uh6eh" path="res://assets/scenes/system/ui/elements/menu/indicators/score.tscn" id="5_5fr56"]
 [ext_resource type="Shortcut" uid="uid://gwvblu3dti2y" path="res://assets/resources/runtime/templates/macro/shortcuts/screen.tres" id="6_51gjr"]
@@ -16,12 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://jb8uo0di7rkp" path="res://assets/scenes/system/ui/screens/transition.tscn" id="8_mai1m"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="9_hfsic"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/selector.gd" id="10_mixgd"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/paused.gd" id="11_2s1ts"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/vertical/touchscreen.gd" id="12_246to"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/reset.gd" id="12_mhdkl"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/vertical/keyboard.gd" id="13_datty"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/horizontal/touchscreen.gd" id="15_3q8ui"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/behavior/movement/horizontal/keyboard.gd" id="16_r6c7c"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/paused.gd" id="11_2s1ts"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/vertical/touchscreen.gd" id="12_246to"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/reset.gd" id="12_mhdkl"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/vertical/keyboard.gd" id="13_datty"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/horizontal/touchscreen.gd" id="15_3q8ui"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/horizontal/keyboard.gd" id="16_r6c7c"]
 
 [node name="hero" type="CharacterBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, 0)

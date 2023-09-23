@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4ytwuh4qkiq"
-path.s3tc="res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.s3tc.ctex"
-path.etc2="res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.etc2.ctex"
+uid="uid://4smh0kqgfw0e"
+path.s3tc="res://.godot/imported/run_DefaultMaterial_Emission.png-14aa952d6b588cc18d13e5d61db025f1.s3tc.ctex"
+path.etc2="res://.godot/imported/run_DefaultMaterial_Emission.png-14aa952d6b588cc18d13e5d61db025f1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/resources/models/road/sides/houses/2/Материал_BaseColor.png"
-dest_files=["res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.s3tc.ctex", "res://.godot/imported/Материал_BaseColor.png-f16f444064ca0aacbac1ac54e3e6a774.etc2.ctex"]
+source_file="res://assets/resources/models/hero/run_DefaultMaterial_Emission.png"
+dest_files=["res://.godot/imported/run_DefaultMaterial_Emission.png-14aa952d6b588cc18d13e5d61db025f1.s3tc.ctex", "res://.godot/imported/run_DefaultMaterial_Emission.png-14aa952d6b588cc18d13e5d61db025f1.etc2.ctex"]
 
 [params]
 

@@ -1,0 +1,37 @@
+[gd_scene load_steps=12 format=3 uid="uid://bbpchg3jthdcu"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/blocks/road.gd" id="1_qs1nx"]
+[ext_resource type="PackedScene" uid="uid://b1111pxvpach0" path="res://assets/scenes/actors/environment/decorations/houses/floor.tscn" id="2_0t21h"]
+[ext_resource type="Material" uid="uid://dgydnkweui60s" path="res://assets/resources/runtime/templates/materials/terrain/road/sides/houses/1.tres" id="3_lwqkr"]
+[ext_resource type="Script" path="res://addons/single/mesh_merger.gd" id="4_3s7io"]
+[ext_resource type="PackedScene" uid="uid://be7d76wleth1y" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_6.tscn" id="5_l6tw1"]
+[ext_resource type="PackedScene" uid="uid://2ah4pdwcb6ng" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_5_poster_big.tscn" id="6_0q6y7"]
+[ext_resource type="PackedScene" uid="uid://dqbomm50an8ov" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_5_poster.tscn" id="7_7n63u"]
+[ext_resource type="PackedScene" uid="uid://db1rrmhp0knrp" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_4.tscn" id="8_7xmuw"]
+[ext_resource type="PackedScene" uid="uid://dyxfcgokjk7py" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_3.tscn" id="9_fnwva"]
+[ext_resource type="PackedScene" uid="uid://dr4jiwdmchcty" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_3_sides.tscn" id="10_oy88a"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0olgl"]
+
+[node name="multihouse" type="Node3D"]
+script = ExtResource("1_qs1nx")
+
+[node name="view" parent="." instance=ExtResource("2_0t21h")]
+
+[node name="merger" type="MeshInstance3D" parent="."]
+material_override = ExtResource("3_lwqkr")
+mesh = SubResource("ArrayMesh_0olgl")
+script = ExtResource("4_3s7io")
+toggle_children_visibility = true
+
+[node name="top_6" parent="merger" instance=ExtResource("5_l6tw1")]
+
+[node name="top_5_poster_big" parent="merger" instance=ExtResource("6_0q6y7")]
+
+[node name="top_5_poster" parent="merger" instance=ExtResource("7_7n63u")]
+
+[node name="top_4" parent="merger" instance=ExtResource("8_7xmuw")]
+
+[node name="top_3" parent="merger" instance=ExtResource("9_fnwva")]
+
+[node name="top_3_sides" parent="merger" instance=ExtResource("10_oy88a")]
