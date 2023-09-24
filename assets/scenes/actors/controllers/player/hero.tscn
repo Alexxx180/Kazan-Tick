@@ -33,7 +33,7 @@ shape = ExtResource("2_y2trp")
 [node name="view" parent="." instance=ExtResource("3_iug8k")]
 
 [node name="vision" type="Camera3D" parent="."]
-transform = Transform3D(-1, 5.01437e-08, -7.16126e-08, 0, 0.819152, 0.573576, 8.74228e-08, 0.573576, -0.819152, 0.138, 1.51532, -1.45857)
+transform = Transform3D(-1, -4.69722e-08, 7.37316e-08, 0, 0.843391, 0.5373, -8.74228e-08, 0.5373, -0.843391, 0.138, 1.51532, -1.09144)
 fov = 110.0
 
 [node name="pause" parent="vision" instance=ExtResource("4_3efhf")]
