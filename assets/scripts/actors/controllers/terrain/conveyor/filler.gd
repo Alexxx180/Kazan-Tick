@@ -15,4 +15,4 @@ func fill_space(storage, generator, offset: Vector3i, count: int) -> void:
 			storage.add_block(block)
 		else:
 			var current = storage.get_current(index)
-			storage.append_block(block, current)
+			storage.append_block(block, current, offset.y)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmeht2a31bb4w"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/progression/side.gd" id="1_pni7o"]
-[ext_resource type="PackedScene" uid="uid://bbly8xg3ml4ke" path="res://assets/scenes/actors/controllers/conveyor/terrain/sides/4.tscn" id="2_ivjrk"]
+[ext_resource type="PackedScene" uid="uid://bbly8xg3ml4ke" path="res://assets/scenes/actors/controllers/conveyor/complex/terrain/sides/4.tscn" id="2_ivjrk"]
 
 [node name="side" type="Node3D"]
 script = ExtResource("1_pni7o")

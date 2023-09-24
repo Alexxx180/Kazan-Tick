@@ -1,8 +1,11 @@
 extends Node3D
 
-## This is the terrain generator
-## A set of randomly choosen terrain blocks is rendered to the viewport.
-## Holds the catalog of loaded terrain block scenes
+"""
+Terrain generator
+---
+Hold the blocks catalog and render them to the viewport
+"""
+
 var blocks: Array = []
 
 func add_element(type: String, block):

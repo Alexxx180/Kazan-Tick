@@ -1,7 +1,7 @@
 extends Node3D
 
 ## Render speed and keeping count
-@export var obstacles_far = 6
+@export var obstacles_far: int = 6
 @export var velocity: float = 15.0
 
 @export var paused = true
@@ -15,7 +15,7 @@ func switch_pause() -> void:
 
 func _physics_process(delta: float) -> void:
 	if (not paused):
-		_progress_terrain(delta)
+		_progress(delta)
 
 func _ready() -> void:
 	hero.pause.get_node("game/play/start").continue_pressed.connect(switch_pause)
@@ -23,8 +23,8 @@ func _ready() -> void:
 	terrain.fill_space()
 	objects.fill_space(obstacles_far)
 
-func _progress_terrain(delta: float) -> void:
+func _progress(delta: float) -> void:
 	var speed = velocity * delta
-	terrain.progress_terrain(speed)
-	objects.progress_terrain(speed)
+	terrain.progress(speed)
+	objects.progress(speed)
 	

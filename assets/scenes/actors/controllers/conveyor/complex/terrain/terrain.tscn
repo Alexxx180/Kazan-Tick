@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://iom2ex5bjgd6"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/progression/terrain.gd" id="1_otn2t"]
+[ext_resource type="PackedScene" uid="uid://bom3j8xyclqes" path="res://assets/scenes/actors/controllers/conveyor/generators/constant/road.tscn" id="2_cpqen"]
+[ext_resource type="PackedScene" uid="uid://dkfm8qt2q3crp" path="res://assets/scenes/actors/controllers/conveyor/generators/constant/lanterns.tscn" id="3_q0yf7"]
+[ext_resource type="PackedScene" uid="uid://bmeht2a31bb4w" path="res://assets/scenes/actors/controllers/conveyor/complex/terrain/sides/2.tscn" id="4_avnv0"]
+[ext_resource type="PackedScene" uid="uid://batexkrasnhm1" path="res://assets/scenes/actors/controllers/conveyor/conveyor.tscn" id="4_j3xkx"]
+
+[node name="terrain" type="Node3D"]
+script = ExtResource("1_otn2t")
+
+[node name="sides" parent="." instance=ExtResource("4_avnv0")]
+
+[node name="lanterns" parent="." instance=ExtResource("4_j3xkx")]
+offset = Vector3(-0.35, 38.6, 5.6)
+
+[node name="generator" parent="lanterns" instance=ExtResource("3_q0yf7")]
+
+[node name="road" parent="." instance=ExtResource("4_j3xkx")]
+offset = Vector3(0, 0, 1)
+
+[node name="generator" parent="road" instance=ExtResource("2_cpqen")]

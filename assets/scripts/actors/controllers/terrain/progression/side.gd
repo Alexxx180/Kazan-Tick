@@ -7,6 +7,6 @@ func fill_space(far: int):
 	left.fill_space(far)
 	right.fill_space(far)
 
-func progress_terrain(delta):
-	left.progress_terrain(delta)
-	right.progress_terrain(delta)
+func progress(delta):
+	left.progress(delta)
+	right.progress(delta)

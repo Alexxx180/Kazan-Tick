@@ -16,7 +16,7 @@ func add_block(block):
 	add_child(block)
 	rendering.append(block)
 
-func append_block(block, current, offset):
+func append_block(block, current, offset: float):
 	block.append_to_edge(current, offset)
 	add_block(block)
 	

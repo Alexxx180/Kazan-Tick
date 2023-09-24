@@ -10,5 +10,5 @@ func change_look():
 		return
 		
 	var count = mesh.get_child_count()
-	var current = randi() % count
+	var current = randi_range(0, count - 1)
 	mesh.get_child(current).show()
