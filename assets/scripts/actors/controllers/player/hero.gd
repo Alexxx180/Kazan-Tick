@@ -51,7 +51,9 @@ func collide():
 	pause.show()
 	pause.get_node("game/play/start").hide()
 	option.hide()
-	pause.get_node("game/play/retry").show()
+	var retry = pause.get_node("game/play/retry")
+	retry.grab_focus()
+	retry.show()
 	view.interrupt("stop")
 
 func change_direction(turn):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cfi67atue4lrh"]
+[gd_scene load_steps=17 format=3 uid="uid://cfi67atue4lrh"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/hero.gd" id="1_suvyr"]
 [ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/geometry/shapes/humanoid.tres" id="2_y2trp"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://assets/scripts/system/ui/screen/fullscreen.gd" id="8_f2qtc"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="8_gr5rv"]
 [ext_resource type="PackedScene" uid="uid://jb8uo0di7rkp" path="res://assets/scenes/system/ui/screens/transition.tscn" id="8_mai1m"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/focus.tscn" id="13_1x8ly"]
 [ext_resource type="PackedScene" uid="uid://pxepuctui4f2" path="res://assets/scenes/actors/behavior/movement/movement.tscn" id="15_n4ed0"]
 
 [node name="hero" type="CharacterBody3D"]
@@ -96,6 +97,9 @@ texture_normal = ExtResource("8_0d17t")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="focus" parent="vision/game/pause/option" instance=ExtResource("13_1x8ly")]
+path = "../../../../pause/game/play/start"
+
 [node name="transition" parent="vision" instance=ExtResource("8_mai1m")]
 visible = false
 
@@ -107,3 +111,4 @@ script = ExtResource("8_gr5rv")
 [connection signal="score_received" from="." to="vision/score" method="append_score"]
 [connection signal="pressed" from="vision/fullscreen/back/option" to="vision/fullscreen/back/option" method="_toggle_fullscreen"]
 [connection signal="pressed" from="vision/game/pause/option" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="vision/game/pause/option" to="vision/game/pause/option/focus" method="focus"]

@@ -376,6 +376,7 @@ bones/31/rotation = Quaternion(0.379292, 0.00145151, -0.000592857, 0.925276)
 
 [node name="NUR_GAME_плащ_texture" parent="Armature/Skeleton3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 0, 2.84217e-14, 1, 0, 0, 0)
+visible = false
 surface_material_override/0 = ExtResource("3_4ocw1")
 
 [node name="AnimationPlayer" parent="." index="3"]

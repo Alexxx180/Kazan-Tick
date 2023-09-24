@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjj7hqc17hnok"]
+[gd_scene load_steps=10 format=3 uid="uid://bjj7hqc17hnok"]
 
 [ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="1_rc0ss"]
 [ext_resource type="PackedScene" uid="uid://blbbkucolvrga" path="res://assets/scenes/system/ui/elements/decoration/background.tscn" id="2_t4mrg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Shortcut" uid="uid://b1hcbfnqa7gxa" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/focus.tres" id="6_5v3a7"]
 [ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher.tscn" id="6_8xapt"]
 [ext_resource type="Shortcut" uid="uid://beefargnqrmfc" path="res://assets/resources/runtime/templates/macro/shortcuts/common/cancel.tres" id="8_po010"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/focus.tscn" id="8_tuchv"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -73,6 +74,9 @@ text = "Credits"
 to_hide = NodePath("../..")
 to_show = NodePath("../../../credits")
 
+[node name="focus" parent="options/credits" node_paths=PackedStringArray("control") instance=ExtResource("8_tuchv")]
+control = NodePath("../../../credits/back")
+
 [node name="back" type="Button" parent="options"]
 layout_mode = 2
 shortcut = ExtResource("8_po010")
@@ -81,6 +85,9 @@ text = "Back"
 [node name="switcher" parent="options/back" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
 to_hide = NodePath("../..")
 to_show = NodePath("../../../game")
+
+[node name="focus" parent="options/back" instance=ExtResource("8_tuchv")]
+path = "../../../game/settings/options"
 
 [node name="credits" type="VBoxContainer" parent="."]
 visible = false
@@ -126,8 +133,14 @@ text = "Back"
 
 [node name="switcher" parent="credits/back" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
 to_hide = NodePath("../..")
-to_show = NodePath("../../../game")
+to_show = NodePath("../../../options")
+
+[node name="focus" parent="credits/back" node_paths=PackedStringArray("control") instance=ExtResource("8_tuchv")]
+control = NodePath("../../../options/credits")
 
 [connection signal="pressed" from="options/credits" to="options/credits/switcher" method="_switch"]
+[connection signal="pressed" from="options/credits" to="options/credits/focus" method="focus"]
 [connection signal="pressed" from="options/back" to="options/back/switcher" method="_switch"]
+[connection signal="pressed" from="options/back" to="options/back/focus" method="focus"]
 [connection signal="pressed" from="credits/back" to="credits/back/switcher" method="_switch"]
+[connection signal="pressed" from="credits/back" to="credits/back/focus" method="focus"]
