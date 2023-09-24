@@ -14,6 +14,7 @@ func _ready():
 	progressor.storage = $storage
 	progressor.generator = $generator
 	progressor.interval = offset.y
+	progressor.offset = offset.z
 
 func fill_space(count: int) -> void:
 	var storage = progressor.storage

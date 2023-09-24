@@ -2,13 +2,14 @@ extends Node
 
 # Progress blocks with defined interval
 @export var interval: float = 0
+@export var offset: float = 0
 
 var storage
 var generator
 
 func check_out_of_bounds() -> void:
 	var first = storage.get_first()
-	var edge = first.get_center() + interval
+	var edge = first.get_center() + offset
 	
 	if first.position.z > edge:
 		var last = storage.get_last()

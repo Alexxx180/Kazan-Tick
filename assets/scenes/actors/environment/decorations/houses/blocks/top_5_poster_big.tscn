@@ -33,6 +33,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_iiuxx")
 
 [node name="top_5_poster_big" type="MeshInstance3D"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.507, 0.04, 0.563)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.507, 0.04, 0.563)
 mesh = SubResource("ArrayMesh_yrkd7")
 skeleton = NodePath("")

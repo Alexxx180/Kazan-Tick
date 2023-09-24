@@ -14,7 +14,7 @@ config/name="Kazan-Tick"
 config/name_localized={
 "ru_RU": "Тикай-Казань"
 }
-run/main_scene="res://assets/scenes/system/io/levels/kazan.tscn"
+run/main_scene="res://assets/scenes/system/scenes/kazan.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0.0392157, 0.0392157, 0.0392157, 1)
 boot_splash/image="res://assets/resources/media/images/logo.png"
@@ -93,4 +93,5 @@ common/physics_ticks_per_second=120
 
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+reflections/sky_reflections/texture_array_reflections=false
 occlusion_culling/use_occlusion_culling=true

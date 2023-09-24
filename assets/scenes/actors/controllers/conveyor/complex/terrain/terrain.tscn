@@ -17,6 +17,6 @@ offset = Vector3(-0.35, 38.6, 5.6)
 [node name="generator" parent="lanterns" instance=ExtResource("3_q0yf7")]
 
 [node name="road" parent="." instance=ExtResource("4_j3xkx")]
-offset = Vector3(0, 0, 1)
+offset = Vector3(0, 0, 10)
 
 [node name="generator" parent="road" instance=ExtResource("2_cpqen")]

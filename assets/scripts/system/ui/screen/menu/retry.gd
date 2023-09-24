@@ -2,7 +2,7 @@ extends "res://assets/scripts/system/ui/screen/menu/play.gd"
 
 signal reset_score()
 
-@export var level = "res://assets/scenes/system/io/levels/kazan.tscn"
+@export var level = "res://assets/scenes/system/scenes/kazan.tscn"
 
 func _retry():
 	var reload = get_tree().change_scene_to_file(level)
