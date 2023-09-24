@@ -23,7 +23,7 @@ glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.541176, 0.368627, 0.513726, 1)
 fog_light_energy = 0.1
-fog_density = 0.02
+fog_density = 0.015
 fog_sky_affect = 0.3
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4p1w3"]
