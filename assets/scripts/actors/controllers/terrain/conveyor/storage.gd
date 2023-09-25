@@ -22,4 +22,5 @@ func append_block(block, current, offset: float):
 	
 func drop_front():
 	var first = rendering.pop_front()
+	remove_child(first)
 	first.queue_free()

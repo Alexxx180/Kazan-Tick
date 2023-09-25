@@ -36,7 +36,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_mrv7q"]
 resource_name = "Armature|jump"
-length = 1.11
+length = 1.1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -271,7 +271,7 @@ tracks/31/path = NodePath(".")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
-"times": PackedFloat32Array(1.11),
+"times": PackedFloat32Array(1.1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": ["run"],
@@ -389,10 +389,11 @@ libraries = {
 tree_root = ExtResource("6_262ct")
 anim_player = NodePath("..")
 active = true
-parameters/TimeScale/scale = 1.4
+parameters/act-scale/scale = 1.4
 parameters/active/current_state = "run"
 parameters/active/transition_request = ""
 parameters/active/current_index = 1
 parameters/character/current_state = "stop"
 parameters/character/transition_request = ""
 parameters/character/current_index = 1
+parameters/jump-scale/scale = 1.35

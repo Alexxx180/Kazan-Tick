@@ -18,8 +18,8 @@ func _physics_process(delta: float) -> void:
 		_progress(delta)
 
 func _ready() -> void:
-	hero.pause.get_node("game/play/start").continue_pressed.connect(switch_pause)
-	hero.pause.get_node("game/play/retry").continue_pressed.connect(switch_pause)
+	#hero.pause.get_node("game/play/start").continue_pressed.connect(switch_pause)
+	#hero.pause.get_node("game/play/retry").continue_pressed.connect(switch_pause)
 	terrain.fill_space()
 	objects.fill_space(obstacles_far)
 
