@@ -1,13 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://cj2fvuv0efwwa"]
 
-[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/settings.gd" id="1_bo6a7"]
 [ext_resource type="Shortcut" uid="uid://b1hcbfnqa7gxa" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/focus.tres" id="2_52per"]
 [ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher.tscn" id="2_64il7"]
 [ext_resource type="Shortcut" uid="uid://ce4goulx6k06x" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/quit.tres" id="4_0c3pc"]
 [ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/focus.tscn" id="4_u1whr"]
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/options/quit.gd" id="5_i3kf5"]
 
 [node name="settings" type="VBoxContainer"]
-script = ExtResource("1_bo6a7")
 
 [node name="options" type="Button" parent="."]
 layout_mode = 2
@@ -18,6 +17,8 @@ shortcut = ExtResource("2_52per")
 text = "Options"
 
 [node name="switcher" parent="options" instance=ExtResource("2_64il7")]
+hide_path = "../../.."
+show_path = "../../../../options"
 
 [node name="focus" parent="options" instance=ExtResource("4_u1whr")]
 path = "../../../../options/credits"
@@ -29,7 +30,8 @@ focus_neighbor_right = NodePath("../options")
 focus_previous = NodePath("../options")
 shortcut = ExtResource("4_0c3pc")
 text = "Quit"
+script = ExtResource("5_i3kf5")
 
 [connection signal="pressed" from="options" to="options/switcher" method="_switch"]
 [connection signal="pressed" from="options" to="options/focus" method="focus"]
-[connection signal="pressed" from="quit" to="." method="_on_quit"]
+[connection signal="pressed" from="quit" to="quit" method="_on_quit"]

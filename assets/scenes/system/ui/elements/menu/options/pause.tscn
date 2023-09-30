@@ -1,11 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://o1u8wgm6mccj"]
+[gd_scene load_steps=3 format=3 uid="uid://o1u8wgm6mccj"]
 
-[ext_resource type="Script" path="res://assets/scripts/system/ui/screen/menu/pause.gd" id="1_gokbi"]
+[ext_resource type="PackedScene" uid="uid://dpfr1bnlveuvd" path="res://assets/scenes/system/ui/elements/core/emitter/client.tscn" id="2_nscm6"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/focus.tscn" id="3_bau1l"]
 
 [node name="start" type="Button"]
 offset_right = 46.0
 offset_bottom = 31.0
 text = "Start"
-script = ExtResource("1_gokbi")
 
-[connection signal="pressed" from="." to="." method="_continue"]
+[node name="client" parent="." instance=ExtResource("2_nscm6")]
+server_path = "../../../../../../../pause"
+
+[node name="focus" parent="." instance=ExtResource("3_bau1l")]
+path = ".."
+on_start = true
+
+[connection signal="pressed" from="." to="client" method="_submit"]

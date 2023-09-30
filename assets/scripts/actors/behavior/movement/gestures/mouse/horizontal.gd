@@ -7,7 +7,7 @@ func drag(e, tact):
 	var data = tact.blackboard
 	
 	if data.get_value('drag'):
-		state = game.swipe(e.relative.x, tact.actor)
+		state = game.swipe(e.relative.x, tact.actor.logic)
 	if state == OK:
 		data.set_value('drag', false)
 		

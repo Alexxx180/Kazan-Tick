@@ -14,7 +14,7 @@ theme = ExtResource("1_0lwxb")
 toggle_mode = true
 shortcut = ExtResource("2_qhul1")
 script = ExtResource("2_gam46")
-path = "../../../../view/Armature/Skeleton3D/NUR_GAME_плащ_texture"
+path = "../../../../doll/view/Armature/Skeleton3D/NUR_GAME_плащ_texture"
 
 [node name="margin" type="MarginContainer" parent="."]
 layout_mode = 1

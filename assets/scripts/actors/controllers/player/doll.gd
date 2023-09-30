@@ -1,12 +1,14 @@
 extends Node3D
 
+var hero: CharacterBody3D
+
 @onready var view = $view
 @onready var blackboard = $blackboard
 @onready var movement = $movement
 
 func _input(e):
 	blackboard.set_value('event', e)
-	movement.tick(self, blackboard)
+	movement.tick(hero, blackboard)
 
 func _ready():
 	blackboard.set_value('swipe', 'swiped')
@@ -16,8 +18,8 @@ func _ready():
 	set_floor(true)
 
 
-func set_floor(floor: bool):
-	blackboard.set_value('is_on_floor', floor)
+func set_floor(on_floor: bool):
+	blackboard.set_value('is_on_floor', on_floor)
 
 func jump():
 	blackboard.set_value('swipe', 'swiped')
@@ -29,11 +31,6 @@ func is_jumping():
 
 func is_running():
 	return blackboard.get_value('running') == OK
-
-
-func over():
-	blackboard.set_value('running', FAILED)
-	view.interrupt("stop")
 
 func pause():
 	var running = blackboard.get_value('running')

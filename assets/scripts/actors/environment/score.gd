@@ -1,7 +1,7 @@
 extends Area3D
 
-@export var score: int = 1
+@export var bonus: int = 1
 
 func _on_receive(hero: CharacterBody3D):
-	hero.emit_signal("score_received", score)
+	hero.vision.score.append(bonus)
 	get_parent().queue_free()

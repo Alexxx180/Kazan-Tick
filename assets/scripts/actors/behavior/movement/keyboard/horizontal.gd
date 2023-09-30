@@ -1,7 +1,7 @@
 extends "res://addons/godot-behavior-tree-plugin/action.gd"
 
 func move(tact: Tick, direction: int):
-	tact.actor.change_direction(direction)
+	tact.actor.logic.change_direction(direction)
 	return OK
 
 

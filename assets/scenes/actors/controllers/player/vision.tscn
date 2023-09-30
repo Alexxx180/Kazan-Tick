@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://behfy4vyukwm3"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/ui/vision.gd" id="1_owxwj"]
+[ext_resource type="PackedScene" uid="uid://bjj7hqc17hnok" path="res://assets/scenes/system/ui/screens/menu.tscn" id="2_dlbl3"]
+[ext_resource type="PackedScene" uid="uid://b1ie14j2uh6eh" path="res://assets/scenes/system/ui/elements/menu/indicators/score.tscn" id="3_tonu4"]
+[ext_resource type="PackedScene" uid="uid://ewhcc1qdwbky" path="res://assets/scenes/system/ui/elements/menu/options/ingame/fullscreen.tscn" id="4_6slgf"]
+[ext_resource type="PackedScene" uid="uid://3qtp1uxw1msk" path="res://assets/scenes/system/ui/elements/menu/options/ingame/pause.tscn" id="5_wcxeh"]
+[ext_resource type="PackedScene" uid="uid://jb8uo0di7rkp" path="res://assets/scenes/system/ui/screens/transition.tscn" id="6_2f3yg"]
+[ext_resource type="PackedScene" uid="uid://cquu6mkyxh4ci" path="res://assets/scenes/system/ui/elements/core/toggle.tscn" id="7_110f7"]
+
+[node name="vision" type="Camera3D"]
+transform = Transform3D(-1, -4.69722e-08, 7.37316e-08, 0, 0.843391, 0.5373, -8.74228e-08, 0.5373, -0.843391, 0.138, 1.51532, -1.09144)
+fov = 110.0
+script = ExtResource("1_owxwj")
+
+[node name="menu" parent="." instance=ExtResource("2_dlbl3")]
+
+[node name="score" parent="." instance=ExtResource("3_tonu4")]
+
+[node name="fullscreen" parent="." instance=ExtResource("4_6slgf")]
+
+[node name="pause" parent="." instance=ExtResource("5_wcxeh")]
+visible = false
+
+[node name="transition" parent="." instance=ExtResource("6_2f3yg")]
+
+[node name="toggle" parent="." node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("7_110f7")]
+to_hide = NodePath("../menu")
+to_show = NodePath("../pause")

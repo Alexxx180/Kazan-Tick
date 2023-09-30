@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cb5o0mk55nhlr"]
 
-[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/focus.gd" id="1_jvpm0"]
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/core/focus.gd" id="1_jvpm0"]
 
 [node name="focus" type="Node"]
 script = ExtResource("1_jvpm0")

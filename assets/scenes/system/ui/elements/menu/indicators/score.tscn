@@ -13,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_wkjf2")
+retry = "../menu/game/play/retry"
 
 [node name="current" type="Label" parent="."]
 layout_mode = 1

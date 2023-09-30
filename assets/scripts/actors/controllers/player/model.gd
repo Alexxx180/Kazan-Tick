@@ -10,12 +10,8 @@ func interrupt(state: String):
 	tree.set(request, state)
 	
 func act(action: String):
-	if (action == last):
-		return
-	
 	var request = "parameters/active/transition_request"
 	tree.set(request, action)
-	last = action
 	
 func pause(is_active: bool):
 	if (is_active):

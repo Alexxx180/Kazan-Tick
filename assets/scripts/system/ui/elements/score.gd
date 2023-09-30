@@ -1,16 +1,14 @@
 extends Control
 
-var current: Label
+@onready var current: Label = $current
+@export var retry: String
+
+func _ready():
+	set_score()
 
 func set_score():
 	current.text = Global.get_score_string()
 
-func _ready():
-	current = $current
-	set_score()
-	var parent = get_parent()
-	parent.get_node("pause/game/play/retry").reset_score.connect(set_score)
-	
-func append_score(bonus: int):
+func append(bonus: int):
 	Global.append_score(bonus)
 	set_score()

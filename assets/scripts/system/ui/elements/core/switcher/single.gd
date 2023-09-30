@@ -13,6 +13,6 @@ func _ready():
 	if (to_show == null):
 		to_show = get_node(show_path)
 
-func _switch():
+func switch():
 	to_show.show()
 	to_hide.hide()
