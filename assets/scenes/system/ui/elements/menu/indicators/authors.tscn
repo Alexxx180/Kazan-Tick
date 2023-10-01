@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://7lvdjmmuwq8u"]
+
+[node name="panel" type="ColorRect"]
+size_flags_vertical = 3
+color = Color(0.109804, 0.109804, 0.109804, 0.72549)
+
+[node name="margin" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 417.0
+offset_bottom = 266.0
+size_flags_vertical = 3
+
+[node name="authors" type="RichTextLabel" parent="margin"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[i]Art[/i]
+[right]Stepanova Maria
+Lomako Mark
+Bulankina Elizaveta[/right]
+[i]Code[/i]
+[right]Tatarintsev Aleksandr[/right]"
+fit_content = true

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://xj3vofwuf6t6"]
+
+[ext_resource type="PackedScene" uid="uid://dmbiftba05658" path="res://assets/scenes/system/ui/elements/menu/options/pause/settings/skin.tscn" id="1_e0aih"]
+[ext_resource type="PackedScene" uid="uid://ejk4ki08ubui" path="res://assets/scenes/system/ui/elements/menu/options/pause/settings/credits.tscn" id="2_ibpmt"]
+[ext_resource type="PackedScene" uid="uid://6y1fuow7jvc3" path="res://assets/scenes/system/ui/elements/menu/options/pause/back/game.tscn" id="5_5w6te"]
+
+[node name="options" type="VBoxContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -217.0
+offset_right = 212.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="music" type="HSlider" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="highscore" parent="." instance=ExtResource("1_e0aih")]
+custom_minimum_size = Vector2(0, 118)
+layout_mode = 2
+
+[node name="credits" parent="." instance=ExtResource("2_ibpmt")]
+layout_mode = 2
+
+[node name="back" parent="." instance=ExtResource("5_5w6te")]
+layout_mode = 2

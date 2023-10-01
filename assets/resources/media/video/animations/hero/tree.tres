@@ -36,7 +36,7 @@ animation = &"run"
 animation = &"lose"
 
 [resource]
-graph_offset = Vector2(-263, -229)
+graph_offset = Vector2(-237, -100)
 nodes/act-scale/node = SubResource("AnimationNodeTimeScale_ohtal")
 nodes/act-scale/position = Vector2(400, 40)
 nodes/active/node = SubResource("AnimationNodeTransition_xfc5k")

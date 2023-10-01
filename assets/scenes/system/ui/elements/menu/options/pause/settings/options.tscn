@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0dv1bqfcagfo"]
+
+[ext_resource type="Shortcut" uid="uid://b1hcbfnqa7gxa" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/focus.tres" id="1_x5ewy"]
+[ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher/switcher.tscn" id="2_xk228"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/runtime/focus.tscn" id="3_xduo6"]
+
+[node name="options" type="Button"]
+focus_neighbor_left = NodePath("../quit")
+focus_neighbor_bottom = NodePath("../quit")
+focus_next = NodePath("../quit")
+shortcut = ExtResource("1_x5ewy")
+text = "Options"
+
+[node name="switcher" parent="." instance=ExtResource("2_xk228")]
+hide_path = "../../.."
+show_path = "../../../../options"
+
+[node name="focus" parent="." instance=ExtResource("3_xduo6")]
+path = "../../../../options/credits"
+
+[connection signal="pressed" from="." to="switcher" method="switch"]
+[connection signal="pressed" from="." to="focus" method="focus"]

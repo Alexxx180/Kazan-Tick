@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuye6bqgqwbj4"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/io/signals/detacher.gd" id="1_lpyey"]
+
+[node name="detacher" type="Node"]
+script = ExtResource("1_lpyey")

@@ -33,19 +33,6 @@ size_flags_horizontal = 0
 texture = ExtResource("2_gjsui")
 expand_mode = 3
 
-[node name="placeholder" type="Label" parent="margin/image"]
-visible = false
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -57.0
-offset_right = 105.0
-offset_bottom = 57.0
-grow_vertical = 2
-text = "Coat
-Here"
-
 [node name="text" type="VBoxContainer" parent="margin"]
 layout_mode = 2
 size_flags_horizontal = 8

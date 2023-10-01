@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://cjkyihk3jngbf"]
+[gd_scene load_steps=3 format=3 uid="uid://cjkyihk3jngbf"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/core/runtime/rename.gd" id="1_fc5a1"]
+[ext_resource type="PackedScene" uid="uid://cuye6bqgqwbj4" path="res://assets/scenes/system/signals/detacher.tscn" id="2_uxvnc"]
 
 [node name="rename" type="Node"]
+script = ExtResource("1_fc5a1")
+
+[node name="detacher" parent="." instance=ExtResource("2_uxvnc")]

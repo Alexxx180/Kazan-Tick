@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ejk4ki08ubui"]
+
+[ext_resource type="Shortcut" uid="uid://b1hcbfnqa7gxa" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/focus.tres" id="1_cse5e"]
+[ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher/switcher.tscn" id="2_0ihqo"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/runtime/focus.tscn" id="3_siwlo"]
+
+[node name="credits" type="Button"]
+shortcut = ExtResource("1_cse5e")
+text = "Credits"
+
+[node name="switcher" parent="." instance=ExtResource("2_0ihqo")]
+hide_path = "../../../options"
+show_path = "../../../credits"
+
+[node name="focus" parent="." instance=ExtResource("3_siwlo")]
+path = "../../../credits/back"
+
+[connection signal="pressed" from="." to="switcher" method="switch"]
+[connection signal="pressed" from="." to="focus" method="focus"]

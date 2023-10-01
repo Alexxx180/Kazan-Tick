@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://o1u8wgm6mccj"]
+[gd_scene load_steps=4 format=3 uid="uid://o1u8wgm6mccj"]
 
 [ext_resource type="PackedScene" uid="uid://dpfr1bnlveuvd" path="res://assets/scenes/system/ui/elements/core/emitter/client.tscn" id="2_nscm6"]
-[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/focus.tscn" id="3_bau1l"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/runtime/focus.tscn" id="3_bau1l"]
+[ext_resource type="PackedScene" uid="uid://cjkyihk3jngbf" path="res://assets/scenes/system/ui/elements/core/runtime/rename.tscn" id="3_jbwhm"]
 
 [node name="start" type="Button"]
 offset_right = 46.0
@@ -15,4 +16,8 @@ server_path = "../../../../../../../pause"
 path = ".."
 on_start = true
 
+[node name="continue" parent="." instance=ExtResource("3_jbwhm")]
+text = "Continue"
+
 [connection signal="pressed" from="." to="client" method="_submit"]
+[connection signal="pressed" from="." to="continue" method="rename"]

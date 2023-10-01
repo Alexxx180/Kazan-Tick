@@ -1,14 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjj7hqc17hnok"]
+[gd_scene load_steps=6 format=3 uid="uid://bjj7hqc17hnok"]
 
 [ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="1_rc0ss"]
 [ext_resource type="PackedScene" uid="uid://blbbkucolvrga" path="res://assets/scenes/system/ui/elements/decoration/background.tscn" id="2_t4mrg"]
-[ext_resource type="PackedScene" uid="uid://cp5c5r2td8lfq" path="res://assets/scenes/system/ui/elements/menu/groups/play.tscn" id="3_qrlq3"]
-[ext_resource type="PackedScene" uid="uid://cj2fvuv0efwwa" path="res://assets/scenes/system/ui/elements/menu/groups/settings.tscn" id="4_dkyxj"]
-[ext_resource type="PackedScene" uid="uid://dmbiftba05658" path="res://assets/scenes/system/ui/elements/menu/options/skin.tscn" id="5_g0pn7"]
-[ext_resource type="Shortcut" uid="uid://b1hcbfnqa7gxa" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/focus.tres" id="6_5v3a7"]
-[ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher.tscn" id="6_8xapt"]
-[ext_resource type="Shortcut" uid="uid://beefargnqrmfc" path="res://assets/resources/runtime/templates/macro/shortcuts/common/cancel.tres" id="8_po010"]
-[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/focus.tscn" id="8_tuchv"]
+[ext_resource type="PackedScene" uid="uid://t3bcwq112g6l" path="res://assets/scenes/system/ui/elements/menu/groups/game/game.tscn" id="3_02wxc"]
+[ext_resource type="PackedScene" uid="uid://xj3vofwuf6t6" path="res://assets/scenes/system/ui/elements/menu/groups/options.tscn" id="4_wg7cq"]
+[ext_resource type="PackedScene" uid="uid://dtuhuj4neasik" path="res://assets/scenes/system/ui/elements/menu/groups/credits.tscn" id="5_y0bs7"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -22,125 +18,15 @@ theme = ExtResource("1_rc0ss")
 [node name="back" parent="." instance=ExtResource("2_t4mrg")]
 layout_mode = 1
 
-[node name="game" type="VBoxContainer" parent="."]
+[node name="game" parent="." instance=ExtResource("3_02wxc")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -212.0
-offset_top = -217.0
-offset_right = 212.0
-offset_bottom = 217.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_top = -231.0
+offset_bottom = 231.0
 
-[node name="play" parent="game" instance=ExtResource("3_qrlq3")]
-layout_mode = 2
-
-[node name="settings" parent="game" instance=ExtResource("4_dkyxj")]
-layout_mode = 2
-
-[node name="options" type="VBoxContainer" parent="."]
-visible = false
+[node name="options" parent="." instance=ExtResource("4_wg7cq")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -212.0
-offset_top = -217.0
-offset_right = 212.0
-offset_bottom = 217.0
-grow_horizontal = 2
-grow_vertical = 2
 
-[node name="music" type="HSlider" parent="options"]
-visible = false
-layout_mode = 2
-
-[node name="highscore" parent="options" instance=ExtResource("5_g0pn7")]
-custom_minimum_size = Vector2(0, 118)
-layout_mode = 2
-
-[node name="credits" type="Button" parent="options"]
-layout_mode = 2
-shortcut = ExtResource("6_5v3a7")
-text = "Credits"
-
-[node name="switcher" parent="options/credits" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
-to_hide = NodePath("../..")
-to_show = NodePath("../../../credits")
-
-[node name="focus" parent="options/credits" node_paths=PackedStringArray("control") instance=ExtResource("8_tuchv")]
-control = NodePath("../../../credits/back")
-
-[node name="back" type="Button" parent="options"]
-layout_mode = 2
-shortcut = ExtResource("8_po010")
-text = "Back"
-
-[node name="switcher" parent="options/back" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
-to_hide = NodePath("../..")
-to_show = NodePath("../../../game")
-
-[node name="focus" parent="options/back" instance=ExtResource("8_tuchv")]
-path = "../../../game/settings/options"
-
-[node name="credits" type="VBoxContainer" parent="."]
-visible = false
+[node name="credits" parent="." instance=ExtResource("5_y0bs7")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -212.0
-offset_top = -217.0
-offset_right = 212.0
-offset_bottom = 209.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="panel" type="ColorRect" parent="credits"]
-layout_mode = 2
-size_flags_vertical = 3
-color = Color(0.109804, 0.109804, 0.109804, 0.72549)
-
-[node name="margin" type="MarginContainer" parent="credits/panel"]
-layout_mode = 2
-offset_right = 417.0
-offset_bottom = 266.0
-size_flags_vertical = 3
-
-[node name="authors" type="RichTextLabel" parent="credits/panel/margin"]
-layout_mode = 2
-bbcode_enabled = true
-text = "[i]Art[/i]
-[right]Stepanova Maria
-Lomako Mark
-Bulankina Elizaveta[/right]
-[i]Code[/i]
-[right]Tatarintsev Aleksandr[/right]"
-fit_content = true
-
-[node name="back" type="Button" parent="credits"]
-layout_mode = 2
-shortcut = ExtResource("8_po010")
-text = "Back"
-
-[node name="switcher" parent="credits/back" node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("6_8xapt")]
-to_hide = NodePath("../..")
-to_show = NodePath("../../../options")
-
-[node name="focus" parent="credits/back" node_paths=PackedStringArray("control") instance=ExtResource("8_tuchv")]
-control = NodePath("../../../options/credits")
-
-[connection signal="pressed" from="options/credits" to="options/credits/switcher" method="_switch"]
-[connection signal="pressed" from="options/credits" to="options/credits/focus" method="focus"]
-[connection signal="pressed" from="options/back" to="options/back/switcher" method="_switch"]
-[connection signal="pressed" from="options/back" to="options/back/focus" method="focus"]
-[connection signal="pressed" from="credits/back" to="credits/back/switcher" method="_switch"]
-[connection signal="pressed" from="credits/back" to="credits/back/focus" method="focus"]
+offset_top = -213.0
+offset_bottom = 213.0

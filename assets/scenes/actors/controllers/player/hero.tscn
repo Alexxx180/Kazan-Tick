@@ -1,15 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cfi67atue4lrh"]
+[gd_scene load_steps=7 format=3 uid="uid://cfi67atue4lrh"]
 
 [ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/hero.gd" id="1_suvyr"]
 [ext_resource type="Shape3D" uid="uid://dhuv61g65fkt" path="res://assets/resources/runtime/templates/geometry/shapes/humanoid.tres" id="2_y2trp"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/doll.gd" id="3_hl8m3"]
-[ext_resource type="PackedScene" uid="uid://bv3x2hl8fanqy" path="res://assets/scenes/actors/controllers/player/model.tscn" id="3_iug8k"]
+[ext_resource type="PackedScene" uid="uid://ci2tfpaheth67" path="res://assets/scenes/actors/controllers/player/view/doll.tscn" id="3_5dofm"]
+[ext_resource type="PackedScene" uid="uid://d1j3c1lda3miu" path="res://assets/scenes/actors/controllers/player/logic.tscn" id="5_o22bk"]
 [ext_resource type="PackedScene" uid="uid://behfy4vyukwm3" path="res://assets/scenes/actors/controllers/player/vision.tscn" id="7_e00s1"]
-[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="8_gr5rv"]
 [ext_resource type="PackedScene" uid="uid://dpfr1bnlveuvd" path="res://assets/scenes/system/ui/elements/core/emitter/client.tscn" id="8_l07sm"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/processor.gd" id="8_owbuf"]
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/physics.gd" id="10_76t2m"]
-[ext_resource type="PackedScene" uid="uid://pxepuctui4f2" path="res://assets/scenes/actors/behavior/movement/movement.tscn" id="15_n4ed0"]
 
 [node name="hero" type="CharacterBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, 0)
@@ -25,24 +21,11 @@ script = ExtResource("1_suvyr")
 [node name="collision" type="CollisionShape3D" parent="."]
 shape = ExtResource("2_y2trp")
 
-[node name="doll" type="Node3D" parent="."]
-script = ExtResource("3_hl8m3")
-
-[node name="view" parent="doll" instance=ExtResource("3_iug8k")]
-
-[node name="blackboard" type="Node" parent="doll"]
-script = ExtResource("8_gr5rv")
-
-[node name="movement" parent="doll" instance=ExtResource("15_n4ed0")]
+[node name="doll" parent="." instance=ExtResource("3_5dofm")]
 
 [node name="vision" parent="." instance=ExtResource("7_e00s1")]
 
-[node name="physics" type="Node" parent="."]
-script = ExtResource("10_76t2m")
-
-[node name="processor" type="Node" parent="physics"]
-script = ExtResource("8_owbuf")
-tracks = "../../../track/paths"
+[node name="physics" parent="." instance=ExtResource("5_o22bk")]
 
 [node name="hit" parent="." instance=ExtResource("8_l07sm")]
 server_path = "../../pause"
