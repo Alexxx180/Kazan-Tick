@@ -24,6 +24,9 @@ func get_score():
 
 func get_markers():
 	return unsorted.get_children()
+	
+func free_markers():
+	unsorted.queue_free()
 
 func add_score(instance):
 	score.add_child(instance)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://1361f5mfq6e0"]
 
-[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/generators/random/setup.gd" id="1_juqd5"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/generators/random.gd" id="1_juqd5"]
 [ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/scenes/loader.tscn" id="1_v770n"]
 [ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="3_1cqic"]
 [ext_resource type="PackedScene" uid="uid://crbl4idt3nhec" path="res://assets/scenes/actors/behavior/objects/generating.tscn" id="4_hei0s"]

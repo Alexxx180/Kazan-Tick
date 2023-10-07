@@ -4,6 +4,5 @@ extends "res://addons/godot-behavior-tree-plugin/sequence.gd"
 
 func _ready():
 	$act.check = int(str(name))
-	var obstacles = $obstacles
-	obstacles.offset = obstacle.x
-	obstacles.max_count = obstacle.y
+	$obstacles/anchoring.offset = obstacle.x
+	$obstacles/determinant.limit = obstacle.y

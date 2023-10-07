@@ -8,7 +8,7 @@ var detacher: Node
 func _ready():
 	if remove:
 		detacher = $detacher
-		
+
 func _remove(control: Control):
 	detacher.unbind(control, rename)
 	queue_free()

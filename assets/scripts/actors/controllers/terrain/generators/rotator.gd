@@ -4,5 +4,6 @@ extends "res://assets/scripts/actors/controllers/terrain/generators/constant.gd"
 
 func generate():
 	var block = super.generate()
-	block.get_node("merger").rotation.y = randi_range(0, angles.x) * angles.y
+	var merger = block.get_node("merger")
+	merger.rotation.y = randi_range(0, angles.x) * angles.y
 	return block

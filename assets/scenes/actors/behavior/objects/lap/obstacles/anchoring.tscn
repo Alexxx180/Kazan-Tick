@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjgme3cse6ksq"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/obstacles/anchor.gd" id="1_mv6ad"]
+
+[node name="anchoring" type="Node"]
+script = ExtResource("1_mv6ad")

@@ -1,6 +1,6 @@
 extends Node3D
 
-## Render speed and keeping count
+# Render speed and keeping count
 @export var obstacles_far: int = 6
 @export var velocity: float = 15.0
 
@@ -25,4 +25,3 @@ func _progress(delta: float) -> void:
 	var speed = velocity * delta
 	terrain.progress(speed)
 	objects.progress(speed)
-	

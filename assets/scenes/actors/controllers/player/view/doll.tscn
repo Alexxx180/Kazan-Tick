@@ -9,7 +9,6 @@
 script = ExtResource("1_7vok8")
 
 [node name="view" parent="." instance=ExtResource("2_oh1g8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
 
 [node name="blackboard" type="Node" parent="."]
 script = ExtResource("3_17353")

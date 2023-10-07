@@ -3,7 +3,7 @@ extends Node3D
 """
 Terrain generator
 ---
-Hold the blocks catalog and render them to the viewport
+Holds and renders the blocks catalog to the viewport
 """
 
 @export_file("*.tscn") var placeholder_file: String
@@ -14,16 +14,16 @@ var blackboard: Variant = null
 func _ready():
 	behavior = $behavior
 
-func _set_blackboard():
+func _set_blackboard(blocks):
 	blackboard = $blackboard
 	blackboard.set_value("placeholder", load(placeholder_file))
-	blackboard.set_value("blocks", { "obstacles" : [], "score" : [] })
+	blackboard.set_value("blocks", blocks)
 	blackboard.set_value("space", [0, 1, 2])
 	blackboard.set_value("lap", -1)
 
 func get_blackboard():
 	if (blackboard == null):
-		_set_blackboard()
+		_set_blackboard({ "obstacles" : [], "score" : [] })
 	return blackboard
 
 func add_element(type: String, block):

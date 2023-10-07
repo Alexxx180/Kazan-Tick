@@ -7,11 +7,10 @@ func tick(tact: Tick) -> int:
 	var result = tact.blackboard.get_value("result")
 	var markers = result.get_markers()
 	
-	while markers.size() > 0:
+	for marker in markers:
 		var bonus = score.instantiate()
-		bonus.position = markers[0].position
+		bonus.position = marker.position
 		result.add_score(bonus)
-		markers.remove_at(0)
 	
 	return super.tick(tact)
 
