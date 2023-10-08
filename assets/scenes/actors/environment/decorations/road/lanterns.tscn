@@ -32,7 +32,9 @@ transform = Transform3D(1, 0, 0, 0, 0.0558389, -0.99844, 0, 0.99844, 0.0558389, 
 spot_range = 1.5
 
 [node name="road" parent="view/lanterns/left" instance=ExtResource("5_47hiw")]
-transform = Transform3D(1, 0, 0, 0, -0.00294963, 0.999996, 0, -0.999996, -0.00294963, -17.4346, 3.43209, 0.178351)
+transform = Transform3D(1, 0, 0, 0, -0.00294963, 0.999996, 0, -0.999996, -0.00294963, -17.4346, 0.939119, 0.178351)
+spot_range = 5.0
+spot_angle = 90.0
 
 [node name="right" type="Node3D" parent="view/lanterns"]
 
@@ -41,4 +43,6 @@ transform = Transform3D(1, 0, 0, 0, 0.0558389, -0.99844, 0, 0.99844, 0.0558389, 
 spot_range = 1.5
 
 [node name="road" parent="view/lanterns/right" instance=ExtResource("5_47hiw")]
-transform = Transform3D(1, 0, 0, 0, -0.00294963, 0.999996, 0, -0.999996, -0.00294963, -13.1, 3.43216, 0.178)
+transform = Transform3D(1, 0, 0, 0, -0.00294963, 0.999996, 0, -0.999996, -0.00294963, -13.1, 0.939, 0.178)
+spot_range = 5.0
+spot_angle = 90.0
