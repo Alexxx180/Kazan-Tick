@@ -14,7 +14,7 @@ config/name="Kazan-Tick"
 config/name_localized={
 "ru_RU": "Тикай-Казань"
 }
-run/main_scene="res://assets/scenes/system/scenes/kazan.tscn"
+run/main_scene="res://assets/scenes/kazan.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0.0392157, 0.0392157, 0.0392157, 1)
 boot_splash/image="res://assets/resources/media/images/logo.png"

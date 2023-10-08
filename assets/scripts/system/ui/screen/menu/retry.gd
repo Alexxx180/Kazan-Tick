@@ -1,6 +1,6 @@
 extends Button
 
-@export var level = "res://assets/scenes/system/scenes/kazan.tscn"
+@export var level = "res://assets/scenes/kazan.tscn"
 
 func _retry():
 	var tree = get_tree()
