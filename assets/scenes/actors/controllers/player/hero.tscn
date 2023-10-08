@@ -24,6 +24,8 @@ shape = ExtResource("2_y2trp")
 [node name="doll" parent="." instance=ExtResource("3_5dofm")]
 
 [node name="vision" parent="." instance=ExtResource("7_e00s1")]
+fov = 100.0
+far = 210.0
 
 [node name="physics" parent="." instance=ExtResource("5_o22bk")]
 

@@ -16,9 +16,14 @@ func _ready():
 
 func _set_blackboard(blocks):
 	blackboard = $blackboard
+	var space = [0, 1, 2]
 	blackboard.set_value("placeholder", load(placeholder_file))
 	blackboard.set_value("blocks", blocks)
-	blackboard.set_value("space", [0, 1, 2])
+	blackboard.set_value("space", space)
+	blackboard.set_value("amount", space.size() - 1)
+	
+	blackboard.set_value("anchor", 1)
+	blackboard.set_value("angle", 0.0)
 	blackboard.set_value("lap", -1)
 
 func get_blackboard():

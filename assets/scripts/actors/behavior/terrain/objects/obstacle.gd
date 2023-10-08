@@ -20,7 +20,7 @@ func generate_obstacles(location):
 
 func tick(tact: Tick) -> int:
 	var blackboard = tact.blackboard
-	var obstacles = place.get_obstacles(blackboard)
-	var space = generate_obstacles(obstacles)
+	var location = place.get_obstacles(blackboard)
+	var space = generate_obstacles(location)
 	blackboard.set_value("space", space)
 	return super.tick(tact)

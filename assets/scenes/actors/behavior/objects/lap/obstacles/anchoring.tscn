@@ -4,3 +4,5 @@
 
 [node name="anchoring" type="Node"]
 script = ExtResource("1_mv6ad")
+
+[node name="shuffler" type="Node" parent="."]

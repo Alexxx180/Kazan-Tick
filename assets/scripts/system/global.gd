@@ -8,6 +8,7 @@ var score: int
 func _ready() -> void:
 	reset()
 	load_settings()
+	randomize()
 
 func get_score_string() -> String:
 	return str(score)
