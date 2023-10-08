@@ -27,6 +27,9 @@ Global="*res://assets/scripts/system/global.gd"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/energy_saving/keep_screen_on=false
 window/handheld/orientation=6
 
 [editor_plugins]

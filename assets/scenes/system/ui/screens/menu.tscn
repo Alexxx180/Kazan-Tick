@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjj7hqc17hnok"]
+[gd_scene load_steps=7 format=3 uid="uid://bjj7hqc17hnok"]
 
 [ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="1_rc0ss"]
 [ext_resource type="PackedScene" uid="uid://blbbkucolvrga" path="res://assets/scenes/system/ui/elements/decoration/background.tscn" id="2_t4mrg"]
 [ext_resource type="PackedScene" uid="uid://t3bcwq112g6l" path="res://assets/scenes/system/ui/elements/menu/groups/game/game.tscn" id="3_02wxc"]
 [ext_resource type="PackedScene" uid="uid://xj3vofwuf6t6" path="res://assets/scenes/system/ui/elements/menu/groups/options.tscn" id="4_wg7cq"]
 [ext_resource type="PackedScene" uid="uid://dtuhuj4neasik" path="res://assets/scenes/system/ui/elements/menu/groups/credits.tscn" id="5_y0bs7"]
+[ext_resource type="PackedScene" uid="uid://ewhcc1qdwbky" path="res://assets/scenes/system/ui/elements/menu/options/ingame/fullscreen.tscn" id="6_qgoxb"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -24,9 +25,21 @@ offset_top = -231.0
 offset_bottom = 231.0
 
 [node name="options" parent="." instance=ExtResource("4_wg7cq")]
+visible = false
 layout_mode = 1
 
 [node name="credits" parent="." instance=ExtResource("5_y0bs7")]
 layout_mode = 1
 offset_top = -213.0
 offset_bottom = 213.0
+
+[node name="fullscreen" parent="." instance=ExtResource("6_qgoxb")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -236.0
+offset_top = -190.0
+offset_right = -90.0
+offset_bottom = -49.0
+grow_horizontal = 0

@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://xj3vofwuf6t6"]
+[gd_scene load_steps=5 format=3 uid="uid://xj3vofwuf6t6"]
 
+[ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="1_cb2ej"]
 [ext_resource type="PackedScene" uid="uid://dmbiftba05658" path="res://assets/scenes/system/ui/elements/menu/options/pause/settings/skin.tscn" id="1_e0aih"]
 [ext_resource type="PackedScene" uid="uid://ejk4ki08ubui" path="res://assets/scenes/system/ui/elements/menu/options/pause/settings/credits.tscn" id="2_ibpmt"]
 [ext_resource type="PackedScene" uid="uid://6y1fuow7jvc3" path="res://assets/scenes/system/ui/elements/menu/options/pause/back/game.tscn" id="5_5w6te"]
 
 [node name="options" type="VBoxContainer"]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -17,6 +17,7 @@ offset_right = 212.0
 offset_bottom = 217.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_cb2ej")
 
 [node name="music" type="HSlider" parent="."]
 visible = false
