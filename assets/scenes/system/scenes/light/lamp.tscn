@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dam6hagk4u1cg"]
+
+[node name="lamp" type="SpotLight3D"]
+transform = Transform3D(1, 0, 0, 0, 0.0558389, -0.99844, 0, 0.99844, 0.0558389, 0, 2.365, 0)
+light_energy = 3.0
+spot_range = 1.5
+spot_angle = 60.0

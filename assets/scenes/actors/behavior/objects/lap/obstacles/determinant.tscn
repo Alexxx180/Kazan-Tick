@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckg448e6k83jh"]
 
-[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/obstacle.gd" id="1_wugkq"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/obstacles/obstacle.gd" id="1_wugkq"]
 [ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/obstacles/markup.gd" id="2_rs2l5"]
 [ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/obstacles/location.gd" id="3_4gs58"]
 

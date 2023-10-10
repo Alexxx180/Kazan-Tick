@@ -28,7 +28,6 @@ offset_right = -90.0
 offset_bottom = -49.0
 
 [node name="transition" parent="." instance=ExtResource("6_2f3yg")]
-process_mode = 2
 
 [node name="toggle" parent="." node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("7_110f7")]
 to_hide = NodePath("../menu")
