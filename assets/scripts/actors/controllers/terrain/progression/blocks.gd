@@ -4,24 +4,17 @@ extends Node3D
 @export var obstacles_far: int = 6
 @export var velocity: float = 15.0
 
-@export var paused = true
-@export var hero: CharacterBody3D
-
 @onready var terrain = $terrain
 @onready var objects = $objects
 
-func switch_pause() -> void:
-	paused = !paused
-
 func _physics_process(delta: float) -> void:
-	if (not paused):
-		_progress(delta)
+	var speed = velocity * delta
+	_progress(speed)
 
 func _ready() -> void:
 	terrain.fill_space()
 	objects.fill_space(obstacles_far)
 
-func _progress(delta: float) -> void:
-	var speed = velocity * delta
+func _progress(speed: float) -> void:
 	terrain.progress(speed)
 	objects.progress(speed)

@@ -8,15 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://cquu6mkyxh4ci" path="res://assets/scenes/system/ui/elements/core/switcher/toggle.tscn" id="7_110f7"]
 
 [node name="vision" type="Camera3D"]
+process_mode = 3
 transform = Transform3D(-1, -4.69722e-08, 7.37316e-08, 0, 0.843391, 0.5373, -8.74228e-08, 0.5373, -0.843391, 0.138, 1.51532, -1.09144)
 fov = 110.0
 script = ExtResource("1_owxwj")
 
 [node name="menu" parent="." instance=ExtResource("2_dlbl3")]
+process_mode = 2
 
 [node name="score" parent="." instance=ExtResource("3_tonu4")]
+process_mode = 1
 
 [node name="pause" parent="." instance=ExtResource("5_wcxeh")]
+process_mode = 1
 visible = false
 offset_left = -236.0
 offset_top = -190.0
@@ -24,6 +28,7 @@ offset_right = -90.0
 offset_bottom = -49.0
 
 [node name="transition" parent="." instance=ExtResource("6_2f3yg")]
+process_mode = 2
 
 [node name="toggle" parent="." node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("7_110f7")]
 to_hide = NodePath("../menu")

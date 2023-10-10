@@ -9,6 +9,7 @@
 script = ExtResource("1_7vok8")
 
 [node name="view" parent="." instance=ExtResource("2_oh1g8")]
+process_mode = 3
 
 [node name="blackboard" type="Node" parent="."]
 script = ExtResource("3_17353")

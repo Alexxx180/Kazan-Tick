@@ -3,5 +3,4 @@
 [node name="right" type="SpotLight3D"]
 transform = Transform3D(1, 0, 0, 0, -0.00294963, 0.999996, 0, -0.999996, -0.00294963, -13.1, 3.59, 0.178)
 light_energy = 3.0
-spot_range = 300.0
-spot_angle = 60.0
+spot_angle = 90.0
