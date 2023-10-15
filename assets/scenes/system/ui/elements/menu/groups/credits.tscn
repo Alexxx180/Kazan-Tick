@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtuhuj4neasik"]
+
+[ext_resource type="PackedScene" uid="uid://dwkhobbm5w5f7" path="res://assets/scenes/system/ui/elements/menu/options/pause/back/options.tscn" id="1_tyvdc"]
+[ext_resource type="PackedScene" uid="uid://7lvdjmmuwq8u" path="res://assets/scenes/system/ui/elements/menu/indicators/authors.tscn" id="1_vnvmr"]
+
+[node name="credits" type="VBoxContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -217.0
+offset_right = 212.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="panel" parent="." instance=ExtResource("1_vnvmr")]
+layout_mode = 2
+
+[node name="back" parent="." instance=ExtResource("1_tyvdc")]
+layout_mode = 2

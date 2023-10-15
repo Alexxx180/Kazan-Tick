@@ -8,9 +8,13 @@ var score: int
 func _ready() -> void:
 	reset()
 	load_settings()
+	randomize()
 
 func get_score_string() -> String:
 	return str(score)
+	
+func get_highscore_string() -> String:
+	return str(get_value("score"))
 
 func append_score(bonus: int) -> void:
 	score += bonus
@@ -32,6 +36,10 @@ func load_settings() -> void:
 	settings = Serializer.load_data(storage)
 
 
+func set_coat(value: bool) -> void:
+	settings["coat"] = value
+	save_settings()
+
 func set_value(key: String, value: int) -> void:
 	settings[key] = value
 	
@@ -39,6 +47,7 @@ func get_value(key: String) -> int:
 	return settings[key]
 
 var settings = {
-	"music" : 50,
-	"score" : 0
+	"default" : 100,
+	"score" : 0,
+	"coat" : false
 }

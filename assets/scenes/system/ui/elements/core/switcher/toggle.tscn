@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cquu6mkyxh4ci"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/core/switcher/dual.gd" id="1_vgtun"]
+
+[node name="toggle" type="Node"]
+script = ExtResource("1_vgtun")

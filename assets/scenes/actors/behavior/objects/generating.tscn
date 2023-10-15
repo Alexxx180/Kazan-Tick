@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://crbl4idt3nhec"]
+
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="1_dtuao"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/selector.gd" id="2_673vy"]
+[ext_resource type="PackedScene" uid="uid://y3p5e6q2f2j4" path="res://assets/scenes/actors/behavior/objects/lap.tscn" id="3_c6iq3"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/reset.gd" id="4_dofot"]
+
+[node name="behavior" type="Node"]
+script = ExtResource("1_dtuao")
+
+[node name="laps" type="Node" parent="."]
+script = ExtResource("2_673vy")
+
+[node name="0" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="1" parent="laps" instance=ExtResource("3_c6iq3")]
+
+[node name="2" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="3" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="4" parent="laps" instance=ExtResource("3_c6iq3")]
+
+[node name="5" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="6" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="7" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="8" parent="laps" instance=ExtResource("3_c6iq3")]
+
+[node name="9" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="10" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="11" parent="laps" instance=ExtResource("3_c6iq3")]
+
+[node name="12" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="13" parent="laps" instance=ExtResource("3_c6iq3")]
+
+[node name="14" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="15" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="16" parent="laps" instance=ExtResource("3_c6iq3")]
+
+[node name="17" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="18" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="19" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="20" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="21" parent="laps" instance=ExtResource("3_c6iq3")]
+count = 2
+
+[node name="end" type="Node" parent="laps"]
+script = ExtResource("4_dofot")

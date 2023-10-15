@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://pxepuctui4f2"]
+
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/behavior_tree.gd" id="1_kft4p"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/selector.gd" id="2_rwf71"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/paused.gd" id="3_7wwea"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/reset.gd" id="4_6jbk0"]
+[ext_resource type="PackedScene" uid="uid://b441vhxqqu20d" path="res://assets/scenes/actors/behavior/movement/gestures/vertical.tscn" id="5_esqqv"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/keyboard/vertical.gd" id="6_rn41a"]
+[ext_resource type="PackedScene" uid="uid://8vbk3hy7osth" path="res://assets/scenes/actors/behavior/movement/gestures/horizontal.tscn" id="7_p66uu"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/keyboard/horizontal.gd" id="8_06mcm"]
+
+[node name="movement" type="Node"]
+script = ExtResource("1_kft4p")
+
+[node name="behavior" type="Node" parent="."]
+script = ExtResource("2_rwf71")
+
+[node name="paused" type="Node" parent="behavior"]
+script = ExtResource("3_7wwea")
+
+[node name="reset" type="Node" parent="behavior"]
+script = ExtResource("4_6jbk0")
+
+[node name="vertical" type="Node" parent="behavior"]
+script = ExtResource("2_rwf71")
+
+[node name="gestures" parent="behavior/vertical" instance=ExtResource("5_esqqv")]
+
+[node name="keyboard" type="Node" parent="behavior/vertical"]
+script = ExtResource("6_rn41a")
+
+[node name="horizontal" type="Node" parent="behavior"]
+script = ExtResource("2_rwf71")
+
+[node name="gestures" parent="behavior/horizontal" instance=ExtResource("7_p66uu")]
+
+[node name="keyboard" type="Node" parent="behavior/horizontal"]
+script = ExtResource("8_06mcm")

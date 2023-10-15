@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6lem6oishv1g"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/core/switcher/single.gd" id="1_e78yu"]
+
+[node name="switcher" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e78yu")

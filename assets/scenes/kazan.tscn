@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://lui80x5p02fx"]
+
+[ext_resource type="PackedScene" uid="uid://cfi67atue4lrh" path="res://assets/scenes/actors/controllers/player/hero.tscn" id="1_fy2wg"]
+[ext_resource type="PackedScene" uid="uid://d3vlgt415niqw" path="res://assets/scenes/actors/controllers/conveyor/complex/blocks.tscn" id="2_6w7cb"]
+[ext_resource type="PackedScene" uid="uid://crmo778eiquc2" path="res://assets/scenes/actors/controllers/track/paths.tscn" id="3_w2i3u"]
+[ext_resource type="Shape3D" uid="uid://0y8xn7nbeogu" path="res://assets/resources/runtime/templates/geometry/shapes/floor.tres" id="4_0r2cq"]
+[ext_resource type="PackedScene" uid="uid://dm1b0hwabwiwc" path="res://assets/scenes/system/ui/elements/core/emitter/server.tscn" id="5_r1w4u"]
+[ext_resource type="PackedScene" uid="uid://dcet64m1de7lb" path="res://assets/scenes/system/scenes/pause.tscn" id="6_jiaph"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifakd"]
+sky_top_color = Color(0.541176, 0.368627, 0.513726, 1)
+sky_horizon_color = Color(0.25098, 0.0784314, 0.211765, 1)
+ground_bottom_color = Color(0.0862745, 0.027451, 0.129412, 1)
+ground_horizon_color = Color(0.235294, 0.0980392, 0.196078, 1)
+sun_curve = 0.184672
+
+[sub_resource type="Sky" id="Sky_b11uc"]
+sky_material = SubResource("ProceduralSkyMaterial_ifakd")
+
+[sub_resource type="Environment" id="Environment_18mnk"]
+background_mode = 2
+sky = SubResource("Sky_b11uc")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.541176, 0.368627, 0.513726, 1)
+fog_light_energy = 0.1
+fog_density = 0.015
+fog_sky_affect = 0.3
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4p1w3"]
+
+[node name="world" type="Node3D"]
+
+[node name="environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_18mnk")
+
+[node name="light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 0, 0, 0)
+
+[node name="hero" parent="." instance=ExtResource("1_fy2wg")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1, -1)
+
+[node name="track" type="Node3D" parent="."]
+
+[node name="terrain" parent="track" instance=ExtResource("2_6w7cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.045995)
+
+[node name="paths" parent="track" instance=ExtResource("3_w2i3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="platform" type="StaticBody3D" parent="track"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+physics_material_override = SubResource("PhysicsMaterial_4p1w3")
+
+[node name="collision" type="CollisionShape3D" parent="track/platform"]
+shape = ExtResource("4_0r2cq")
+
+[node name="pause" parent="." instance=ExtResource("5_r1w4u")]
+
+[node name="tree" parent="pause" instance=ExtResource("6_jiaph")]
+initial = true
+
+[connection signal="on_receive" from="pause" to="hero" method="switch_pause"]
+[connection signal="on_receive" from="pause" to="pause/tree" method="_pause_process"]

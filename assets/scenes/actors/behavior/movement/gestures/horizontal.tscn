@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://8vbk3hy7osth"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/gestures.gd" id="1_7tflg"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/swipe/horizontal.gd" id="2_jjbox"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/mouse/horizontal.gd" id="3_080aj"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/screen/horizontal.gd" id="4_lcrvt"]
+
+[node name="gestures" type="Node"]
+script = ExtResource("1_7tflg")
+
+[node name="game" type="Node" parent="."]
+script = ExtResource("2_jjbox")
+speed = -10
+
+[node name="mouse" type="Node" parent="."]
+script = ExtResource("3_080aj")
+
+[node name="screen" type="Node" parent="."]
+script = ExtResource("4_lcrvt")

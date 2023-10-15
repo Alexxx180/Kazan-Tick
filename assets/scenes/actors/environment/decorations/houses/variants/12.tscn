@@ -1,0 +1,30 @@
+[gd_scene load_steps=9 format=3 uid="uid://ge5ljuti5cay"]
+
+[ext_resource type="PackedScene" uid="uid://b1111pxvpach0" path="res://assets/scenes/actors/environment/decorations/houses/floor.tscn" id="1_s6vtq"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/blocks/road.gd" id="1_ylyew"]
+[ext_resource type="PackedScene" uid="uid://gvnwgjiex3sm" path="res://addons/single/merger.tscn" id="2_f6s83"]
+[ext_resource type="Material" uid="uid://dgydnkweui60s" path="res://assets/resources/runtime/templates/materials/terrain/road/sides/houses/1.tres" id="3_qubyf"]
+[ext_resource type="PackedScene" uid="uid://dqbomm50an8ov" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_5_poster.tscn" id="4_x6x6j"]
+[ext_resource type="PackedScene" uid="uid://db1rrmhp0knrp" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_4.tscn" id="5_qvpis"]
+[ext_resource type="PackedScene" uid="uid://dyxfcgokjk7py" path="res://assets/scenes/actors/environment/decorations/houses/blocks/top_3.tscn" id="6_34dcc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hknvj"]
+
+[node name="12" type="Node3D"]
+script = ExtResource("1_ylyew")
+
+[node name="view" parent="." instance=ExtResource("1_s6vtq")]
+
+[node name="merger" parent="." instance=ExtResource("2_f6s83")]
+material_override = ExtResource("3_qubyf")
+mesh = SubResource("ArrayMesh_hknvj")
+toggle_children_visibility = true
+
+[node name="top_5_poster" parent="merger" instance=ExtResource("4_x6x6j")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -1.13932)
+
+[node name="top_4" parent="merger" instance=ExtResource("5_qvpis")]
+transform = Transform3D(3.99998, 0, -0.013823, 0, 4, 0, 0.013823, 0, 3.99998, -0.143805, 0, 1.26684)
+
+[node name="top_3" parent="merger" instance=ExtResource("6_34dcc")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.663187, 0, -3.54482)

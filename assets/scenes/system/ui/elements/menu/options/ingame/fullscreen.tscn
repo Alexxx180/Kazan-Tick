@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://ewhcc1qdwbky"]
+
+[ext_resource type="Shortcut" uid="uid://gwvblu3dti2y" path="res://assets/resources/runtime/templates/macro/shortcuts/screen.tres" id="1_ks4l3"]
+[ext_resource type="Texture2D" uid="uid://ocyxbostk612" path="res://assets/resources/media/images/textures/ui/screen/normal.svg" id="2_ghv8e"]
+[ext_resource type="Texture2D" uid="uid://877wx1dk7y0i" path="res://assets/resources/media/images/textures/ui/screen/hover.svg" id="3_mjk81"]
+[ext_resource type="Script" path="res://assets/scripts/system/ui/screen/fullscreen.gd" id="4_3gm4j"]
+
+[node name="fullscreen" type="MarginContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -164.0
+offset_right = 170.0
+offset_bottom = -23.0
+grow_vertical = 0
+
+[node name="back" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.00784314, 0.00784314, 0.00784314, 0.454902)
+
+[node name="option" type="TextureButton" parent="back"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+shortcut = ExtResource("1_ks4l3")
+texture_normal = ExtResource("2_ghv8e")
+texture_hover = ExtResource("3_mjk81")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_3gm4j")
+
+[connection signal="pressed" from="back/option" to="back/option" method="_toggle_fullscreen"]

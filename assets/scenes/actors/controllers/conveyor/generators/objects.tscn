@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://1361f5mfq6e0"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/generators/random.gd" id="1_juqd5"]
+[ext_resource type="PackedScene" uid="uid://r3imudttcmtb" path="res://assets/scenes/system/scenes/loader.tscn" id="1_v770n"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="3_1cqic"]
+[ext_resource type="PackedScene" uid="uid://crbl4idt3nhec" path="res://assets/scenes/actors/behavior/objects/generating.tscn" id="4_hei0s"]
+
+[node name="generator" type="Node3D"]
+script = ExtResource("1_juqd5")
+placeholder_file = "res://assets/scenes/actors/controllers/track/objects.tscn"
+
+[node name="obstacles" parent="." instance=ExtResource("1_v770n")]
+files = "res://assets/scenes/actors/environment/objects/blocks"
+
+[node name="score" parent="." instance=ExtResource("1_v770n")]
+files = "res://assets/scenes/actors/environment/objects/score"
+
+[node name="blackboard" type="Node" parent="."]
+script = ExtResource("3_1cqic")
+
+[node name="behavior" parent="." instance=ExtResource("4_hei0s")]

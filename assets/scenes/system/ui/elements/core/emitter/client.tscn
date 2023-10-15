@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpfr1bnlveuvd"]
+
+[ext_resource type="Script" path="res://assets/scripts/system/ui/elements/core/emitter/client.gd" id="1_ujqap"]
+
+[node name="client" type="Node"]
+script = ExtResource("1_ujqap")

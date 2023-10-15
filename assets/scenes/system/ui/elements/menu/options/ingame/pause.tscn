@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://3qtp1uxw1msk"]
+
+[ext_resource type="Theme" uid="uid://beyh03xa5x65p" path="res://assets/resources/runtime/themes/regular.tres" id="1_2yomv"]
+[ext_resource type="Shortcut" uid="uid://beefargnqrmfc" path="res://assets/resources/runtime/templates/macro/shortcuts/common/cancel.tres" id="2_wp5py"]
+[ext_resource type="Texture2D" uid="uid://d4dfk8icjr7c7" path="res://assets/resources/media/images/textures/ui/pause.svg" id="3_ftb7x"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/focus.tscn" id="4_1kos1"]
+[ext_resource type="PackedScene" uid="uid://dpfr1bnlveuvd" path="res://assets/scenes/system/ui/elements/core/emitter/client.tscn" id="5_aodlf"]
+
+[node name="game" type="MarginContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -164.0
+offset_right = -24.0
+offset_bottom = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_2yomv")
+
+[node name="pause" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.00784314, 0.00784314, 0.00784314, 0.454902)
+
+[node name="option" type="TextureButton" parent="pause"]
+layout_mode = 2
+offset_right = 116.0
+offset_bottom = 111.0
+shortcut = ExtResource("2_wp5py")
+texture_normal = ExtResource("3_ftb7x")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="focus" parent="pause/option" instance=ExtResource("4_1kos1")]
+path = "../../../../menu/game/play/start"
+
+[node name="client" parent="pause/option" instance=ExtResource("5_aodlf")]
+server_path = "../../../../../../pause"
+
+[connection signal="pressed" from="pause/option" to="pause/option/focus" method="focus"]
+[connection signal="pressed" from="pause/option" to="pause/option/client" method="_submit"]

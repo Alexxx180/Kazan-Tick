@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://y3p5e6q2f2j4"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/lap.gd" id="1_23bvs"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/act.gd" id="2_0s7hd"]
+[ext_resource type="PackedScene" uid="uid://bodeb6k8pn6dy" path="res://assets/scenes/actors/behavior/objects/lap/obstacles/obstacles.tscn" id="3_mmllh"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/score.gd" id="4_5fet0"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/terrain/objects/markers.gd" id="5_t8kxw"]
+
+[node name="lap" type="Node"]
+script = ExtResource("1_23bvs")
+
+[node name="act" type="Node" parent="."]
+script = ExtResource("2_0s7hd")
+
+[node name="obstacles" parent="." instance=ExtResource("3_mmllh")]
+
+[node name="score" type="Node" parent="."]
+script = ExtResource("4_5fet0")
+
+[node name="markers" type="Node" parent="."]
+script = ExtResource("5_t8kxw")

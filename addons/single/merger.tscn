@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://gvnwgjiex3sm"]
+
+[ext_resource type="Script" path="res://addons/single/mesh_merger.gd" id="1_r8xeq"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ce1q7"]
+
+[node name="merger" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_ce1q7")
+script = ExtResource("1_r8xeq")

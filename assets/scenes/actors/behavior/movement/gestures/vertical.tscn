@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b441vhxqqu20d"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/gestures.gd" id="1_2vq1y"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/swipe/vertical.gd" id="2_kh12c"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/mouse/vertical.gd" id="3_rt3dc"]
+[ext_resource type="Script" path="res://assets/scripts/actors/behavior/movement/gestures/screen/vertical.gd" id="4_6c6qs"]
+
+[node name="gestures" type="Node"]
+script = ExtResource("1_2vq1y")
+
+[node name="game" type="Node" parent="."]
+script = ExtResource("2_kh12c")
+
+[node name="mouse" type="Node" parent="."]
+script = ExtResource("3_rt3dc")
+
+[node name="screen" type="Node" parent="."]
+script = ExtResource("4_6c6qs")

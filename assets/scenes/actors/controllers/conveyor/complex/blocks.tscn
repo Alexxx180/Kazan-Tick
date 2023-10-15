@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3vlgt415niqw"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/terrain/progression/blocks.gd" id="1_mpg7r"]
+[ext_resource type="PackedScene" uid="uid://iom2ex5bjgd6" path="res://assets/scenes/actors/controllers/conveyor/complex/terrain/terrain.tscn" id="2_57ejy"]
+[ext_resource type="PackedScene" uid="uid://batexkrasnhm1" path="res://assets/scenes/actors/controllers/conveyor/conveyor.tscn" id="4_8hbyu"]
+[ext_resource type="PackedScene" uid="uid://1361f5mfq6e0" path="res://assets/scenes/actors/controllers/conveyor/generators/objects.tscn" id="4_x3tlw"]
+
+[node name="blocks" type="Node3D"]
+script = ExtResource("1_mpg7r")
+
+[node name="terrain" parent="." instance=ExtResource("2_57ejy")]
+
+[node name="objects" parent="." instance=ExtResource("4_8hbyu")]
+offset = Vector3(-25, 12, 5)
+
+[node name="generator" parent="objects" instance=ExtResource("4_x3tlw")]

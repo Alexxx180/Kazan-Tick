@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1j3c1lda3miu"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/logic/physics.gd" id="1_ttijt"]
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/logic/processor.gd" id="2_3001k"]
+
+[node name="physics" type="Node"]
+script = ExtResource("1_ttijt")
+
+[node name="processor" type="Node" parent="."]
+script = ExtResource("2_3001k")
+tracks = "../../../track/paths"

@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://cp5c5r2td8lfq"]
+
+[ext_resource type="PackedScene" uid="uid://o1u8wgm6mccj" path="res://assets/scenes/system/ui/elements/menu/options/pause/play/start.tscn" id="1_57n3u"]
+[ext_resource type="Script" path="res://assets/scripts/system/ui/screen/groups/play.gd" id="1_ljqbg"]
+[ext_resource type="Shortcut" uid="uid://vr6w0nmbyqd7" path="res://assets/resources/runtime/templates/macro/shortcuts/menu/continue.tres" id="2_0b2ju"]
+[ext_resource type="PackedScene" uid="uid://ca63la17sjoj2" path="res://assets/scenes/system/ui/elements/menu/options/pause/play/retry.tscn" id="2_86ymm"]
+[ext_resource type="PackedScene" uid="uid://c6lem6oishv1g" path="res://assets/scenes/system/ui/elements/core/switcher/switcher.tscn" id="4_c6spb"]
+[ext_resource type="PackedScene" uid="uid://cb5o0mk55nhlr" path="res://assets/scenes/system/ui/elements/core/runtime/focus.tscn" id="5_r6fa8"]
+
+[node name="play" type="VBoxContainer"]
+script = ExtResource("1_ljqbg")
+
+[node name="start" parent="." instance=ExtResource("1_57n3u")]
+layout_mode = 2
+shortcut = ExtResource("2_0b2ju")
+
+[node name="retry" parent="." instance=ExtResource("2_86ymm")]
+visible = false
+layout_mode = 2
+shortcut = ExtResource("2_0b2ju")
+text = "Retry"
+
+[node name="switcher" parent="." node_paths=PackedStringArray("to_hide", "to_show") instance=ExtResource("4_c6spb")]
+layout_mode = 2
+to_hide = NodePath("../start")
+to_show = NodePath("../retry")
+
+[node name="focus" parent="." node_paths=PackedStringArray("control") instance=ExtResource("5_r6fa8")]
+control = NodePath("../retry")

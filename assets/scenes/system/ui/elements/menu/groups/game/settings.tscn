@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj2fvuv0efwwa"]
+
+[ext_resource type="PackedScene" uid="uid://c0dv1bqfcagfo" path="res://assets/scenes/system/ui/elements/menu/options/pause/settings/options.tscn" id="1_70u0n"]
+[ext_resource type="PackedScene" uid="uid://df6m8g6ffa8ad" path="res://assets/scenes/system/ui/elements/menu/options/pause/back/quit.tscn" id="2_835re"]
+
+[node name="settings" type="VBoxContainer"]
+
+[node name="options" parent="." instance=ExtResource("1_70u0n")]
+layout_mode = 2
+
+[node name="quit" parent="." instance=ExtResource("2_835re")]
+layout_mode = 2

@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeBlendTree" load_steps=8 format=3 uid="uid://codavodjixec5"]
+[gd_resource type="AnimationNodeBlendTree" load_steps=9 format=3 uid="uid://codavodjixec5"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ohtal"]
 
@@ -21,6 +21,8 @@ input_1/name = "stop"
 input_1/auto_advance = false
 input_1/reset = true
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_vhah6"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0dd05"]
 animation = &"jump"
 
@@ -34,15 +36,17 @@ animation = &"run"
 animation = &"lose"
 
 [resource]
-graph_offset = Vector2(-295.433, -49.9488)
-nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ohtal")
-nodes/TimeScale/position = Vector2(400, 40)
+graph_offset = Vector2(-254.322, -65.1901)
+nodes/act-scale/node = SubResource("AnimationNodeTimeScale_ohtal")
+nodes/act-scale/position = Vector2(400, 40)
 nodes/active/node = SubResource("AnimationNodeTransition_xfc5k")
 nodes/active/position = Vector2(240, 0)
 nodes/character/node = SubResource("AnimationNodeTransition_ni4x6")
 nodes/character/position = Vector2(560, 80)
 nodes/jump/node = SubResource("AnimationNodeAnimation_0dd05")
-nodes/jump/position = Vector2(60, -20)
+nodes/jump/position = Vector2(-80, -80)
+nodes/jump-scale/node = SubResource("AnimationNodeTimeScale_vhah6")
+nodes/jump-scale/position = Vector2(80, -60)
 nodes/output/position = Vector2(720, 120)
 nodes/roll/node = SubResource("AnimationNodeAnimation_v3oeb")
 nodes/roll/position = Vector2(60, 120)
@@ -50,4 +54,4 @@ nodes/run/node = SubResource("AnimationNodeAnimation_rjmwd")
 nodes/run/position = Vector2(-80, 60)
 nodes/stop/node = SubResource("AnimationNodeAnimation_x5uqq")
 nodes/stop/position = Vector2(400, 200)
-node_connections = [&"output", 0, &"character", &"TimeScale", 0, &"active", &"active", 0, &"jump", &"active", 1, &"run", &"active", 2, &"roll", &"character", 0, &"TimeScale", &"character", 1, &"stop"]
+node_connections = [&"output", 0, &"character", &"act-scale", 0, &"active", &"active", 0, &"jump-scale", &"active", 1, &"run", &"active", 2, &"roll", &"character", 0, &"act-scale", &"character", 1, &"stop", &"jump-scale", 0, &"jump"]

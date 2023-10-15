@@ -2,4 +2,5 @@
 
 [resource]
 device = -1
+ctrl_pressed = true
 keycode = 4194306

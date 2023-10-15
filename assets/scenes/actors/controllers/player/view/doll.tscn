@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci2tfpaheth67"]
+
+[ext_resource type="Script" path="res://assets/scripts/actors/controllers/player/view/doll.gd" id="1_7vok8"]
+[ext_resource type="PackedScene" uid="uid://bv3x2hl8fanqy" path="res://assets/scenes/actors/controllers/player/view/model.tscn" id="2_oh1g8"]
+[ext_resource type="Script" path="res://addons/godot-behavior-tree-plugin/blackboard.gd" id="3_17353"]
+[ext_resource type="PackedScene" uid="uid://pxepuctui4f2" path="res://assets/scenes/actors/behavior/movement/movement.tscn" id="4_a3w08"]
+
+[node name="doll" type="Node3D"]
+script = ExtResource("1_7vok8")
+
+[node name="view" parent="." instance=ExtResource("2_oh1g8")]
+process_mode = 3
+
+[node name="blackboard" type="Node" parent="."]
+script = ExtResource("3_17353")
+
+[node name="movement" parent="." instance=ExtResource("4_a3w08")]
